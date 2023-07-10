@@ -3,6 +3,15 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      transitionTimingFunction: {
+        'in-expo': 'cubic-bezier(0.95, 0.05, 0.795, 0.035)',
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+      },
+      backgroundImage: {
+        'hero-pattern': "url('../src/assets/images/bg.png')",
+      },
       colors: {
         primary: '#C63866',
         secondary: '#686868',
@@ -15,5 +24,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animated')],
 };
