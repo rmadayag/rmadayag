@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import logo from '/logo.svg' ;
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -24,9 +25,9 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between">
         <div className="mx-7">
-          <h4 className="text-4xl uppercase font-bold">
-            <span className="text-primary">R.</span>
-          </h4>
+            <div>
+         <img src={logo} />
+     </div>
         </div>
         <div
           className={` ${
