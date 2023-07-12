@@ -10,7 +10,7 @@ body {
   @apply box-border bg-bgcolor text-gray-100;
 }
 .btn-primary {
-  @apply bg-pink-600 font-semibold text-white md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2;
+  @apply bg-primary font-semibold text-white md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2;
 }
 
 .aboutImg::after {
@@ -30,5 +30,5 @@ textarea {
 }
 
 ::selection {
-  @apply bg-pink-600;
+  @apply bg-primary;
 }
