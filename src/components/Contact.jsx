@@ -25,7 +25,7 @@ const Contact = () => {
             <input type="text" placeholder="Your Name" />
             <input type="Email" placeholder="Your Email Address" />
             <textarea placeholder="Your Message" rows={10}></textarea>
-            <button className="btn-primary w-fit">Send Message</button>
+            <button className="btn-primary w-fit hover:bg-primary/70">Send Message</button>
           </form>
           <div className="flex flex-col  gap-7 ">
             {contact_info.map((contact, i) => (

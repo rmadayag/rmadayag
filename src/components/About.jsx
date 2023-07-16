@@ -17,7 +17,7 @@ const About = () => {
           <div className="p-2">
             <div className="text-secondary my-3">
               <p className="text-justify leading-7 w-11/12 mx-auto">
-              I am a Devolper and also a Designer. I graduated from University of the Cordilleras with bachelor’s degree in Information technology major in web technology. I am hardworking, honest, diligent, intelligent, and dedicated to the UI/UX Designer profession.
+              I am a UI/UX Designer. I graduated from University of the Cordilleras with bachelor’s degree in Information technology major in web technology. I am hardworking, honest, diligent, intelligent, and dedicated to the UI/UX Designer profession.
               </p>
               <div className="flex mt-10 items-center gap-7">
                 {info.map((content) => (
@@ -33,7 +33,7 @@ const About = () => {
               <br />
               <br />
               <a href="./src/assets/Code_a_program.pdf" download>
-                <button className="btn-primary ease-in duration-300">Download CV</button>
+                <button className="btn-primary ease-in duration-300 hover:bg-primary/70">Download CV</button>
               </a>
             </div>
           </div>
