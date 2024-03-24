@@ -1,44 +1,51 @@
 import React from "react";
 import hero from "../assets/images/hero.png";
+import intro from "../assets/images/hello.svg"
+
 const Hero = () => {
   const social_media = [
     "logo-facebook",
-    "logo-twitter",
     "logo-github",
     "logo-linkedin",
   ];
+
   return (
-    <section
-      id="home"
-      className="min-h-screen flex py-10 md:flex-row flex-col items-center bg-hero-pattern"
-    >
-      <div className="flex-1 flex items-center justify-center h-full">
-        <img src={hero} alt="" className="md:w-11/12 h-full object-cover" />
-      </div>
-      <div className="flex-1">
-        <div className="md:text-left text-center">
-          <h1 className="md:text-5xl text-2xl md:leading-normal leading-10c font-bold">
-            <span className="text-black md:text-3xl text-10xl">
-            Howdy,
-              <br />
-            </span>
-            <span className="text-primary">I'm Rheynalyn</span>
+    <section id="home" className="py-36 text-white bg-hero-pattern">
+        <div className="flex md:flex-row flex-col items-center md:gap-10 gap-10 px-5 max-w-6xl mx-auto">
+          <div className="flex-1">
+            <div className="text-txtcolor my-3 text-center">
+            <img
+                src={intro} 
+                alt="Hello"
+              />
+            <h1 className="md:text-6xl text-2xl md:leading-normal leading-10 font-semibold md:text-left">
+            I'm  <span className="text-primary">Rheynalyn</span> Madayag
           </h1>
-          <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-secondary">
-            UI/UX Designer
+          <h4 className="md:text-1xl text-lg md:leading-normal leading-5 mt-4 font-regular text-txtcolor md:text-left">
+          I'm a Freelance UI/UX Designer and Developer. I strives to build immersive and beautiful web applications through carefully crafted code and user-centric design.
           </h4>
           <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
             {social_media?.map((icon) => (
               <div
                 key={icon}
-                className="text-secondary hover:text-primary cursor-pointer "
+                className="text-secondary hover:text-txtcolor cursor-pointer "
               >
                 <ion-icon name={icon}></ion-icon>
               </div>
             ))}
           </div>
+            </div>
+          </div>
+          <div className="flex-1 md:mt-0 mt-6 flex justify-center items-center">
+            <div className="lg:w-100 h-full relative sm:w-100 w-full max-w-lg">
+              <img
+                src={hero}
+                alt="Rheynalyn"
+              />
+            </div>
+          </div>
         </div>
-      </div>
+    
     </section>
   );
 };

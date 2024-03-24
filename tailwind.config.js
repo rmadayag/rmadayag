@@ -3,18 +3,15 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        'hero-pattern': "url('../src/assets/images/bg1.png')",
-      },
       colors: {
-        primary: '#00EAD4',
-        secondary: '#00EAD4',
-        accent: '#00EAD4',
-        txtcolor: '#FFFFFF',
-        bgcolor: '#101010',
+        primary: '#FF4883',
+        secondary: '#FF4883',
+        accent: '#FF4883',
+        txtcolor: '#101010',
+        bgcolor: '#FFFFFF',
       },
       fontFamily: {
-        Montserrat : "Montserrat ",
+        Poppins : "Poppins ",
       },
     },
   },

@@ -1,16 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  @apply font-Montserrat scroll-smooth;
+  @apply font-Poppins scroll-smooth;
 }
 body {
   @apply box-border bg-bgcolor text-gray-100;
 }
 .btn-primary {
-  @apply bg-primary font-semibold text-black md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2;
+  @apply bg-primary font-medium text-white md:mx-0 mx-auto rounded-[10px] py-3 px-6 flex items-center gap-2;
 }
 
 .aboutImg::after {

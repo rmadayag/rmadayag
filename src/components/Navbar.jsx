@@ -5,11 +5,12 @@ const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [open, setOpen] = useState(false);
   const menuLinks = [
-    { name: "HOME", link: "#home" },
-    { name: "ABOUT", link: "#about" },
-    { name: "SKILLS", link: "#skills" },
-    { name: "PROJECTS", link: "#projects" },
-    { name: "CONTACT", link: "#contact" },
+    { name: "Home", link: "#home" },
+    { name: "About", link: "#about" },
+    { name: "Services", link: "#service" },
+    { name: "Portfolio", link: "#projects" },
+    { name: "Testimonial", link: "#testimony" },
+    { name: "Contact", link: "#contact" },
   ];
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -19,10 +20,10 @@ const Navbar = () => {
   }, []);
   return (
     <nav
-      className={`fixed w-full left-0 top-0 z-[999] ${
-        sticky ? "bg-accent/30  text-bgcolor" : "text-pink"
-      }`}
-    >
+    className={`fixed w-full left-0 top-0 z-[999] ${
+      sticky ? "bg-bgcolor text-bgcolor" : "bg-bgcolor text-pink"
+    } p-5`}
+  >
       <div className="flex items-center justify-between">
         <div className="mx-7">
             <div>
@@ -52,7 +53,7 @@ const Navbar = () => {
         </div>
         <div
           className={`md:hidden text-txtcolor absolute w-2/3 h-screen
-      px-7 py-2 font-medium bg-white top-0 duration-300 ${
+      px-7 py-2 font-medium bg-bgcolor top-0 duration-300 ${
         open ? "right-0" : "right-[-100%]"
       }`}
         >
