@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from '/logo.svg' ;
+import logo from '/full-logo.svg' ;
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
