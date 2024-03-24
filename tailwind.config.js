@@ -3,26 +3,20 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      transitionTimingFunction: {
-        'in-expo': 'cubic-bezier(0.95, 0.05, 0.795, 0.035)',
-      },
-      animation: {
-        wiggle: 'wiggle 1s ease-in-out infinite',
-      },
       backgroundImage: {
-        'hero-pattern': "url('../src/assets/images/bg.png')",
+        'hero-pattern': "url('../src/assets/images/bg1.png')",
       },
       colors: {
-        primary: '#C63866',
-        secondary: '#686868',
-        accent: '#CE92A5',
-        txtcolor: '#1E1E1E',
-        bgcolor: '#F5DCE4',
+        primary: '#00EAD4',
+        secondary: '#00EAD4',
+        accent: '#00EAD4',
+        txtcolor: '#FFFFFF',
+        bgcolor: '#101010',
       },
       fontFamily: {
-        Poppins: "Poppins",
+        Montserrat : "Montserrat ",
       },
     },
   },
-  plugins: [require('tailwindcss-animated')],
+  plugins: [],
 };
