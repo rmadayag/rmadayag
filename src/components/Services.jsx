@@ -8,7 +8,7 @@ import WebDev from "../assets/images/Web Dev.svg";
 const Services = () => {
   return (
     <section id="service" className="md:py-36 py-12 text-white bg-bgaccent">
-      <div className="flex md:flex-row flex-col items-start md:gap-10 gap-10 px-5 max-w-6xl mx-auto">
+      <div className="flex md:flex-row flex-col items-center md:gap-10 gap-10 px-5 max-w-6xl mx-auto">
         {/* Services container */}
         <div className="flex-1 md:order-2">
         <div class="flex flex-col md:flex-row gap-5">

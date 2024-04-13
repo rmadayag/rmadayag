@@ -17,7 +17,6 @@ import PS from "../assets/images/PS.svg";
 import AI from "../assets/images/AI.svg";
 import CANVA from "../assets/images/CANVA.svg";
 import intro from "../assets/images/about.svg";
-import intro2 from "../assets/images/Skills.svg";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("tech");

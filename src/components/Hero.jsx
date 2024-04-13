@@ -4,8 +4,8 @@ import intro from "../assets/images/hello.svg";
 
 const Hero = () => {
   return (
-    <section id="home" className="md:py-36 pt-28 pb-12 text-white bg-hero-pattern">
-      <div className="flex md:flex-row flex-col items-start md:gap-10 gap-10 px-5 max-w-6xl mx-auto">
+    <section id="home" className="md:py-36 pt-28 pb-12 text-white bg-bgaccent">
+      <div className="flex md:flex-row flex-col items-center md:gap-10 gap-10 px-5 max-w-6xl mx-auto">
         {/* Image container */}
         <div className="flex-1 md:order-2">
           <div className="lg:w-100 h-full relative sm:w-100 w-full max-w-lg">
