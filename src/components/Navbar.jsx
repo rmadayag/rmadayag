@@ -25,7 +25,7 @@ const Navbar = () => {
     } p-5`}
   >
       <div className="flex items-center justify-between">
-        <div className="mx-7">
+        <div className="">
             <div>
          <img src={logo} />
      </div>
@@ -47,7 +47,7 @@ const Navbar = () => {
           onClick={() => setOpen(!open)}
           className={`z-[999]  ${
             open ? "text-txtcolor" : "text-primary"
-          } text-3xl md:hidden m-5`}
+          } text-4xl md:hidden`}
         >
           <ion-icon name="menu"></ion-icon>
         </div>

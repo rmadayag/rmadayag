@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "./components/Hero";
 import About from "./components/About";
-// import Services from "./components/Services";
+import Services from "./components/Services";
 // import Project from "./components/Project";
 // import Hireme from "./components/Hireme";
 // import Contact from "./components/Contact";
@@ -15,6 +15,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
+      <Services/>
       
       <Footer />
     </div>
