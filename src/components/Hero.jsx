@@ -24,13 +24,17 @@ const Hero = () => {
               immersive and beautiful web applications through carefully
               crafted code and user-centric design.
             </h4>
-            <button
-  className="btn-primary ease-in duration-300 hover:bg-primary/80"
-  onClick={() => window.open("./src/assets/Madayag_Rheynalyn.pdf")}
->
-  Download CV
-</button>
-
+            <a
+              href="./src/assets/Madayag_Rheynalyn.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block"
+            >
+              <button className="btn-primary ease-in duration-300 hover:bg-primary/80">
+                Download CV
+              </button>
+            </a>
           </div>
         </div>
       </div>
