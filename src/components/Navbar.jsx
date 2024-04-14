@@ -20,10 +20,12 @@ const Navbar = () => {
   }, []);
   return (
     <nav
-    className={`fixed w-full left-0 top-0 z-[999] ${
-      sticky ? "bg-bgaccent text-bgcolor" : "bg-bgccent text-pink"
-    } p-5`}
-  >
+  className={`fixed left-0 right-0 top-0 z-[999] ${
+    sticky ? "bg-bgaccent text-bgcolor" : "bg-bgccent text-pink"
+  } p-5 px-5 max-w-6xl mx-auto`}
+>
+
+
       <div className="flex items-center justify-between">
         <div className="">
             <div>
@@ -37,7 +39,7 @@ const Navbar = () => {
         >
           <ul className="flex items-center gap-1 py-2 text-lg">
             {menuLinks?.map((menu, i) => (
-              <li key={i} className="px-6 hover:text-primary">
+              <li key={i} className="px-4 hover:text-primary">
                 <a href={menu?.link}>{menu?.name}</a>
               </li>
             ))}
