@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import logo from '/full-logo.svg' ;
+import logo from '/full-logo.svg';
 
 const Navbar = () => {
-  const [sticky, setSticky] = useState(false);
   const [open, setOpen] = useState(false);
   const menuLinks = [
     { name: "Home", link: "#home" },
@@ -12,31 +11,30 @@ const Navbar = () => {
     { name: "Testimonial", link: "#testimony" },
     { name: "Contact", link: "#contact" },
   ];
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const nav = document.querySelector("nav");
-      window.scrollY > 0 ? setSticky(true) : setSticky(false);
-    });
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleScroll = () => {
+    const nav = document.querySelector("nav");
+    if (window.scrollY > 0) {
+      nav.classList.add("visible");
+    } else {
+      nav.classList.remove("visible");
+    }
+  };
+
   return (
-    <nav
-  className={`fixed left-0 right-0 top-0 z-[999] ${
-    sticky ? "bg-bgaccent text-bgcolor" : "bg-bgccent text-pink"
-  } p-5 px-5 max-w-6xl mx-auto`}
->
-
-
-      <div className="flex items-center justify-between">
+    <nav className="fixed left-0 right-0 top-0 z-50 bg-bgaccent p-5 px-5">
+      <div className="flex items-center justify-between w-full max-w-6xl mx-auto">
         <div className="">
-            <div>
-         <img src={logo} />
-     </div>
+          <div>
+            <img src={logo} alt="Logo" />
+          </div>
         </div>
-        <div
-          className={` ${
-            sticky ? "" : ""
-          } text-txtcolor md:block hidden px-7 py-2 font-medium  rounded-bl-full`}
-        >
+        <div className="text-txtcolor md:block hidden px-7 py-2 font-medium">
           <ul className="flex items-center gap-1 py-2 text-lg">
             {menuLinks?.map((menu, i) => (
               <li key={i} className="px-4 hover:text-primary">
@@ -47,17 +45,14 @@ const Navbar = () => {
         </div>
         <div
           onClick={() => setOpen(!open)}
-          className={`z-[999]  ${
-            open ? "text-txtcolor" : "text-primary"
-          } text-4xl md:hidden`}
+          className={`${open ? "text-txtcolor" : "text-primary"} text-4xl md:hidden`}
         >
           <ion-icon name="menu"></ion-icon>
         </div>
         <div
-          className={`md:hidden text-txtcolor absolute w-2/3 h-screen
-      px-7 py-2 font-medium bg-bgcolor top-0 duration-300 ${
-        open ? "right-0" : "right-[-100%]"
-      }`}
+          className={`md:hidden text-txtcolor absolute w-2/3 h-screen px-7 py-2 font-medium bg-bgcolor top-0 duration-300 ${
+            open ? "right-0" : "right-[-100%]"
+          }`}
         >
           <ul className="flex flex-col justify-center h-full gap-10 py-2 text-lg">
             {menuLinks?.map((menu, i) => (
