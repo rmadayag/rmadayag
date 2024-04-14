@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <nav
     className={`fixed w-full left-0 top-0 z-[999] ${
-      sticky ? "bg-bgcolor text-bgcolor" : "bg-bgcolor text-pink"
+      sticky ? "bg-bgaccent text-bgcolor" : "bg-bgccent text-pink"
     } p-5`}
   >
       <div className="flex items-center justify-between">

@@ -88,7 +88,7 @@ const About = () => {
       <div>
       <p className="text-lg font-semibold">Web Designer</p>
       <p className="text-lg">New Media Services Pty Ltd.</p>
-      <p className="text-sm text-txtcolor/50">November 14, 2023 to Present</p>
+      <p className="text-sm text-txtcolor/50">November 14, 2022 to Present</p>
       </div>
       <div>
       <p className="text-lg font-semibold">Jr. Web Developer Intern</p>

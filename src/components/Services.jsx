@@ -57,7 +57,7 @@ const Services = () => {
             to craft visually stunning and intuitive interfaces.
             </h4>
             <a
-              href="/"
+              href="#contact"
               className="inline-block"
             >
               <button className="btn-primary ease-in duration-300 hover:bg-primary/80">
