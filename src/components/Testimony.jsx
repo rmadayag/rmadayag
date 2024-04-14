@@ -1,71 +1,88 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import project1 from "../assets/images/1.png";
-import project2 from "../assets/images/2.png";
-import project3 from "../assets/images/3.png";
-import qoute from "../assets/images/qt.svg"
+import SwiperCore, { Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper";
+import project1 from "../assets/images/qt.svg";
+import project2 from "../assets/images/qt.svg";
+import project3 from "../assets/images/qt.svg";
+import project4 from "../assets/images/qt.svg";
+import project5 from "../assets/images/qt.svg";
+import intro from "../assets/images/Testimonial.svg";
+
+SwiperCore.use([Pagination, Autoplay]);
 
 const Testimony = () => {
   const projects = [
     {
-      qoute: qoute,
-      testimony: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus mattis tellus.",
       img: project1,
-      name: "Lorem ipsum ",
+      name: "Steph",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus mattis tellus. ",
+      github_link: "https://github.com/rmadayag/Tribute",
     },
     {
-        qoute: qoute,
-        testimony: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus mattis tellus.",
       img: project2,
-      name: "Lorem ipsum ",
+      name: "Bob",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus mattis tellus. ",
+      github_link: "https://github.com/rmadayag/Product"
     },
     {
-        qoute: qoute,
-        testimony: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus mattis tellus.",
       img: project3,
-      name: "Lorem ipsum ",
+      name: "Alex",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus mattis tellus. ",
+      github_link: "https://github.com/rmadayag/Technical",
     },
-   
+    {
+      img: project4,
+      name: "Dominic",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus mattis tellus. ",
+      github_link: "https://github.com/rmadayag/Survey",
+    },
+    {
+      img: project5,
+      name: "Mike",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus mattis tellus. ",
+      github_link: "https://github.com/rmadayag/Survey",
+    },
   ];
+
   return (
-    <section id="testimony" className="py-28 text-white bg-white/5">
-      <div className="text-txtcolor text-center px-5 max-w-6xl mx-auto">
-        <h3 className="md:text-4xl text-2xl md:leading-normal leading-10 font-medium mb-2">
-          What they say
-        </h3>
-        <div className="flex max-w-full gap-5 px-5 mx-auto items-center relative mt-12">
-          <div className="w-full">
-            <Swiper
-              slidesperview={1}
-              spaceBetween={20}
-              breakpoints={{
-                393: { slidesperview: 1.3, spaceBetween: 10 },
-                768: { slidesperpiew: 3, spaceBetween: 20 },
-              }}
-              loop={true}
-              autoplay={{ delay: 3000 }}
-              pagination={{ clickable: true }}
-              modules={[Pagination, Autoplay]}
-            >
-              {projects.map((project, i) => (
-              <SwiperSlide key={i}>
-              <div className="h-fit w-full p-4 bg-white/10 rounded-xl flex flex-col items-center justify-center">
-                <img src={project.qoute} alt="Quote" className="rounded-lg" />
-                <p className="my-4">{project.testimony}</p>
-                <img src={project.img} alt={project.name} className="rounded-lg" />
-                <p className="font-semibold my-4">{project.name}</p>
+    <section
+      id="testimony"
+      className="md:py-36 py-12 bg-bgaccent"
+    >
+      <div className="flex flex-col justify-center items-center px-5 max-w-6xl mx-auto">
+      <img src={intro} className="mb-5" alt="About" />
+      <h2 className="text-2xl md:text-4xl leading-tight font-semibold text-txtcolor">
+      What Clients <span className="text-primary">Say</span>
+      </h2>
+      <br />
+      <div className="max-w-6xl px-5 gap-5">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={20}
+          loop={true}
+          autoplay={{
+            delay: 3000
+          }}
+          pagination={{
+            clickable: true
+          }}
+        >
+          {projects.map((project, index) => (
+            <SwiperSlide key={index}>
+              <div className="flex flex-col items-end py-5 px-5 bg-bgcolor rounded-lg gap-1">
+              <img src={project.img} alt="Quote" className="w-[40px]" />
+               <div className="flex flex-col items-start">
+                <h3 className="text-lg font-semibold text-txtcolor">{project.name}</h3>
+                <p className="font-regular text-txtcolor">{project.description}</p>
+                </div>
               </div>
             </SwiperSlide>
-            
-             
-              ))}
-            </Swiper>
-          </div>
-        </div>
+          ))}
+        </Swiper>
       </div>
+        </div>
     </section>
   );
 };

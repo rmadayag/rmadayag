@@ -102,7 +102,7 @@ const About = () => {
 
   return (
     <>
-    <section id="about" className="md:py-36 py-12 bg-white/5">
+    <section id="about" className="md:py-36 py-12 bg-white">
       <div className="flex md:flex-row flex-col md:gap-10 gap-10 px-5 max-w-6xl mx-auto">
         <div className="flex-1 md:mt-0 mt-6 flex justify-center items-center">
           <div className="lg:w-100 h-full relative sm:w-100 w-full max-w-lg">

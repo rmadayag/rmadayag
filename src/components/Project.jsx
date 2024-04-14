@@ -1,114 +1,111 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import project1 from "../assets/images/image.png";
-import project2 from "../assets/images/image2.png";
-import project3 from "../assets/images/image3.png";
-import project4 from "../assets/images/image4.png";
-import project5 from "../assets/images/image5.png";
-import project6 from "../assets/images/image5.png";
-import project_person from "../assets/images/project_person1.png";
-import "swiper/css"
+import SwiperCore, { Pagination, Autoplay } from "swiper";
+import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper";
+import project1 from "../assets/images/Noa.png";
+import project2 from "../assets/images/Stranger Lust.png";
+import project3 from "../assets/images/SportsTXT.png";
+import project4 from "../assets/images/SupportTXT.png";
+import project5 from "../assets/images/ShareMyCircle.png";
+import intro from "../assets/images/Portfolio.svg";
+
+SwiperCore.use([Pagination, Autoplay]);
 
 const Project = () => {
   const projects = [
     {
       img: project1,
-      name: " Tribute Page",
+      label: "UI/UX DESIGN",
+      name: "Noa Coach",
+      description: "Noa Coach integrates your company's wellbeing initiatives with AI coaching and neuroscience-backed activities...",
       github_link: "https://github.com/rmadayag/Tribute",
-      live_link: "https://rmadayag.github.io/Tribute/",
     },
     {
       img: project2,
-      name: "PS4 Controller Landing Page",
-      github_link: "https://github.com/rmadayag/Product",
-      live_link: "https://rmadayag.github.io/Product/",
+      label: "UI/UX DESIGN",
+      name: "Stranger Lust",
+      description: "Stranger Lust is an creator-oriented internet content service and designed to meet the needs of people...",
+      github_link: "https://github.com/rmadayag/Product"
     },
     {
       img: project3,
-      name: " Technical Document",
+      label: "WEB DESIGN",
+      name: "SportsTXT",
+      description: "SportsTXT is an online platform designed to deliver the ultimate sports fan experience. Engage with other...",
       github_link: "https://github.com/rmadayag/Technical",
-      live_link: "https://rmadayag.github.io/Technical/",
     },
     {
       img: project4,
-      name: "Survey Form",
-      github_link:
-        "https://github.com/rmadayag/Survey",
-      live_link: "https://rmadayag.github.io/Survey/",
+      label: "WEB DESIGN",
+      name: "SupportTXT",
+      description: "The engagement platform for the community is a place where members can come to learn, grow, and connect...",
+      github_link: "https://github.com/rmadayag/Survey",
     },
     {
       img: project5,
-      name: "NFT's",
-      github_link: "c",
-      live_link: "c",
-    },
-    {
-      img: project6,
-      name: "NFT's",
-      github_link: "c",
-      live_link: "c",
+      label: "WEB DESIGN",
+      name: "Share My Circle",
+      description: "Share My Circle offers a space for soon-to-be-married couples to invite their circle of family...",
+      github_link: "https://github.com/rmadayag/Survey",
     },
   ];
+
   return (
-    <section id="projects" className="py-10 text-txtcolor">
-      <div className="text-center">
-        <h3 className="text-4xl font-semibold">
-          My <span className="text-primary">Projects</span>
-        </h3>
-        <p className="text-secondary mt-3 text-lg">My awesome works</p>
-      </div>
+    <section
+      id="projects"
+      className="md:py-36 py-12 bg-bgcolor"
+    >
+      <div className="flex flex-col justify-center items-center px-5 max-w-6xl mx-auto">
+      <img src={intro} className="mb-5" alt="About" />
+      <h2 className="text-2xl md:text-4xl leading-tight font-semibold text-txtcolor">
+        My Creative <span className="text-primary">Works</span>
+      </h2>
       <br />
-      <div className="flex max-w-6xl gap-6 px-5 mx-auto items-center relative">
-        <div className="lg:w-2/3 w-full">
-          <Swiper
-            slidesperview={1.2}
-            spaceBetween={20}
-            breakpoints={{
-              768: {
-                slidesperview: 2,
-              },
-            }}
-            loop={true}
-            autoplay={{
-              delay: 3000,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Pagination, Autoplay]}
-          >
-            {projects.map((project_info, i) => (
-              <SwiperSlide key={i}>
-                <div className="h-fit w-full p-4 bg-accent/10 rounded-xl">
-                  <img src={project_info.img} alt="" className="rounded-lg" />
-                  <h3 className="text-xl my-4">{project_info.name}</h3>
-                  <div className="flex gap-3">
-                    <a
-                      href={project_info.github_link}
-                      target="_blank"
-                      className="text-primary bg-accent/50 px-2 py-1 inline-block rounded-lg"
-                    >
-                      Github
-                    </a>
-                    <a
-                      href={project_info.live_link}
-                      target="_blank"
-                      className="text-primary bg-accent/50 px-2 py-1 inline-block rounded-lg"
-                    >
-                      Live Demo
-                    </a>
-                  </div>
+      <div className="max-w-6xl px-5 gap-5">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={20}
+          loop={true}
+          autoplay={{
+            delay: 3000
+          }}
+          pagination={{
+            clickable: true
+          }}
+        >
+          {projects.map((project, index) => (
+            <SwiperSlide key={index}>
+              <div className="flex flex-col items-left py-5 px-5 bg-bgaccent rounded-lg gap-1">
+                <img
+                  src={project.img}
+                  alt={project.name}
+                  className="w-full rounded-lg mb-3"
+                />
+                 <p className="font-regular text-txtcolor/50 text-sm">{project.label}</p>
+                <h3 className="text-lg font-semibold text-txtcolor">{project.name}</h3>
+                <p className="font-regular text-txtcolor">{project.description}</p>
+                <div className="flex gap-2 mt-1">
+                  <a
+                    href={project.github_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary bg-accent/10 px-2 py-1 rounded-lg"
+                  >
+                    Read More
+                  </a>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-        <div className="lg:block hidden">
-          <img src={project_person} alt="" />
-        </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
+      <div className="flex justify-center mt-4">
+      <button className="btn-primary ease-in duration-300 hover:bg-primary/80">
+                View More
+              </button>
+        </div>
+        </div>
     </section>
   );
 };
