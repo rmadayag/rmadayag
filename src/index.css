@@ -10,7 +10,7 @@ body {
   @apply box-border bg-bgcolor text-gray-100;
 }
 .btn-primary {
-  @apply bg-primary font-medium text-white md:mx-0 mx-auto rounded-[10px] py-3 px-6 flex items-center gap-2;
+  @apply bg-primary font-medium text-white rounded-[10px] py-3 px-6 flex items-center gap-2;
 }
 
 .aboutImg::after {

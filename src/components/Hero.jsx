@@ -10,7 +10,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="md:py-36 pt-28 pb-12 text-white bg-bgaccent">
-      <div className="flex md:flex-row flex-col items-left md:gap-10 gap-10 px-5 max-w-6xl mx-auto">
+      <div className="flex md:flex-row flex-col items-center md:gap-10 gap-10 px-5 max-w-6xl mx-auto">
         {/* Image container */}
         <div className="flex-1 md:order-2">
           <div className="lg:w-100 h-full relative sm:w-100 w-full max-w-lg">
@@ -18,8 +18,8 @@ const Hero = () => {
           </div>
         </div>
         {/* Text content container */}
-        <div className="flex-1 md:order-1">
-          <div className="text-txtcolor">
+        <div className="flex-1 md:order-1 items-start">
+          <div className="text-txtcolor items-start">
             <img src={intro} className ="mb-5" alt="Introduction" />
             <h1 className="md:text-6xl text-4xl md:leading-tight leading-tight font-semibold">
               I'm <span className="text-primary">Rheynalyn</span> Madayag
@@ -30,12 +30,11 @@ const Hero = () => {
               crafted code and user-centric design.
             </h4>
             <button
-  onClick={handleDownload}
-  className="mt-4 btn-primary ease-in duration-300 hover:bg-primary/80 md:ml-auto md:mr-0"
->
-  Download CV
-</button>
-
+              onClick={handleDownload}
+              className="btn-primary ease-in duration-300 hover:bg-primary/80"
+            >
+              Download CV
+            </button>
           </div>
         </div>
       </div>
