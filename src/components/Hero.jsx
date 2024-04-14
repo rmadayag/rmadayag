@@ -30,11 +30,12 @@ const Hero = () => {
               crafted code and user-centric design.
             </h4>
             <button
-              onClick={handleDownload}
-              className="mt-4 btn-primary ease-in duration-300 hover:bg-primary/80"
-            >
-              Download CV
-            </button>
+  onClick={handleDownload}
+  className="mt-4 btn-primary ease-in duration-300 hover:bg-primary/80 md:ml-auto md:mr-0"
+>
+  Download CV
+</button>
+
           </div>
         </div>
       </div>
