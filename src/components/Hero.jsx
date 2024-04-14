@@ -25,7 +25,7 @@ const Hero = () => {
               crafted code and user-centric design.
             </h4>
             <a
-              href="./src/assets/Madayag, Rheynalyn C.pdf"
+              href="./src/assets/Madayag_Rheynalyn.pdf"
               download
               target="_blank"
               rel="noopener noreferrer"
