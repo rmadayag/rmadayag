@@ -29,10 +29,8 @@ const Navbar = () => {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 bg-bgaccent p-5 px-5">
       <div className="flex items-center justify-between w-full max-w-6xl mx-auto">
-        <div className="">
-          <div>
-            <img src={logo} alt="Logo" />
-          </div>
+        <div>
+          <img src={logo} alt="Logo" />
         </div>
         <div className="text-txtcolor md:block hidden px-7 py-2 font-medium">
           <ul className="flex items-center gap-1 py-2 text-lg">
@@ -54,6 +52,11 @@ const Navbar = () => {
             open ? "right-0" : "right-[-100%]"
           }`}
         >
+          <div className="flex justify-between items-center mb-4">
+            <div className="text-4xl text-primary" onClick={() => setOpen(false)}>
+              <ion-icon name="close"></ion-icon>
+            </div>
+          </div>
           <ul className="flex flex-col justify-center h-full gap-10 py-2 text-lg">
             {menuLinks?.map((menu, i) => (
               <li
