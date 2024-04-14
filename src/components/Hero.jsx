@@ -1,8 +1,13 @@
 import React from "react";
 import hero from "../assets/images/hero.png";
 import intro from "../assets/images/hello.svg";
+import cvPdf from "../assets/Madayag_Rheynalyn.pdf";
 
 const Hero = () => {
+  const handleDownload = () => {
+    window.open(cvPdf);
+  };
+
   return (
     <section id="home" className="md:py-36 pt-28 pb-12 text-white bg-bgaccent">
       <div className="flex md:flex-row flex-col items-center md:gap-10 gap-10 px-5 max-w-6xl mx-auto">
@@ -24,18 +29,12 @@ const Hero = () => {
               immersive and beautiful web applications through carefully
               crafted code and user-centric design.
             </h4>
-            <a
-  href="./src/assets/Madayag_Rheynalyn.pdf"
-  target="_blank"  // Add this attribute
-  download
-  rel="noopener noreferrer"
-  className="mt-4 inline-block"
->
-  <button className="btn-primary ease-in duration-300 hover:bg-primary/80">
-    Download CV
-  </button>
-</a>
-
+            <button
+              onClick={handleDownload}
+              className="mt-4 btn-primary ease-in duration-300 hover:bg-primary/80"
+            >
+              Download CV
+            </button>
           </div>
         </div>
       </div>
