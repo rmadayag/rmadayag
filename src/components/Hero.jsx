@@ -26,7 +26,7 @@ const Hero = () => {
             </h4>
             <button
   className="btn-primary ease-in duration-300 hover:bg-primary/80"
-  onClick={() => window.open("./src/assets/Madayag_Rheynalyn.pdf", "_blank")}
+  onClick={() => window.open("./src/assets/Madayag_Rheynalyn.pdf")}
 >
   Download CV
 </button>
