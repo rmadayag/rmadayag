@@ -2,7 +2,7 @@ import React from "react";
 import intro from "../assets/images/Contact.svg";
 import mailIcon from "../assets/images/Email.svg";
 import whatsappIcon from "../assets/images/Phone.svg";
-import locationIcon from "../assets/images/location.svg";
+import locationIcon from "../assets/images/Location.svg";
 
 const Contact = () => {
   const contact_info = [
