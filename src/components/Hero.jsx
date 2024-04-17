@@ -25,7 +25,7 @@ const Hero = () => {
               I'm <span className="text-primary">Rheynalyn</span> Madayag
             </h1>
             <h4 className="md:text-1xl text-lg my-5 font-regular text-txtcolor">
-              I'm a Freelance UI/UX Designer and Web Developer. I strive to build
+              I'm a UI/UX Designer and Web Developer. I strive to build
               immersive and beautiful web applications through carefully
               crafted code and user-centric design.
             </h4>

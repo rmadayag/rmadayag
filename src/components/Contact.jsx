@@ -21,7 +21,7 @@ const Contact = () => {
         <p className="md:text-1xl text-lg my-5 font-regular text-txtcolor text-center">
           Let’s make something new, different and more meaningful or make thing <br/> more visual or conceptual
         </p>
-        <div className="flex md:flex-row flex-col gap-6 md:p-6 p-2 rounded-lg w-full">
+        <div className="flex md:flex-row flex-col md:gap-10 gap-10 md:p-6 p-2 rounded-lg w-full">
           <div className="flex flex-col gap-5 w-full md:w-1/2">
             {contact_info.map((contact, i) => (
               <div key={i} className="flex flex-row text-left gap-5 flex-wrap items-center py-5">
