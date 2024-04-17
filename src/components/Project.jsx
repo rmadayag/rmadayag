@@ -59,11 +59,11 @@ const Project = () => {
   return (
     <section id="projects" className="md:py-36 py-12 bg-bgcolor">
       <div className="flex flex-col justify-center items-center px-5 max-w-6xl mx-auto w-full gap-10">
-        <div className="flex flex-col justify-center items-center gap-5">
-        <img src={intro} alt="About" />
-        <h2 className="text-2xl md:text-4xl leading-tight font-semibold text-txtcolor">
-          My Creative <span className="text-primary">Works</span>
-        </h2>
+        <div className="flex flex-col items-center gap-5">
+          <img src={intro} alt="About" />
+          <h2 className="text-2xl md:text-4xl leading-tight font-semibold text-txtcolor">
+            My Creative <span className="text-primary">Works</span>
+          </h2>
         </div>
         <div className="max-w-full px-5 gap-5">
           <Swiper
@@ -115,14 +115,14 @@ const Project = () => {
           </Swiper>
         </div>
         <div className="flex justify-center mt-4">
-        <a
-              href="#contact"
-              className="inline-block"
-            >
-              <button className="btn-primary ease-in duration-300 hover:bg-primary/80">
-                View More
-              </button>
-            </a>
+          <a
+            href="#contact"
+            className="inline-block"
+          >
+            <button className="btn-primary ease-in duration-300 hover:bg-primary/80">
+              View More
+            </button>
+          </a>
         </div>
       </div>
     </section>

@@ -24,7 +24,7 @@ const About = () => {
   // Content for each tab
   const tabContent = {
     tech: (
-      <div className="flex items-center justify-left mt-5 gap-6 flex-wrap">
+      <div className="flex items-center justify-left gap-6 flex-wrap py-2">
         <div key={0} className="w-10 h-10 flex items-center justify-center">
           <img src={HTML} alt="HTML Logo" />
         </div>
@@ -77,75 +77,74 @@ const About = () => {
       </div>
     ),
     education: (
-      <div className="flex flex-col mt-5">
-      <p className="text-lg font-semibold">University of the Cordilleras</p>
-      <p className="text-lg">Bachelor of Science in Information Technology </p>
-      <p className="text-sm text-txtcolor/50">Batch 2022</p>
-  </div>  
+      <div className="flex flex-col text-txtcolor py-2">
+        <p className="text-lg font-semibold">University of the Cordilleras</p>
+        <p className="text-lg">Bachelor of Science in Information Technology </p>
+        <p className="text-sm text-txtcolor/50">Batch 2022</p>
+      </div>
     ),
     experience: (
-      <div className="flex flex-col mt-5 gap-5">
-      <div>
-      <p className="text-lg font-semibold">Web Designer</p>
-      <p className="text-lg">New Media Services Pty Ltd.</p>
-      <p className="text-sm text-txtcolor/50">November 14, 2022 to Present</p>
+      <div className="flex flex-col gap-5 text-txtcolor py-2">
+        <div>
+          <p className="text-lg font-semibold">Web Designer</p>
+          <p className="text-lg">New Media Services Pty Ltd.</p>
+          <p className="text-sm text-txtcolor/50">November 14, 2022 to Present</p>
+        </div>
+        <div>
+          <p className="text-lg font-semibold">Jr. Web Developer Intern</p>
+          <p className="text-lg">Bitshares Labs Inc.</p>
+          <p className="text-sm text-txtcolor/50">May 23, 2022 to August 4, 2022</p>
+        </div>
       </div>
-      <div>
-      <p className="text-lg font-semibold">Jr. Web Developer Intern</p>
-      <p className="text-lg">Bitshares Labs Inc.</p>
-      <p className="text-sm text-txtcolor/50">May 23, 2022 to August 4, 2022</p>
-      </div>
-      </div>  
-      
+
     ),
   };
 
   return (
     <>
-    <section id="about" className="md:py-36 py-12 bg-white">
-      <div className="flex md:flex-row flex-col md:gap-10 gap-10 px-5 max-w-6xl mx-auto">
-        <div className="flex-1 md:mt-0 mt-6 flex justify-center items-center">
-          <div className="lg:w-100 h-full relative sm:w-100 w-full max-w-lg">
-            <img src={about} alt="Rheynalyn" />
-          </div>
-        </div>
-        <div className="flex-1">
-          <div className="text-txtcolor">
-            <img src={intro} className="mb-5" alt="About" />
-            <h2 className="md:text-4xl text-2xl md:leading-tight leading-tight font-semibold">
-              I am Professional User <span className="text-primary">Experience Designer</span>
-            </h2>
-            <p className="md:text-1xl text-lg my-5 font-regular text-txtcolor">
-              I design and develop services for customers specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences.
-            </p>
-            <div className="flex flex-col md:flex-row md:gap-2">
-              <button
-                className={`text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "tech" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"} rounded-[10px]`}
-                onClick={() => setActiveTab("tech")}
-              >
-                Tech Stack
-              </button>
-              <button
-                className={`text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "education" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"} rounded-[10px]`}
-                onClick={() => setActiveTab("education")}
-              >
-                Education
-              </button>
-              <button
-                className={`text-lg py-2 px-4 font-regular focus:outline-none ${activeTab === "experience" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"} rounded-[10px]`}
-                onClick={() => setActiveTab("experience")}
-              >
-                Experience
-              </button>
+      <section id="about" className="md:py-36 py-12 bg-white">
+        <div className="flex md:flex-row flex-col md:gap-10 gap-10 px-5 max-w-6xl mx-auto">
+          <div className="flex-1 md:mt-0 mt-6 flex justify-center items-center">
+            <div className="lg:w-100 h-full relative sm:w-100 w-full max-w-lg">
+              <img src={about} alt="Rheynalyn" />
             </div>
-            <div className="py-4">
+          </div>
+          <div className="flex-1">
+            <div className="flex flex-col items-start gap-5">
+              <img src={intro} alt="About" />
+              <h2 className="md:text-4xl text-2xl md:leading-tight leading-tight font-semibold text-txtcolor">
+                I am Professional User <span className="text-primary">Experience Designer</span>
+              </h2>
+              <p className="md:text-1xl text-lg font-regular text-txtcolor">
+                I design and develop services for customers specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences.
+              </p>
+              <div className="flex flex-col md:flex-row md:gap-2 w-full">
+                <button
+                  className={`w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "tech" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"} rounded-[10px]`}
+                  onClick={() => setActiveTab("tech")}
+                >
+                  Tech Stack
+                </button>
+                <button
+                  className={`w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "education" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"} rounded-[10px]`}
+                  onClick={() => setActiveTab("education")}
+                >
+                  Education
+                </button>
+                <button
+                  className={`w-full md:w-auto text-lg py-2 px-4 font-regular focus:outline-none ${activeTab === "experience" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"} rounded-[10px]`}
+                  onClick={() => setActiveTab("experience")}
+                >
+                  Experience
+                </button>
+              </div>
+
               {tabContent[activeTab]}
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </>
+      </section>
+    </>
   );
 };
 

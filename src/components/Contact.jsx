@@ -13,22 +13,24 @@ const Contact = () => {
 
   return (
     <section id="contact" className="md:py-36 py-12 bg-bgcolor text-txtcolor">
-      <div className="flex flex-col justify-center items-center px-5 max-w-6xl mx-auto w-full">
-        <img src={intro} className="mb-5" alt="About" />
-        <h2 className="text-2xl md:text-4xl leading-tight font-semibold text-txtcolor">
-          Let’s Discuss <span className="text-primary">Your Project</span>
-        </h2>
-        <p className="md:text-1xl text-lg my-5 font-regular text-txtcolor text-center">
-          Let’s make something new, different and more meaningful or make thing <br/> more visual or conceptual
-        </p>
-        <div className="flex md:flex-row flex-col md:gap-10 gap-10 md:p-6 p-2 rounded-lg w-full">
+      <div className="flex flex-col justify-center items-center px-5 max-w-6xl mx-auto w-full gap-10">
+        <div className="flex flex-col items-center gap-5">
+          <img src={intro} alt="About" />
+          <h2 className="text-2xl md:text-4xl leading-tight font-semibold text-txtcolor">
+            Let’s Discuss <span className="text-primary">Your Project</span>
+          </h2>
+          <p className="md:text-1xl text-lg font-regular text-txtcolor text-center">
+            Let’s make something new, different and more meaningful or make thing <br /> more visual or conceptual
+          </p>
+        </div>
+        <div className="flex md:flex-row flex-col md:gap-10 gap-10 rounded-lg w-full">
           <div className="flex flex-col gap-5 w-full md:w-1/2">
             {contact_info.map((contact, i) => (
               <div key={i} className="flex flex-row text-left gap-5 flex-wrap items-center py-5">
                 <img src={contact.icon} alt={contact.text} className="w-8 h-8" />
                 <div>
-                <p className="md:text-base text-sm  break-words font-semibold">{contact.title}</p>
-                <p className="md:text-base text-sm  break-words">{contact.text}</p>
+                  <p className="md:text-base text-sm  break-words font-semibold">{contact.title}</p>
+                  <p className="md:text-base text-sm  break-words">{contact.text}</p>
                 </div>
               </div>
             ))}

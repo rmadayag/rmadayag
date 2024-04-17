@@ -48,9 +48,8 @@ const Navbar = () => {
           <ion-icon name="menu"></ion-icon>
         </div>
         <div
-          className={`md:hidden text-txtcolor absolute w-2/3 h-screen px-7 py-2 font-medium bg-bgcolor top-0 duration-300 ${
-            open ? "right-0" : "right-[-100%]"
-          }`}
+          className={`md:hidden text-txtcolor absolute w-2/3 h-screen px-7 py-2 font-medium bg-bgcolor top-0 duration-300 ${open ? "right-0" : "right-[-100%]"
+            }`}
         >
           <div className="flex justify-between items-center mb-4">
             <div className="text-4xl text-primary" onClick={() => setOpen(false)}>

@@ -15,9 +15,9 @@ const Hireme = () => {
             Do you want any work from me?
           </h2>
           <p className="lg:text-left text-justify max-w-lg text-sm mt-4 text-gray-200 leading-6">
-          I'm here to help you create profitable and user-friendly digital experiences that include usability, functionality, and emotional components of the user journey. 
+            I'm here to help you create profitable and user-friendly digital experiences that include usability, functionality, and emotional components of the user journey.
           </p>
-          <a href="#contact" className="btn-primary mt-10 hover:bg-primary/70 w-32">Say Hello</a> 
+          <a href="#contact" className="btn-primary mt-10 hover:bg-primary/70 w-32">Say Hello</a>
         </div>
         <img
           src={hireMe}

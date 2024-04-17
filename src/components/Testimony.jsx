@@ -54,11 +54,11 @@ const Testimony = () => {
   return (
     <section id="testimony" className="md:py-36 py-12 bg-bgaccent">
       <div className="flex flex-col justify-center items-center px-5 max-w-6xl mx-auto w-full gap-10">
-      <div className="flex flex-col justify-center items-center gap-5">
-        <img src={intro} alt="About" />
-        <h2 className="text-2xl md:text-4xl leading-tight font-semibold text-txtcolor">
-          What Clients <span className="text-primary">Say</span>
-        </h2>
+        <div className="flex flex-col items-center gap-5">
+          <img src={intro} alt="About" />
+          <h2 className="text-2xl md:text-4xl leading-tight font-semibold text-txtcolor">
+            What Clients <span className="text-primary">Say</span>
+          </h2>
         </div>
         <div className="max-w-full px-5 gap-5">
           <Swiper

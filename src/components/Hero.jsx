@@ -19,12 +19,12 @@ const Hero = () => {
         </div>
         {/* Text content container */}
         <div className="flex-1 md:order-1 items-start">
-          <div className="text-txtcolor items-start">
-            <img src={intro} className ="mb-5" alt="Introduction" />
-            <h1 className="md:text-6xl text-4xl md:leading-tight leading-tight font-semibold">
+          <div className="flex flex-col items-start gap-5">
+            <img src={intro} alt="Introduction" />
+            <h1 className="md:text-6xl text-4xl md:leading-tight leading-tight font-semibold text-txtcolor">
               I'm <span className="text-primary">Rheynalyn</span> Madayag
             </h1>
-            <h4 className="md:text-1xl text-lg my-5 font-regular text-txtcolor">
+            <h4 className="md:text-1xl text-lg font-regular text-txtcolor">
               I'm a UI/UX Designer and Web Developer. I strive to build
               immersive and beautiful web applications through carefully
               crafted code and user-centric design.
