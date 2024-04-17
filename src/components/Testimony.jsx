@@ -60,7 +60,7 @@ const Testimony = () => {
             What Clients <span className="text-primary">Say</span>
           </h2>
         </div>
-        <div className="max-w-full px-5 gap-5">
+        <div className="max-w-full gap-5">
           <Swiper
             slidesPerView={1}
             spaceBetween={20}

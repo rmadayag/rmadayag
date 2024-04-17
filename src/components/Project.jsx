@@ -65,7 +65,7 @@ const Project = () => {
             My Creative <span className="text-primary">Works</span>
           </h2>
         </div>
-        <div className="max-w-full px-5 gap-5">
+        <div className="max-w-full gap-5">
           <Swiper
             slidesPerView={1} // One slide per view by default
             spaceBetween={20}
