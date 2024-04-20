@@ -18,36 +18,36 @@ const Testimony = () => {
       img: project1,
       name: "Steph",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus mattis tellus. ",
-      github_link: "https://github.com/rmadayag/Tribute",
+        "So happy with this design to be used thank you :) ",
+     
     },
     {
       img: project2,
       name: "Bob",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus mattis tellus. ",
-      github_link: "https://github.com/rmadayag/Product",
+        "Love the first one, Great Job! ",
+     
     },
     {
       img: project3,
       name: "Alex",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus mattis tellus. ",
-      github_link: "https://github.com/rmadayag/Technical",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+
     },
     {
       img: project4,
       name: "Dominic",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus mattis tellus. ",
-      github_link: "https://github.com/rmadayag/Survey",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+   
     },
     {
       img: project5,
       name: "Mike",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus mattis tellus. ",
-      github_link: "https://github.com/rmadayag/Survey",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+     
     },
   ];
 
@@ -82,7 +82,7 @@ const Testimony = () => {
               <SwiperSlide key={index}>
                 <div className="flex flex-col items-end py-5 px-5 bg-bgcolor rounded-lg gap-1">
                   <img src={project.img} alt="Quote" className="w-[40px]" />
-                  <div className="flex flex-col">
+                  <div className="flex flex-col w-full h-[80px]">
                     <h3 className="text-lg font-semibold text-txtcolor">
                       {project.name}
                     </h3>
