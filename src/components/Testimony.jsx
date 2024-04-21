@@ -32,21 +32,21 @@ const Testimony = () => {
       img: project3,
       name: "Alex",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+        "Love the color scheme and overall layout. ",
 
     },
     {
       img: project4,
       name: "Dominic",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+        "The design is looking really sleek and modern, which I love!  ",
    
     },
     {
       img: project5,
-      name: "Mike",
+      name: "Brandon",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Overall, the design is looking great!",
      
     },
   ];
