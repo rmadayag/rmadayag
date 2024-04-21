@@ -8,9 +8,10 @@ import emailjs from "emailjs-com";
 
 const Contact = () => {
   const recaptchaRef = useRef();
-  const [errorMessage, setErrorMessage] = useState("");
+  const [emailSent, setEmailSent] = useState(false);
+  const [error, setError] = useState(null);
 
-  const contact_info = [
+  const contactInfo = [
     { icon: mailIcon, title: "Email", text: "hello.rmady@gmail.com" },
     { icon: whatsappIcon, title: "Phone", text: "+639 564 450 644" },
     { icon: locationIcon, title: "Location", text: "Baguio City, Philippines" },
@@ -26,15 +27,11 @@ const Contact = () => {
       // Your email sending logic here
       await emailjs.sendForm('service_biprksg', 'template_mafhlaf', e.target, 'lxpQI6JFkLQc2gB68');
       
-      // Reset the form
+      // Reset form and set emailSent to true
       e.target.reset();
-      
-      // Clear any previous error message
-      setErrorMessage("");
+      setEmailSent(true);
     } catch (error) {
-      // Handle errors
-      console.error("Error sending email:", error);
-      setErrorMessage("Error sending email. Please try again later.");
+      setError("Failed to send email. Please try again later.");
     }
   };
 
@@ -52,7 +49,7 @@ const Contact = () => {
         </div>
         <div className="flex md:flex-row flex-col md:gap-10 gap-10 rounded-lg w-full">
           <div className="flex flex-col gap-5 w-full md:w-1/2">
-            {contact_info.map((contact, i) => (
+            {contactInfo.map((contact, i) => (
               <div key={i} className="flex flex-row text-left gap-5 flex-wrap items-center py-5">
                 <img src={contact.icon} alt={contact.text} className="w-8 h-8" />
                 <div>
@@ -63,16 +60,17 @@ const Contact = () => {
             ))}
           </div>
           <form onSubmit={sendEmail} className="flex flex-col flex-1 gap-5 w-full md:w-1/2 p-8 bg-bgaccent rounded-lg">
-            <input type="text" name="name" placeholder="Name" required />
-            <input type="email" name="email" placeholder="Email" required />
-            <textarea name="message" placeholder="Message" rows={10} required></textarea>
+            <input type="text" name="name" placeholder="Name" />
+            <input type="email" name="email" placeholder="Email" />
+            <textarea name="message" placeholder="Message" rows={10}></textarea>
             {/* Render reCAPTCHA */}
             <ReCAPTCHA
               ref={recaptchaRef}
               sitekey="6LfVQsIpAAAAACvn5T_2u3eAv7KLngfV4DB5WXK6"
             />
+            {emailSent && <p className="text-green-500">Email sent successfully!</p>}
+            {error && <p className="text-red-500">{error}</p>}
             <button type="submit" className="btn-primary w-fit hover:bg-primary/70">Send Message</button>
-            {errorMessage && <p className="text-red-500">{errorMessage}</p>}
           </form>
         </div>
       </div>
