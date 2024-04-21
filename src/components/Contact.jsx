@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import intro from "../assets/images/Contact.svg";
 import mailIcon from "../assets/images/Email.svg";
@@ -8,6 +8,7 @@ import emailjs from "emailjs-com";
 
 const Contact = () => {
   const recaptchaRef = useRef();
+  const [errorMessage, setErrorMessage] = useState("");
 
   const contact_info = [
     { icon: mailIcon, title: "Email", text: "hello.rmady@gmail.com" },
@@ -18,18 +19,23 @@ const Contact = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    // Verify reCAPTCHA
-    const token = await recaptchaRef.current.executeAsync();
+    try {
+      // Verify reCAPTCHA
+      const token = await recaptchaRef.current.executeAsync();
 
-    // Your email sending logic here
-    emailjs.sendForm('service_biprksg', 'template_mafhlaf', e.target, 'lxpQI6JFkLQc2gB68')
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
-
-    e.target.reset();
+      // Your email sending logic here
+      await emailjs.sendForm('service_biprksg', 'template_mafhlaf', e.target, 'lxpQI6JFkLQc2gB68');
+      
+      // Reset the form
+      e.target.reset();
+      
+      // Clear any previous error message
+      setErrorMessage("");
+    } catch (error) {
+      // Handle errors
+      console.error("Error sending email:", error);
+      setErrorMessage("Error sending email. Please try again later.");
+    }
   };
 
   return (
@@ -57,15 +63,16 @@ const Contact = () => {
             ))}
           </div>
           <form onSubmit={sendEmail} className="flex flex-col flex-1 gap-5 w-full md:w-1/2 p-8 bg-bgaccent rounded-lg">
-            <input type="text" name="name" placeholder="Name" />
-            <input type="email" name="email" placeholder="Email" />
-            <textarea name="message" placeholder="Message" rows={10}></textarea>
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea name="message" placeholder="Message" rows={10} required></textarea>
             {/* Render reCAPTCHA */}
             <ReCAPTCHA
               ref={recaptchaRef}
               sitekey="6LfVQsIpAAAAACvn5T_2u3eAv7KLngfV4DB5WXK6"
             />
             <button type="submit" className="btn-primary w-fit hover:bg-primary/70">Send Message</button>
+            {errorMessage && <p className="text-red-500">{errorMessage}</p>}
           </form>
         </div>
       </div>
