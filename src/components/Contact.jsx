@@ -12,6 +12,7 @@ const Contact = () => {
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [messageError, setMessageError] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const contact_info = [
     { icon: mailIcon, title: "Email", text: "hello.rmady@gmail.com" },
@@ -46,18 +47,22 @@ const Contact = () => {
     }
 
     if (isValid) {
-      // Your email sending logic here
       emailjs.sendForm('service_biprksg', 'template_mafhlaf', e.target, 'lxpQI6JFkLQc2gB68')
         .then((result) => {
           console.log(result.text);
-        }, (error) => {
-          console.log(error.text);
+          setIsSuccess(true);
+          setTimeout(() => setIsSuccess(false), 5000); // Remove success message after 5 seconds
+        })
+        .catch((error) => {
+          console.error('Error sending email:', error);
+          // Handle error cases if necessary
+        })
+        .finally(() => {
+          e.target.reset();
+          setName("");
+          setEmail("");
+          setMessage("");
         });
-
-      e.target.reset();
-      setName("");
-      setEmail("");
-      setMessage("");
     }
   };
 
@@ -93,6 +98,7 @@ const Contact = () => {
             <textarea name="message" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Message" rows={10} required className={messageError ? "border-red-500" : ""}></textarea>
             {messageError && <span className="text-red-500">{messageError}</span>}
             <button type="submit" className="btn-primary w-fit hover:bg-primary/70">Send Message</button>
+            {isSuccess && <p className="text-green-500">Message sent successfully!</p>}
           </form>
         </div>
       </div>
