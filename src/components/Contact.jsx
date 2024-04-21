@@ -63,7 +63,6 @@ const Contact = () => {
             {/* Render reCAPTCHA */}
             <ReCAPTCHA
               ref={recaptchaRef}
-              size="invisible"
               sitekey="6LfVQsIpAAAAACvn5T_2u3eAv7KLngfV4DB5WXK6"
             />
             <button type="submit" className="btn-primary w-fit hover:bg-primary/70">Send Message</button>
