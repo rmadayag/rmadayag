@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import intro from "../assets/images/Contact.svg";
 import mailIcon from "../assets/images/Email.svg";
 import whatsappIcon from "../assets/images/Phone.svg";
@@ -6,15 +7,21 @@ import locationIcon from "../assets/images/Location.svg";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const recaptchaRef = useRef();
+
   const contact_info = [
     { icon: mailIcon, title: "Email", text: "hello.rmady@gmail.com" },
     { icon: whatsappIcon, title: "Phone", text: "+639 564 450 644" },
     { icon: locationIcon, title: "Location", text: "Baguio City, Philippines" },
   ];
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
+    // Verify reCAPTCHA
+    const token = await recaptchaRef.current.executeAsync();
+
+    // Your email sending logic here
     emailjs.sendForm('service_biprksg', 'template_mafhlaf', e.target, 'lxpQI6JFkLQc2gB68')
       .then((result) => {
         console.log(result.text);
@@ -53,6 +60,12 @@ const Contact = () => {
             <input type="text" name="name" placeholder="Name" />
             <input type="email" name="email" placeholder="Email" />
             <textarea name="message" placeholder="Message" rows={10}></textarea>
+            {/* Render reCAPTCHA */}
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              size="invisible"
+              sitekey="6LfVQsIpAAAAACvn5T_2u3eAv7KLngfV4DB5WXK6"
+            />
             <button type="submit" className="btn-primary w-fit hover:bg-primary/70">Send Message</button>
           </form>
         </div>
