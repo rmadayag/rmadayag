@@ -3,6 +3,7 @@ import intro from "../assets/images/Contact.svg";
 import mailIcon from "../assets/images/Email.svg";
 import whatsappIcon from "../assets/images/Phone.svg";
 import locationIcon from "../assets/images/Location.svg";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const contact_info = [
@@ -10,6 +11,19 @@ const Contact = () => {
     { icon: whatsappIcon, title: "Phone", text: "+639 564 450 644" },
     { icon: locationIcon, title: "Location", text: "Baguio City, Philippines" },
   ];
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_biprksg', 'template_mafhlaf', e.target, 'lxpQI6JFkLQc2gB68')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+
+    e.target.reset();
+  };
 
   return (
     <section id="contact" className="md:py-36 py-12 bg-bgcolor text-txtcolor">
@@ -35,11 +49,11 @@ const Contact = () => {
               </div>
             ))}
           </div>
-          <form className="flex flex-col flex-1 gap-5 w-full md:w-1/2 p-8 bg-bgaccent rounded-lg">
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <textarea placeholder="Message" rows={10}></textarea>
-            <button className="btn-primary w-fit hover:bg-primary/70">Send Message</button>
+          <form onSubmit={sendEmail} className="flex flex-col flex-1 gap-5 w-full md:w-1/2 p-8 bg-bgaccent rounded-lg">
+            <input type="text" name="name" placeholder="Name" />
+            <input type="email" name="email" placeholder="Email" />
+            <textarea name="message" placeholder="Message" rows={10}></textarea>
+            <button type="submit" className="btn-primary w-fit hover:bg-primary/70">Send Message</button>
           </form>
         </div>
       </div>

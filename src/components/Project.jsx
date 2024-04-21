@@ -11,6 +11,9 @@ import project5 from "../assets/images/ShareMyCircle.png";
 import project6 from "../assets/images/Chekkee.png";
 import project7 from "../assets/images/NMS.png";
 import project8 from "../assets/images/Maha.png";
+import project9 from "../assets/images/Wittytongues.png";
+import project10 from "../assets/images/SL.png";
+import project11 from "../assets/images/ST.png";
 import intro from "../assets/images/Portfolio.svg";
 import Noa_popup from "../assets/images/Noa_popup.png";
 import Noa_color from "../assets/images/Noa_color.svg";
@@ -36,6 +39,9 @@ import NMS_popup from "../assets/images/NMS_popup.png";
 import Maha_color from "../assets/images/Maha_color.svg";
 import Maha_logo from "../assets/images/Maha_logo.svg";
 import Maha_popup from "../assets/images/Maha_popup.png";
+import Wittytongues_popup from "../assets/images/Wittytongues_popup.png";
+import SL_popup from "../assets/images/SL_popup.png";
+import ST_popup from "../assets/images/ST_popup.png";
 
 
 
@@ -43,7 +49,7 @@ import Maha_popup from "../assets/images/Maha_popup.png";
 SwiperCore.use([Pagination, Autoplay]);
 
 const Project = () => {
-  const [activeTab, setActiveTab] = useState("All");
+  const [activeTab, setActiveTab] = useState("UI/UX DESIGN");
   const [showPopup, setShowPopup] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -68,7 +74,7 @@ const Project = () => {
       label: "UI/UX DESIGN",
       name: "Noa Coach AI",
       description:
-        "Noa Coach integrates your company's wellbeing initiatives with AI coaching and neuroscience-backed activities to minimise stress and maximise output",
+        "Noa Coach is a mobile application designed to provide users with personalized coaching and guidance for various aspects of their lives, such as health, wellness, productivity, and personal development.",
       typography1: "Raleway",
       typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
       typography2: "Montserrat",
@@ -85,7 +91,7 @@ const Project = () => {
       label: "UI/UX DESIGN",
       name: "Stranger Lust",
       description:
-        "Stranger Lust is an creator-oriented internet content service and designed to meet the needs of people who create content for the web ",
+        "Stranger Lust is a platform that connects users anonymously based on mutual interests and desires for casual encounters or exploration. Users typically create profiles with their preferences and interests.",
       typography1: "Poppins",
       typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
       typography2: "Questrial",
@@ -198,9 +204,42 @@ const Project = () => {
       design_tool: "Platform : Wordpress",
       live_preview: "https://nms.ph/",
     },
+    {
+      img_popup: Wittytongues_popup,
+      img: project9,
+      label: "GRAPHIC DESIGN",
+      name: "Witty Tongues",
+      description:
+        "The central element of the logo is, of course, the tongue. It's a universal symbol of communication, speaking, and expression. It's bold and prominent, indicating the confidence and assertiveness associated with effective communication",
+      description_2:
+        "The tongue is portrayed in a stylized manner, perhaps with a curve or a twist, signifying wit, humor, and creativity. This suggests that communication with Witty Tongues isn't just about conveying information but doing so in an engaging and entertaining way.",
+      type: "Type : Logo",
+    },
+    {
+      img_popup: SL_popup,
+      img: project10,
+      label: "GRAPHIC DESIGN",
+      name: "Stranger Lust",
+      description:
+        "The logo for Stranger Lust aims to capture the essence of intrigue and sensuality while maintaining tastefulness and elegance. It might feature a combination of elegant typography and subtle imagery, such as silhouettes or suggestive shapes, to evoke curiosity and anticipation.",
+      description_2:
+        "The logo's composition should be visually balanced and scalable across different platforms. Importantly, the design should avoid explicit imagery or vulgar connotations to uphold the brand's integrity and appeal.",
+      type: "Type : Logo",
+    },
+    {
+      img_popup: ST_popup,
+      img: project11,
+      label: "GRAPHIC DESIGN",
+      name: "SportsTXT",
+      description:
+        "The logo for Sportstxt aims to represent the brand's focus on sports-related content through a combination of text and imagery. The typography is chosen to be bold and modern, reflecting the energy of sports. ",
+      description_2:
+        "Additionally, sports-related icons or symbols may be incorporated into the design to enhance its relevance. The color palette is vibrant and dynamic, evoking the excitement of sports events. The logo's composition is carefully balanced to ensure visual appeal and versatility across different platforms. ",
+      type: "Type : Logo",
+    },
   ];
 
-  const filteredProjects = activeTab === "All" ? projects : projects.filter(project => project.label === activeTab);
+  const filteredProjects = activeTab === "UX/UI DESIGN" ? projects : projects.filter(project => project.label === activeTab);
 
   const openPopup = (project) => {
     setSelectedProject(project);
@@ -221,12 +260,11 @@ const Project = () => {
           </h2>
         </div>
         <div className="flex flex-col md:flex-row md:gap-2 w-full justify-center">
-          {/* Render tab buttons */}
-          <button onClick={() => setActiveTab("All")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "All" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>All</button>
-          <button onClick={() => setActiveTab("UI/UX DESIGN")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "UI/UX DESIGN" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>UI/UX Design</button>
-          <button onClick={() => setActiveTab("WEB DESIGN | DEVELOPMENT")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "WEB DESIGN | DEVELOPMENT" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>Design | Development</button>
-          {/* <button onClick={() => setActiveTab("GRAPHIC DESIGN")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "GRAPHIC DESIGN" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>Graphic Design</button> */}
-        </div>
+  <button onClick={() => setActiveTab("UI/UX DESIGN")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "UI/UX DESIGN" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>UI/UX Design</button>
+  <button onClick={() => setActiveTab("WEB DESIGN | DEVELOPMENT")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "WEB DESIGN | DEVELOPMENT" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>Design | Development</button>
+  <button onClick={() => setActiveTab("GRAPHIC DESIGN")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "GRAPHIC DESIGN" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>Graphic Design</button>
+</div>
+
         <div className="max-w-full gap-5">
           <Swiper
             slidesPerView={1}
@@ -242,10 +280,10 @@ const Project = () => {
             {filteredProjects.map((project, index) => (
               <SwiperSlide key={index}>
                 <div className="flex flex-col items-left py-5 px-5 bg-bgaccent rounded-lg gap-1">
-                  <img src={project.img} alt={project.name} className="w-full rounded-lg mb-3" />
+                  <img src={project.img} alt={project.name} className="w-full h-[200px] object-cover rounded-lg mb-3" />
                   <p className="font-regular text-txtcolor/50 text-sm">{project.label}</p>
                   <h3 className="text-lg font-semibold text-txtcolor">{project.name}</h3>
-                  <p className="font-regular text-txtcolor">{project.description.substring(0, 100) + "..."}</p>
+                  <p className="font-regular text-txtcolor">{project.description.substring(0, 120) + "..."}</p>
                   <div className="flex gap-2 mt-1">
                     <button onClick={() => openPopup(project)} className="text-primary bg-accent/10 px-2 py-1 rounded-lg">Read More</button>
                   </div>
@@ -255,53 +293,83 @@ const Project = () => {
           </Swiper>
         </div>
       </div>
-      {/* Popup */}
-      {showPopup && (
-  <div className="fixed inset-0 flex justify-center items-center z-50 overflow-y-auto">
-    <div className="fixed inset-0 bg-black bg-opacity-50" onClick={closePopup}></div>
-    <div className="bg-white rounded-lg max-w-[90%] md:max-w-[1000px] w-[90%] md:w-auto max-h-[80vh] overflow-y-auto relative">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-8">
-        <div className="mb-5 md:mb-0">
-          <img src={selectedProject.img_popup} alt={selectedProject.name} className="rounded-lg" />
-        </div>
-        <div>
-          <div className="flex justify-end">
-            <button onClick={closePopup} className="absolute top-0 right-0 mt-3 mr-3 text-gray-600 hover:text-gray-800">
-              <ion-icon name="close" class="text-[25px]"></ion-icon>
-            </button>
-          </div>
-          <h2 className="text-txtcolor text-2xl font-semibold mb-5">{selectedProject.name}</h2>
-          <p className="text-txtcolor/50 mb-2">{selectedProject.label}</p>
-          <p className="text-txtcolor mb-2">{selectedProject.description}</p>
-          <p className="text-txtcolor/50 mb-2">{selectedProject.type}</p>
-          <p className="text-txtcolor/50 mb-2">{selectedProject.design_tool}</p>
-          <img src={selectedProject.logo_svg} alt={selectedProject.name} className="mb-5" />
-          <img src={selectedProject.color_svg} alt={selectedProject.name} className="mb-5" />
-          <div className="mb-5">
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
-              <div>
-                <p className="text-txtcolor">{selectedProject.typography1}</p>
-                <p className="text-txtcolor font-Poppins font-semibold text-lg">{selectedProject.typography_bold}</p>
+      {/* General Project Popup */}
+      {showPopup && selectedProject && activeTab !== "GRAPHIC DESIGN" && (
+        <div className="fixed inset-0 flex justify-center items-center z-50 overflow-y-auto">
+          {/* Popup overlay */}
+          <div className="fixed inset-0 bg-black bg-opacity-50" onClick={closePopup}></div>
+          {/* Popup content */}
+          <div className="bg-white rounded-lg max-w-[90%] md:max-w-[1000px] w-[90%] md:w-auto max-h-[80vh] overflow-y-auto relative">
+            {/* Popup content */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-8">
+              {/* Project image */}
+              <div className="mb-5 md:mb-0">
+                <img src={selectedProject.img_popup} alt={selectedProject.name} className="rounded-lg" />
               </div>
+              {/* Project details */}
               <div>
-                <p className="text-txtcolor">{selectedProject.typography2}</p>
-                <p className="text-txtcolor font-Poppins font-regular text-lg">{selectedProject.typography_regular}</p>
+                {/* Close button */}
+                <div className="flex justify-end">
+                  <button onClick={closePopup} className="absolute top-0 right-0 mt-3 mr-3 text-gray-600 hover:text-gray-800">
+                    <ion-icon name="close" class="text-[25px]"></ion-icon>
+                  </button>
+                </div>
+                {/* Project information */}
+                <h2 className="text-txtcolor text-2xl font-semibold mb-5">{selectedProject.name}</h2>
+                <p className="text-txtcolor/50 mb-2">{selectedProject.label}</p>
+                <p className="text-txtcolor mb-5">{selectedProject.description}</p>
+                <p className="text-txtcolor/50 mb-2">{selectedProject.type}</p>
+                <p className="text-txtcolor/50 mb-5">{selectedProject.design_tool}</p>
+                <img src={selectedProject.logo_svg} alt={selectedProject.name} className="mb-5" />
+                <img src={selectedProject.color_svg} alt={selectedProject.name} className="mb-5" />
+                {/* Project links */}
+                <a
+                  href={selectedProject.live_preview}
+                  target="_blank"
+                  className="text-primary bg-primary/10 px-2 py-1 inline-block rounded-lg"
+                >
+                  Visit Site
+                </a>
               </div>
             </div>
           </div>
-          <a
-            href={selectedProject.live_preview}
-            target="_blank"
-            className="text-primary bg-primary/10 px-2 py-1 inline-block rounded-lg"
-          >
-            Visit Site
-          </a>
         </div>
-      </div>
-    </div>
-  </div>
-)}
+      )}
 
+      {/* Graphic Design Project Popup */}
+      {showPopup && selectedProject && activeTab === "GRAPHIC DESIGN" && (
+        <div className="fixed inset-0 flex justify-center items-center z-50 overflow-y-auto">
+          {/* Popup overlay */}
+          <div className="fixed inset-0 bg-black bg-opacity-50" onClick={closePopup}></div>
+          {/* Popup content */}
+          <div className="bg-white rounded-lg max-w-[90%] md:max-w-[1000px] w-[90%] md:w-auto max-h-[80vh] overflow-y-auto relative">
+            {/* Popup content */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-8">
+              {/* Project image */}
+              <div className="mb-5 md:mb-0">
+                <img src={selectedProject.img_popup} alt={selectedProject.name} className="rounded-lg" />
+              </div>
+              {/* Project details */}
+              <div>
+                {/* Close button */}
+                <div className="flex justify-end">
+                  <button onClick={closePopup} className="absolute top-0 right-0 mt-3 mr-3 text-gray-600 hover:text-gray-800">
+                    <ion-icon name="close" class="text-[25px]"></ion-icon>
+                  </button>
+                </div>
+                {/* Project information */}
+                <h2 className="text-txtcolor text-2xl font-semibold mb-5">{selectedProject.name}</h2>
+                {/* More project details */}
+                <p className="text-txtcolor/50 mb-2">{selectedProject.label}</p>
+                <p className="text-txtcolor/50 mb-5">{selectedProject.type}</p>
+                <p className="text-txtcolor mb-5">{selectedProject.description}</p>
+                <p className="text-txtcolor mb-2">{selectedProject.description_2}</p>
+                {/* Project links */}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
     </section>
   );
