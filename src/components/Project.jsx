@@ -173,7 +173,7 @@ const Project = () => {
       label_to: "WEB DESIGN | DEVELOPMENT",
       name: "SupportTXT",
       description:
-        "The engagement platform for the community is a place where members can come to learn, grow, and connect with each other",
+        "The engagement platform for the community is a place where members can come to learn, grow, and connect with each other. The content on the platform should be engaging, informative, and relevant to the interests of the community members.",
       typography1: "Poppins",
       typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
       typography2: "Poppins",
