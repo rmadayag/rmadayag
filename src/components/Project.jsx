@@ -14,6 +14,8 @@ import project8 from "../assets/images/Maha.png";
 import project9 from "../assets/images/Wittytongues.png";
 import project10 from "../assets/images/SL.png";
 import project11 from "../assets/images/ST.png";
+import project12 from "../assets/images/Afflyfe.png";
+import project13 from "../assets/images/Detox.png";
 import intro from "../assets/images/Portfolio.svg";
 import Noa_popup from "../assets/images/Noa_popup.png";
 import Noa_color from "../assets/images/Noa_color.svg";
@@ -42,6 +44,12 @@ import Maha_popup from "../assets/images/Maha_popup.png";
 import Wittytongues_popup from "../assets/images/Wittytongues_popup.png";
 import SL_popup from "../assets/images/SL_popup.png";
 import ST_popup from "../assets/images/ST_popup.png";
+import Afflyfe_color from "../assets/images/Afflyfe_color.svg";
+import Afflyfe_logo from "../assets/images/Afflyfe_logo.svg";
+import Afflyfe_popup from "../assets/images/Afflyfe_popup.png";
+import Detox_color from "../assets/images/Detox_color.svg";
+import Detox_logo from "../assets/images/Detox_logo.svg";
+import Detox_popup from "../assets/images/Detox_popup.png";
 
 
 
@@ -72,6 +80,7 @@ const Project = () => {
       img_popup: Noa_popup,
       img: project1,
       label: "UI/UX DESIGN",
+      label_to: "UI/UX DESIGN",
       name: "Noa Coach AI",
       description:
         "Noa Coach is a mobile application designed to provide users with personalized coaching and guidance for various aspects of their lives, such as health, wellness, productivity, and personal development.",
@@ -89,6 +98,7 @@ const Project = () => {
       img_popup: Strangerlust_popup,
       img: project2,
       label: "UI/UX DESIGN",
+      label_to: "UI/UX DESIGN",
       name: "Stranger Lust",
       description:
         "Stranger Lust is a platform that connects users anonymously based on mutual interests and desires for casual encounters or exploration. Users typically create profiles with their preferences and interests.",
@@ -100,12 +110,13 @@ const Project = () => {
       logo_svg: Strangerlust_logo,
       type: "Type : Web Application",
       design_tool: "Design Tool : Figma",
-      live_preview: "https://",
+      live_preview: "https://strangerlust.com/",
     },
     {
       img_popup: Maha_popup,
       img: project8,
       label: "UI/UX DESIGN",
+      label_to: "UI/UX DESIGN",
       name: "My Allied Health Academy",
       description:
         "My Allied Health Academy (MAHA) provides an ongoing learning subscription in the form of lessons to student practioners who wish to subscribe to the course",
@@ -117,12 +128,13 @@ const Project = () => {
       logo_svg: Maha_logo,
       type: "Type : Web Application",
       design_tool: "Design Tool : Figma",
-      live_preview: "https://",
+      live_preview: "https://myalliedhealthacademy.com/",
     },
     {
       img_popup: Chekkee_popup,
       img: project6,
       label: "WEB DESIGN | DEVELOPMENT",
+      label_to: "WEB DESIGN | DEVELOPMENT",
       name: "Chekkee",
       description:
         "Chekkee is a content moderation company based in Australia. Providing real-time human and AI-powered content moderation solutions for all kinds of online platforms",
@@ -140,6 +152,7 @@ const Project = () => {
       img_popup: SportTXT_popup,
       img: project3,
       label: "WEB DESIGN | DEVELOPMENT",
+      label_to: "WEB DESIGN | DEVELOPMENT",
       name: "SportsTXT",
       description:
         "SportsTXT is an online platform designed to deliver the ultimate sports fan experience. Engage with other fans, get insider facts about your favorite teams",
@@ -157,6 +170,7 @@ const Project = () => {
       img_popup: SupportTXT_popup,
       img: project4,
       label: "WEB DESIGN | DEVELOPMENT",
+      label_to: "WEB DESIGN | DEVELOPMENT",
       name: "SupportTXT",
       description:
         "The engagement platform for the community is a place where members can come to learn, grow, and connect with each other",
@@ -174,6 +188,7 @@ const Project = () => {
       img_popup: SMC_popup,
       img: project5,
       label: "WEB DESIGN | DEVELOPMENT",
+      label_to: "WEB DESIGN | DEVELOPMENT",
       name: "Share My Circle",
       description:
         "Share My Circle offers a space for soon-to-be-married couples to invite their circle of family and friends to be connected with them throughout their wedding journey",
@@ -191,6 +206,7 @@ const Project = () => {
       img_popup: NMS_popup,
       img: project7,
       label: "WEB DESIGN | DEVELOPMENT",
+      label_to: "WEB DESIGN | DEVELOPMENT",
       name: "New Media Services PH",
       description:
         "New Media Services specializes in delivering intelligent outsourcing services through a combination of machine learning and human-powered activities",
@@ -205,9 +221,46 @@ const Project = () => {
       live_preview: "https://nms.ph/",
     },
     {
+      img_popup: Afflyfe_popup,
+      img: project12,
+      label: "WEB DESIGN | DEVELOPMENT",
+      label_to: "WEB DESIGN",
+      name: "Afflyfe",
+      description:
+        "Afflyfe is a comprehensive NFT information platform designed to cater to both newcomers and experienced participants in the NFT space. Through a range of resources and features, Afflyfe aims to educate, inform, and connect individuals interested in NFTs",
+      typography1: "Montserrat",
+      typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
+      typography2: "Montserrat",
+      typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
+      color_svg: Afflyfe_color,
+      logo_svg: Afflyfe_logo,
+      type: "Type : Website",
+      design_tool: "Design Tool : Figma",
+      live_preview: "https://www.figma.com/proto/iDw0PzGdGinh46iqpauXiL/Projects?type=design&node-id=1-1999&t=d1Q1xZBTjVSGw1Qe-0&scaling=min-zoom&page-id=0%3A1",
+    },
+    {
+      img_popup: Detox_popup,
+      img: project13,
+      label: "WEB DESIGN | DEVELOPMENT",
+      label_to: "WEB DESIGN",
+      name: "San Diego Detox",
+      description:
+        "The San Diego Detox website likely serves as an online platform providing information and services related to detoxification programs in the San Diego area.",
+      typography1: "Montserrat",
+      typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
+      typography2: "Montserrat",
+      typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
+      color_svg: Detox_color,
+      logo_svg: Detox_logo,
+      type: "Type : Website",
+      design_tool: "Design Tool : Figma",
+      live_preview: "https://www.figma.com/proto/iDw0PzGdGinh46iqpauXiL/Projects?type=design&node-id=5-1893&t=d1Q1xZBTjVSGw1Qe-0&scaling=min-zoom&page-id=1%3A5495",
+    }, 
+    {
       img_popup: Wittytongues_popup,
       img: project9,
       label: "GRAPHIC DESIGN",
+      label_to: "GRAPHIC DESIGN",
       name: "Witty Tongues",
       description:
         "The central element of the logo is, of course, the tongue. It's a universal symbol of communication, speaking, and expression. It's bold and prominent, indicating the confidence and assertiveness associated with effective communication",
@@ -219,6 +272,7 @@ const Project = () => {
       img_popup: SL_popup,
       img: project10,
       label: "GRAPHIC DESIGN",
+      label_to: "GRAPHIC DESIGN",
       name: "Stranger Lust",
       description:
         "The logo for Stranger Lust aims to capture the essence of intrigue and sensuality while maintaining tastefulness and elegance. It might feature a combination of elegant typography and subtle imagery, such as silhouettes or suggestive shapes, to evoke curiosity and anticipation.",
@@ -230,6 +284,7 @@ const Project = () => {
       img_popup: ST_popup,
       img: project11,
       label: "GRAPHIC DESIGN",
+      label_to: "GRAPHIC DESIGN",
       name: "SportsTXT",
       description:
         "The logo for Sportstxt aims to represent the brand's focus on sports-related content through a combination of text and imagery. The typography is chosen to be bold and modern, reflecting the energy of sports. ",
@@ -316,7 +371,7 @@ const Project = () => {
                 </div>
                 {/* Project information */}
                 <h2 className="text-txtcolor text-2xl font-semibold mb-5">{selectedProject.name}</h2>
-                <p className="text-txtcolor/50 mb-2">{selectedProject.label}</p>
+                <p className="text-txtcolor/50 mb-2">{selectedProject.label_to}</p>
                 <p className="text-txtcolor mb-5">{selectedProject.description}</p>
                 <p className="text-txtcolor/50 mb-2">{selectedProject.type}</p>
                 <p className="text-txtcolor/50 mb-5">{selectedProject.design_tool}</p>
