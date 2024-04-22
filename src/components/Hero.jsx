@@ -32,6 +32,16 @@ const Hero = () => {
     loop: { reverse: true }
   });
 
+  const styles1 = useSpring({
+    from: { transform: 'translateY(0px)' },
+    to: [
+      { transform: 'translateY(-20px)' },
+      { transform: 'translateY(0px)' }
+    ],
+    config: { duration: 1000 },
+    loop: { reverse: true }
+  });
+
   return (
     <section id="home" className="md:py-36 pt-28 pb-12 text-white bg-bgaccent">
       <div className="flex md:flex-row flex-col items-center md:gap-10 gap-10 px-5 max-w-6xl mx-auto">
@@ -39,7 +49,11 @@ const Hero = () => {
         <div className="flex-1 md:order-2">
           <animated.div style={fadeIn}>
             <div className="lg:w-100 h-full relative sm:w-100 w-full max-w-lg">
-              <img src={hero} alt="Rheynalyn" />
+              <animated.img
+                src={hero}
+                alt="Rheynalyn"
+                style={styles1}
+              />
             </div>
           </animated.div>
         </div>

@@ -4,8 +4,20 @@ import UIandUX from "../assets/images/UIandUX.svg";
 import Graphic from "../assets/images/Graphic.svg";
 import SEO from "../assets/images/SEO.svg";
 import WebDev from "../assets/images/Web Dev.svg";
+import { useSpring, animated } from "react-spring";
 
 const Services = () => {
+
+  const styles = useSpring({
+    from: { transform: 'scale(1)' },
+    to: [
+      { transform: 'scale(1.3)' },
+      { transform: 'scale(1)' }
+    ],
+    config: { duration: 1000 },
+    loop: { reverse: true }
+  });
+
   return (
     <section id="service" className="md:py-36 py-12 text-white bg-bgaccent">
       <div className="flex md:flex-row flex-col items-center md:gap-10 gap-10 px-5 max-w-6xl mx-auto">
@@ -48,7 +60,11 @@ const Services = () => {
         <div className="flex-1 md:order-1">
 
           <div className="flex flex-col items-start gap-5">
-            <img src={intro} alt="Introduction" />
+            <animated.img
+              src={intro}
+              alt="Services"
+              style={styles}
+            />
             <h2 className="md:text-4xl text-2xl md:leading-tight leading-tight font-semibold text-txtcolor">
               Why Hire Me For Your<span className="text-primary"> <br /> Next Project?</span>
             </h2>

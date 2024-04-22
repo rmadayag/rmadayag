@@ -9,6 +9,7 @@ import project3 from "../assets/images/qt.svg";
 import project4 from "../assets/images/qt.svg";
 import project5 from "../assets/images/qt.svg";
 import intro from "../assets/images/Testimonial.svg";
+import { useSpring, animated } from "react-spring";
 
 SwiperCore.use([Pagination, Autoplay]);
 
@@ -51,11 +52,25 @@ const Testimony = () => {
     },
   ];
 
+  const styles = useSpring({
+    from: { transform: 'scale(1)' },
+    to: [
+      { transform: 'scale(1.3)' },
+      { transform: 'scale(1)' }
+    ],
+    config: { duration: 1000 },
+    loop: { reverse: true }
+  });
+
   return (
     <section id="testimony" className="md:py-36 py-12 bg-bgaccent">
       <div className="flex flex-col justify-center items-center px-5 max-w-6xl mx-auto w-full gap-10">
         <div className="flex flex-col items-center gap-5">
-          <img src={intro} alt="About" />
+        <animated.img
+              src={intro}
+              alt="Testimony"
+              style={styles}
+            />
           <h2 className="text-2xl md:text-4xl leading-tight font-semibold text-txtcolor">
             What Clients <span className="text-primary">Say</span>
           </h2>

@@ -111,13 +111,28 @@ const About = () => {
     loop: { reverse: true }
   });
 
+  const styles1 = useSpring({
+    from: { transform: 'translateY(0px)' },
+    to: [
+      { transform: 'translateY(-20px)' },
+      { transform: 'translateY(0px)' }
+    ],
+    config: { duration: 1000 },
+    loop: { reverse: true }
+  });
+
+
   return (
     <>
       <section id="about" className="md:py-36 py-12 bg-white">
         <div className="flex md:flex-row flex-col md:gap-10 gap-10 px-5 max-w-6xl mx-auto">
           <div className="flex-1 md:mt-0 mt-6 flex justify-center items-center">
             <div className="lg:w-100 h-full relative sm:w-100 w-full max-w-lg">
-              <img src={about} alt="Rheynalyn" />
+            <animated.img
+                src={about}
+                alt="Rheynalyn"
+                style={styles1}
+              />
             </div>
           </div>
           <div className="flex-1">

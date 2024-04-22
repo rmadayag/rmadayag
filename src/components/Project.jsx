@@ -50,8 +50,7 @@ import Afflyfe_popup from "../assets/images/Afflyfe_popup.png";
 import Detox_color from "../assets/images/Detox_color.svg";
 import Detox_logo from "../assets/images/Detox_logo.svg";
 import Detox_popup from "../assets/images/Detox_popup.png";
-
-
+import { useSpring, animated } from "react-spring";
 
 
 SwiperCore.use([Pagination, Autoplay]);
@@ -305,11 +304,26 @@ const Project = () => {
     setShowPopup(false);
   };
 
+  const styles = useSpring({
+    from: { transform: 'scale(1)' },
+    to: [
+      { transform: 'scale(1.3)' },
+      { transform: 'scale(1)' }
+    ],
+    config: { duration: 1000 },
+    loop: { reverse: true }
+  });
+
+
   return (
     <section id="projects" className="md:py-36 py-12 bg-bgcolor relative">
       <div className="flex flex-col justify-center items-center px-5 max-w-6xl mx-auto w-full gap-10">
         <div className="flex flex-col items-center gap-5">
-          <img src={intro} alt="About" />
+          <animated.img
+            src={intro}
+            alt="Projects"
+            style={styles}
+          />
           <h2 className="text-2xl md:text-4xl leading-tight font-semibold text-txtcolor">
             My Creative <span className="text-primary">Works</span>
           </h2>

@@ -4,6 +4,7 @@ import mailIcon from "../assets/images/Email.svg";
 import whatsappIcon from "../assets/images/Phone.svg";
 import locationIcon from "../assets/images/Location.svg";
 import emailjs from "emailjs-com";
+import { useSpring, animated } from "react-spring";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -65,12 +66,26 @@ const Contact = () => {
         });
     }
   };
+  const styles = useSpring({
+    from: { transform: 'scale(1)' },
+    to: [
+      { transform: 'scale(1.3)' },
+      { transform: 'scale(1)' }
+    ],
+    config: { duration: 1000 },
+    loop: { reverse: true }
+  });
+
 
   return (
     <section id="contact" className="md:py-36 py-12 bg-bgcolor text-txtcolor">
       <div className="flex flex-col justify-center items-center px-5 max-w-6xl mx-auto w-full gap-10">
         <div className="flex flex-col items-center gap-5">
-          <img src={intro} alt="About" />
+        <animated.img
+              src={intro}
+              alt="Contact"
+              style={styles}
+            />
           <h2 className="text-2xl md:text-4xl leading-tight font-semibold text-txtcolor">
             Let’s Discuss <span className="text-primary">Your Project</span>
           </h2>
