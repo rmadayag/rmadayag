@@ -1,7 +1,7 @@
 import React from "react";
 import hero from "../assets/images/hero.png";
 import intro from "../assets/images/hello.svg";
-import cvPdf from "../assets/Madayag_Rheynalyn.pdf";
+import cvPdf from "../assets/Madayag, Rheynalyn C.pdf";
 
 const Hero = () => {
   const handleDownload = () => {
