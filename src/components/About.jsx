@@ -17,6 +17,7 @@ import PS from "../assets/images/PS.svg";
 import AI from "../assets/images/AI.svg";
 import CANVA from "../assets/images/CANVA.svg";
 import intro from "../assets/images/about.svg";
+import { useSpring, animated } from "react-spring";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("tech");
@@ -99,6 +100,16 @@ const About = () => {
 
     ),
   };
+  
+  const styles = useSpring({
+    from: { transform: 'scale(1)' },
+    to: [
+      { transform: 'scale(1.3)' },
+      { transform: 'scale(1)' }
+    ],
+    config: { duration: 1000 },
+    loop: { reverse: true }
+  });
 
   return (
     <>
@@ -111,7 +122,11 @@ const About = () => {
           </div>
           <div className="flex-1">
             <div className="flex flex-col items-start gap-5">
-              <img src={intro} alt="About" />
+            <animated.img
+              src={intro}
+              alt="About"
+              style={styles}
+            />
               <h2 className="md:text-4xl text-2xl md:leading-tight leading-tight font-semibold text-txtcolor">
                 I am Professional User <span className="text-primary">Experience Designer</span>
               </h2>
