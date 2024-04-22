@@ -14,12 +14,12 @@ const Services = () => {
           <div class="flex flex-col md:flex-row gap-5">
             <div class="w-full md:w-1/2">
               <div class="flex flex-col gap-5">
-                <div class="h-[216px] bg-bgcolor flex flex-col items-start rounded-lg p-4">
+                <div class="h-[216px] bg-bgcolor flex flex-col items-start rounded-lg p-4 hover:bg-primary/10">
                   <img src={UIandUX} class="mb-5" alt="UI/UX" />
                   <p class="mt-2 font-semibold text-txtcolor">UI/UX Design</p>
                   <p class="mt-2 text-txtcolor">Designing with the user's needs and preferences in mind</p>
                 </div>
-                <div class="h-[216px] bg-bgcolor flex flex-col items-start rounded-lg p-4">
+                <div class="h-[216px] bg-bgcolor flex flex-col items-start rounded-lg p-4 hover:bg-primary/10">
                   <img src={Graphic} class="mb-5" alt="Graphic" />
                   <p class="mt-2 font-semibold text-txtcolor">Graphic Design</p>
                   <p class="mt-2 text-txtcolor">Create visual assets and bring design concepts to life</p>
@@ -28,12 +28,12 @@ const Services = () => {
             </div>
             <div class="w-full md:w-1/2">
               <div class="flex flex-col gap-5">
-                <div class="h-[216px] bg-bgcolor flex flex-col items-start rounded-lg p-4">
+                <div class="h-[216px] bg-bgcolor flex flex-col items-start rounded-lg p-4 hover:bg-primary/10">
                   <img src={SEO} class="mb-5" alt="SEO" />
                   <p class="mt-2 font-semibold text-txtcolor">SEO Optimisation</p>
                   <p class="mt-2 text-txtcolor">Improving a website's visibility and ranking in search engine results</p>
                 </div>
-                <div class="h-[216px] bg-bgcolor flex flex-col items-start rounded-lg p-4">
+                <div class="h-[216px] bg-bgcolor flex flex-col items-start rounded-lg p-4 hover:bg-primary/10">
                   <img src={WebDev} class="mb-5" alt="Web Dev" />
                   <p class="mt-2 font-semibold text-txtcolor">Web Development</p>
                   <p class="mt-2 text-txtcolor">Create functional, visually appealing, and user-friendly Website</p>
@@ -61,7 +61,7 @@ const Services = () => {
               href="#contact"
               className="inline-block"
             >
-              <button className="btn-primary ease-in duration-300 hover:bg-primary/80">
+              <button className="btn-primary ease-in duration-300 hover:bg-primary/80 hover:scale-105 hover:transition-transform">
                 Hire Me
               </button>
             </a>

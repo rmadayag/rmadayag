@@ -155,7 +155,7 @@ const Project = () => {
       label_to: "WEB DESIGN | DEVELOPMENT",
       name: "SportsTXT",
       description:
-        "SportsTXT is an online platform designed to deliver the ultimate sports fan experience. Engage with other fans, get insider facts about your favorite teams",
+        "Being a sports fan is not just about watching games. SportsTXT is an online platform designed to deliver the ultimate sports fan experience. Engage with other fans, get insider facts about your favorite teams, and so much more.",
       typography1: "Poppins",
       typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
       typography2: "Poppins",
@@ -255,7 +255,7 @@ const Project = () => {
       type: "Type : Website",
       design_tool: "Design Tool : Figma",
       live_preview: "https://www.figma.com/proto/iDw0PzGdGinh46iqpauXiL/Projects?type=design&node-id=5-1893&t=d1Q1xZBTjVSGw1Qe-0&scaling=min-zoom&page-id=1%3A5495",
-    }, 
+    },
     {
       img_popup: Wittytongues_popup,
       img: project9,
@@ -315,10 +315,10 @@ const Project = () => {
           </h2>
         </div>
         <div className="flex flex-col md:flex-row md:gap-2 w-full justify-center">
-  <button onClick={() => setActiveTab("UI/UX DESIGN")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "UI/UX DESIGN" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>UI/UX Design</button>
-  <button onClick={() => setActiveTab("WEB DESIGN | DEVELOPMENT")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "WEB DESIGN | DEVELOPMENT" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>Design | Development</button>
-  <button onClick={() => setActiveTab("GRAPHIC DESIGN")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "GRAPHIC DESIGN" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>Graphic Design</button>
-</div>
+          <button onClick={() => setActiveTab("UI/UX DESIGN")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "UI/UX DESIGN" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>UI/UX Design</button>
+          <button onClick={() => setActiveTab("WEB DESIGN | DEVELOPMENT")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "WEB DESIGN | DEVELOPMENT" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>Design | Development</button>
+          <button onClick={() => setActiveTab("GRAPHIC DESIGN")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "GRAPHIC DESIGN" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>Graphic Design</button>
+        </div>
 
         <div className="max-w-full gap-5">
           <Swiper
@@ -334,15 +334,16 @@ const Project = () => {
           >
             {filteredProjects.map((project, index) => (
               <SwiperSlide key={index}>
-                <div className="flex flex-col items-left py-5 px-5 bg-bgaccent rounded-lg gap-1">
+                <div className="flex flex-col items-left py-5 px-5 bg-bgaccent rounded-lg gap-1 hover:bg-primary/10">
                   <img src={project.img} alt={project.name} className="w-full h-[200px] object-cover rounded-lg mb-3" />
                   <p className="font-regular text-txtcolor/50 text-sm">{project.label}</p>
                   <h3 className="text-lg font-semibold text-txtcolor">{project.name}</h3>
                   <p className="font-regular text-txtcolor">{project.description.substring(0, 120) + "..."}</p>
                   <div className="flex gap-2 mt-1">
-                    <button onClick={() => openPopup(project)} className="text-primary bg-accent/10 px-2 py-1 rounded-lg">Read More</button>
+                    <button onClick={() => openPopup(project)} className="text-primary bg-accent/10 px-2 py-1 rounded-lg hover:scale-105">Read More</button>
                   </div>
                 </div>
+
               </SwiperSlide>
             ))}
           </Swiper>
@@ -358,7 +359,7 @@ const Project = () => {
             {/* Popup content */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-8">
               {/* Project image */}
-              <div className="mb-5 md:mb-0">
+              <div className="mb-5 md:mb-0 overflow-hidden rounded-lg transform transition-transform hover:scale-105">
                 <img src={selectedProject.img_popup} alt={selectedProject.name} className="rounded-lg" />
               </div>
               {/* Project details */}
@@ -381,9 +382,9 @@ const Project = () => {
                 <a
                   href={selectedProject.live_preview}
                   target="_blank"
-                  className="text-primary bg-primary/10 px-2 py-1 inline-block rounded-lg"
+                  className="text-primary bg-primary/10 px-2 py-1 inline-block rounded-lg hover:scale-105"
                 >
-                  Visit Site
+                  Live Preview
                 </a>
               </div>
             </div>
@@ -401,9 +402,10 @@ const Project = () => {
             {/* Popup content */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-8">
               {/* Project image */}
-              <div className="mb-5 md:mb-0">
+              <div className="mb-5 md:mb-0 overflow-hidden rounded-lg transform transition-transform hover:scale-105">
                 <img src={selectedProject.img_popup} alt={selectedProject.name} className="rounded-lg" />
               </div>
+
               {/* Project details */}
               <div>
                 {/* Close button */}

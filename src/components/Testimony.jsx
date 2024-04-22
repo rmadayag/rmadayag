@@ -80,7 +80,7 @@ const Testimony = () => {
           >
             {projects.map((project, index) => (
               <SwiperSlide key={index}>
-                <div className="flex flex-col items-end py-5 px-5 bg-bgcolor rounded-lg gap-1">
+                <div className="flex flex-col items-end py-5 px-5 bg-bgcolor rounded-lg gap-1 hover:bg-primary/10">
                   <img src={project.img} alt="Quote" className="w-[40px]" />
                   <div className="flex flex-col w-full h-[80px]">
                     <h3 className="text-lg font-semibold text-txtcolor">

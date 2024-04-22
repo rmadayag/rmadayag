@@ -97,7 +97,7 @@ const Contact = () => {
             {emailError && <span className="text-red-500">{emailError}</span>}
             <textarea name="message" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Message" rows={10} required className={messageError ? "border-red-500" : ""}></textarea>
             {messageError && <span className="text-red-500">{messageError}</span>}
-            <button type="submit" className="btn-primary w-fit hover:bg-primary/70">Send Message</button>
+            <button type="submit" className="btn-primary ease-in duration-300 w-fit hover:bg-primary/70 hover:scale-105 hover:transition-transform">Send Message</button>
             {isSuccess && <p className="text-green-500">Message sent successfully!</p>}
           </form>
         </div>
