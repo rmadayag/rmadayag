@@ -16,6 +16,7 @@ import project10 from "../assets/images/SL.png";
 import project11 from "../assets/images/ST.png";
 import project12 from "../assets/images/Afflyfe.png";
 import project13 from "../assets/images/Detox.png";
+import project14 from "../assets/images/Numa.png";
 import intro from "../assets/images/Portfolio.svg";
 import Noa_popup from "../assets/images/Noa_popup.png";
 import Noa_color from "../assets/images/Noa_color.svg";
@@ -38,6 +39,9 @@ import Chekkee_popup from "../assets/images/Chekkee_popup.png";
 import NMS_color from "../assets/images/NMS_color.svg";
 import NMS_logo from "../assets/images/NMS_logo.svg";
 import NMS_popup from "../assets/images/NMS_popup.png";
+import Numa_color from "../assets/images/Numa_color.svg";
+import Numa_logo from "../assets/images/Numa_logo.svg";
+import Numa_popup from "../assets/images/Numa_popup.png";
 import Maha_color from "../assets/images/Maha_color.svg";
 import Maha_logo from "../assets/images/Maha_logo.svg";
 import Maha_popup from "../assets/images/Maha_popup.png";
@@ -200,6 +204,24 @@ const Project = () => {
       type: "Type : Website",
       design_tool: "Platform : Wordpress",
       live_preview: "https://sharemycircle.com/",
+    },
+    {
+      img_popup: Numa_popup,
+      img: project14,
+      label: "WEB DESIGN | DEVELOPMENT",
+      label_to: "WEB DESIGN | DEVELOPMENT",
+      name: "Numa",
+      description:
+        "Numa Recovery Center is a leading detox and rehab In Los Angeles, CA, that serves to eliminate financial barriers to treatment. Healing Begins Here.",
+      typography1: "Inter",
+      typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
+      typography2: "Inter",
+      typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
+      color_svg: Numa_color,
+      logo_svg: Numa_logo,
+      type: "Type : Website",
+      design_tool: "Platform : Wordpress",
+      live_preview: "https://numarecoverycenters.com/",
     },
     {
       img_popup: NMS_popup,
