@@ -68,7 +68,7 @@ const Hero = () => {
             <h1 className="md:text-6xl text-4xl md:leading-tight leading-tight font-semibold text-txtcolor">
               I'm <span className="text-primary">Rheynalyn</span> Madayag
             </h1>
-            <h4 className="md:text-1xl text-lg font-regular text-txtcolor">
+            <h4 className="md:text-1xl text-lg text-txtcolor">
               UI/UX Designer and Web Developer
             </h4>
             <button
