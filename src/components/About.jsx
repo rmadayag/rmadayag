@@ -143,7 +143,7 @@ const About = () => {
               style={styles}
             />
               <h2 className="md:text-4xl text-2xl md:leading-tight leading-tight font-semibold text-txtcolor">
-                I am Professional User <span className="text-primary">Experience Designer</span>
+                I am Professional <span className="text-primary">UX/UI Designer and Web developer</span>
               </h2>
               <p className="md:text-1xl text-lg font-regular text-txtcolor">
                 I design and develop services for customers specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences.

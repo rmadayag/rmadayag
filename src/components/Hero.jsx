@@ -69,9 +69,7 @@ const Hero = () => {
               I'm <span className="text-primary">Rheynalyn</span> Madayag
             </h1>
             <h4 className="md:text-1xl text-lg font-regular text-txtcolor">
-              I'm a UI/UX Designer and Web Developer. I strive to build
-              immersive and beautiful web applications through carefully
-              crafted code and user-centric design.
+              UI/UX Designer and Web Developer
             </h4>
             <button
               onClick={handleDownload}
