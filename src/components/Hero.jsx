@@ -68,12 +68,12 @@ const Hero = () => {
             <h1 className="md:text-6xl text-4xl md:leading-tight leading-tight font-semibold text-txtcolor">
               I'm <span className="text-primary">Rheynalyn</span> Madayag
             </h1>
-            <h4 className="md:text-1xl text-lg font-bold text-txtcolor">
+            <h4 className="md:text-1xl text-[20px] font-bold text-txtcolor">
               UI/UX Designer and Web Developer
             </h4>
             <button
               onClick={handleDownload}
-              className="btn-primary ease-in duration-300 hover:bg-primary/80 hover:scale-105 hover:transition-transform"
+              className="btn-primary ease-in duration-300 hover:bg-primary/80 hover:scale-105 hover:transition-transform p-5"
             >
               Download CV
             </button>
