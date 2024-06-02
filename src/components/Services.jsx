@@ -59,7 +59,7 @@ const Services = () => {
         {/* Text content container */}
         <div className="flex-1 md:order-1">
 
-          <div className="flex flex-col items-start gap-5">
+          <div className="flex flex-col items-start gap-8">
           <div className="flex flex-col items-start gap-5">
             <animated.img
               src={intro}
