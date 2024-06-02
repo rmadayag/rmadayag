@@ -60,6 +60,7 @@ const Services = () => {
         <div className="flex-1 md:order-1">
 
           <div className="flex flex-col items-start gap-5">
+          <div className="flex flex-col items-start gap-5">
             <animated.img
               src={intro}
               alt="Services"
@@ -73,6 +74,7 @@ const Services = () => {
               I blend creativity with technical expertise
               to craft visually stunning and intuitive interfaces.
             </h4>
+            </div>
             <a
               href="#contact"
               className="inline-block"
