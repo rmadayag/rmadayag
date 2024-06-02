@@ -59,7 +59,8 @@ const Hero = () => {
         </div>
         {/* Text content container */}
         <animated.div style={fadeIn} className="flex-1 md:order-1 items-start">
-          <div className="flex flex-col items-start gap-5">
+          <div className="flex flex-col items-start gap-8">
+            <div className="flex flex-col items-start gap-5">
             <animated.img
               src={intro}
               alt="Introduction"
@@ -71,9 +72,10 @@ const Hero = () => {
             <h4 className="md:text-1xl text-[20px] font-bold text-txtcolor">
             Web Developer | UI/UX Designer
             </h4>
+            </div>
             <button
               onClick={handleDownload}
-              className="btn-primary ease-in duration-300 hover:bg-primary/80 hover:scale-105 hover:transition-transform mt-[20px]"
+              className="btn-primary ease-in duration-300 hover:bg-primary/80 hover:scale-105 hover:transition-transform"
             >
               Download CV
             </button>
