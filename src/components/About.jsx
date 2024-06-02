@@ -146,7 +146,7 @@ const About = () => {
               A Dedicated Web Developer <span className="text-primary">and UI/UX Designer</span>
               </h2>
               <p className="md:text-1xl text-lg font-regular text-txtcolor">
-              I specialize in building user-friendly websites and applications that not only look great but also perform seamlessly. My goal is to blend creativity and technical expertise to deliver solutions that meet both user needs and business objectives.
+              I specialize in building user-friendly websites and applications that not only look great but also perform seamlessly.
               </p>
               <div className="flex flex-col md:flex-row md:gap-2 w-full">
                 <button
