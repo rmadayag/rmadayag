@@ -69,7 +69,7 @@ const Hero = () => {
               I'm <span className="text-primary">Rheynalyn</span> Madayag
             </h1>
             <h4 className="md:text-1xl text-[20px] font-bold text-txtcolor">
-              UI/UX Designer and Web Developer
+            Web Developer | UI/UX Designer
             </h4>
             <button
               onClick={handleDownload}
