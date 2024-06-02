@@ -73,7 +73,7 @@ const Hero = () => {
             </h4>
             <button
               onClick={handleDownload}
-              className="btn-primary ease-in duration-300 hover:bg-primary/80 hover:scale-105 hover:transition-transform"
+              className="btn-primary ease-in duration-300 hover:bg-primary/80 hover:scale-105 hover:transition-transform mt-[20px]"
             >
               Download CV
             </button>
