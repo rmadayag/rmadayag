@@ -96,11 +96,6 @@ const About = () => {
           <p className="text-lg">New Media Services Pty Ltd.</p>
           <p className="text-sm text-txtcolor/50">November 2022 – July 2024</p>
         </div>
-        <div>
-          <p className="text-lg font-semibold">Jr. Web Developer Intern</p>
-          <p className="text-lg">Bitshares Labs Inc.</p>
-          <p className="text-sm text-txtcolor/50">May 2022 – August 2022</p>
-        </div>
       </div>
 
     ),
