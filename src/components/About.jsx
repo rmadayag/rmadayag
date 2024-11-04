@@ -86,15 +86,20 @@ const About = () => {
     ),
     experience: (
       <div className="flex flex-col gap-5 text-txtcolor py-2">
+         <div>
+          <p className="text-lg font-semibold">Web Developer</p>
+          <p className="text-lg">The Digital Juice Pty Ltd.</p>
+          <p className="text-sm text-txtcolor/50">July 2024 – Present</p>
+        </div>
         <div>
           <p className="text-lg font-semibold">Web Designer</p>
           <p className="text-lg">New Media Services Pty Ltd.</p>
-          <p className="text-sm text-txtcolor/50">November 14, 2022 to Present</p>
+          <p className="text-sm text-txtcolor/50">November 2022 – July 2024</p>
         </div>
         <div>
           <p className="text-lg font-semibold">Jr. Web Developer Intern</p>
           <p className="text-lg">Bitshares Labs Inc.</p>
-          <p className="text-sm text-txtcolor/50">May 23, 2022 to August 4, 2022</p>
+          <p className="text-sm text-txtcolor/50">May 2022 – August 2022</p>
         </div>
       </div>
 
