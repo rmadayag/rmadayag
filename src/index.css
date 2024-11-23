@@ -10,24 +10,27 @@ body {
   @apply box-border bg-bgcolor text-gray-100;
 }
 .btn-primary {
-  @apply bg-primary font-medium text-white rounded-[10px] py-3 px-6 flex items-center gap-2;
+  @apply bg-secondary font-bold text-black rounded-[70px] md:py-[20px] md:px-[40px] py-[10px] px-[30px] flex items-center gap-2 border-4 border-black md:text-xl text-[16px];
 }
 
 .aboutImg::after {
-  @apply content-[''] w-full left-0 top-0 rounded-xl rotate-12 h-full absolute bg-gray-600 -z-10;
+  @apply content-[''] w-full left-0 top-0 rounded-xl rotate-12 h-full absolute bg-gray-600 -z-10 ;
 }
 
 .swiper-pagination-bullet {
-  @apply bg-white;
+  @apply bg-black;
 }
 
 input,
 textarea {
-  @apply bg-bgcolor outline-none rounded-lg p-3;
+  @apply bg-black/5 outline-none p-3 w-full ;
 }
+
 ::placeholder {
   @apply text-lg;
 }
+
+
 
 ::selection {
   @apply bg-primary;

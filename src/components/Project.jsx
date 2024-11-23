@@ -1,8 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Autoplay } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
 import project1 from "../assets/images/Noa.png";
 import project2 from "../assets/images/Stranger Lust.png";
 import project3 from "../assets/images/SportsTXT.png";
@@ -57,10 +53,8 @@ import Detox_popup from "../assets/images/Detox_popup.png";
 import { useSpring, animated } from "react-spring";
 
 
-SwiperCore.use([Pagination, Autoplay]);
-
 const Project = () => {
-  const [activeTab, setActiveTab] = useState("UI/UX DESIGN");
+  const [activeTab, setActiveTab] = useState("WEB DESIGN | DEVELOPMENT");
   const [showPopup, setShowPopup] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -93,7 +87,7 @@ const Project = () => {
       typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
       color_svg: Noa_color,
       logo_svg: Noa_logo,
-      type: "Type : Mobile Application | Web Application",
+      type: " Mobile Application | Web Application",
       design_tool: "Design Tool : Figma",
       live_preview: "https://noacoach.com/",
     },
@@ -111,7 +105,7 @@ const Project = () => {
       typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
       color_svg: Strangerlust_color,
       logo_svg: Strangerlust_logo,
-      type: "Type : Web Application",
+      type: "Web Application",
       design_tool: "Design Tool : Figma",
       live_preview: "https://strangerlust.com/",
     },
@@ -129,7 +123,7 @@ const Project = () => {
       typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
       color_svg: Maha_color,
       logo_svg: Maha_logo,
-      type: "Type : Web Application",
+      type: "Web Application",
       design_tool: "Design Tool : Figma",
       live_preview: "https://myalliedhealthacademy.com/",
     },
@@ -147,7 +141,7 @@ const Project = () => {
       typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
       color_svg: Chekkee_color,
       logo_svg: Chekkee_logo,
-      type: "Type : Website",
+      type: "UI design - User research - Wordpress develop",
       design_tool: "Platform : Wordpress",
       live_preview: "https://chekkee.com/",
     },
@@ -165,7 +159,7 @@ const Project = () => {
       typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
       color_svg: SportTXT_color,
       logo_svg: SportTXT_logo,
-      type: "Type : Website",
+      type: "UI design - User research - Wordpress develop",
       design_tool: "Platform : Wordpress",
       live_preview: "https://sportstxt.com/",
     },
@@ -183,7 +177,7 @@ const Project = () => {
       typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
       color_svg: SupportTXT_color,
       logo_svg: SupportTXT_logo,
-      type: "Type : Website",
+      type: "UI design - User research - Wordpress develop",
       design_tool: "Platform : Wordpress",
       live_preview: "https://supporttxt.com/",
     },
@@ -201,7 +195,7 @@ const Project = () => {
       typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
       color_svg: SMC_color,
       logo_svg: SMC_logo,
-      type: "Type : Website",
+      type: "UI design - User research - Wordpress develop",
       design_tool: "Platform : Wordpress",
       live_preview: "https://sharemycircle.com/",
     },
@@ -219,7 +213,7 @@ const Project = () => {
       typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
       color_svg: Numa_color,
       logo_svg: Numa_logo,
-      type: "Type : Website",
+      type: "UI design - User research - Wordpress develop",
       design_tool: "Platform : Wordpress",
       live_preview: "https://numarecoverycenters.com/",
     },
@@ -237,7 +231,7 @@ const Project = () => {
       typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
       color_svg: NMS_color,
       logo_svg: NMS_logo,
-      type: "Type : Website",
+      type: "UI design - User research - Wordpress develop",
       design_tool: "Platform : Wordpress",
       live_preview: "https://nms.ph/",
     },
@@ -255,7 +249,7 @@ const Project = () => {
       typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
       color_svg: Afflyfe_color,
       logo_svg: Afflyfe_logo,
-      type: "Type : Website",
+      type: "UI design - User research - Wordpress develop",
       design_tool: "Design Tool : Figma",
       live_preview: "https://www.figma.com/proto/iDw0PzGdGinh46iqpauXiL/Projects?type=design&node-id=1-1999&t=d1Q1xZBTjVSGw1Qe-0&scaling=min-zoom&page-id=0%3A1",
     },
@@ -273,7 +267,7 @@ const Project = () => {
       typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
       color_svg: Detox_color,
       logo_svg: Detox_logo,
-      type: "Type : Website",
+      type: "UI design - User research - Wordpress develop",
       design_tool: "Design Tool : Figma",
       live_preview: "https://www.figma.com/proto/iDw0PzGdGinh46iqpauXiL/Projects?type=design&node-id=5-1893&t=d1Q1xZBTjVSGw1Qe-0&scaling=min-zoom&page-id=1%3A5495",
     },
@@ -287,7 +281,7 @@ const Project = () => {
         "The central element of the logo is, of course, the tongue. It's a universal symbol of communication, speaking, and expression. It's bold and prominent, indicating the confidence and assertiveness associated with effective communication",
       description_2:
         "The tongue is portrayed in a stylized manner, perhaps with a curve or a twist, signifying wit, humor, and creativity. This suggests that communication with Witty Tongues isn't just about conveying information but doing so in an engaging and entertaining way.",
-      type: "Type : Logo",
+      type: "Design Logo",
     },
     {
       img_popup: SL_popup,
@@ -299,7 +293,7 @@ const Project = () => {
         "The logo for Stranger Lust aims to capture the essence of intrigue and sensuality while maintaining tastefulness and elegance. It might feature a combination of elegant typography and subtle imagery, such as silhouettes or suggestive shapes, to evoke curiosity and anticipation.",
       description_2:
         "The logo's composition should be visually balanced and scalable across different platforms. Importantly, the design should avoid explicit imagery or vulgar connotations to uphold the brand's integrity and appeal.",
-      type: "Type : Logo",
+      type: "Design Logo",
     },
     {
       img_popup: ST_popup,
@@ -311,7 +305,7 @@ const Project = () => {
         "The logo for Sportstxt aims to represent the brand's focus on sports-related content through a combination of text and imagery. The typography is chosen to be bold and modern, reflecting the energy of sports. ",
       description_2:
         "Additionally, sports-related icons or symbols may be incorporated into the design to enhance its relevance. The color palette is vibrant and dynamic, evoking the excitement of sports events. The logo's composition is carefully balanced to ensure visual appeal and versatility across different platforms. ",
-      type: "Type : Logo",
+      type: "Design Logo",
     },
   ];
 
@@ -338,52 +332,139 @@ const Project = () => {
 
 
   return (
-    <section id="projects" className="md:py-36 py-12 bg-bgcolor relative">
-      <div className="flex flex-col justify-center items-center px-5 max-w-6xl mx-auto w-full gap-10">
-        <div className="flex flex-col items-center gap-5">
-          <animated.img
-            src={intro}
-            alt="Projects"
-            style={styles}
-          />
-          <h2 className="text-2xl md:text-4xl leading-tight font-semibold text-txtcolor">
-            My Creative <span className="text-primary">Works</span>
-          </h2>
-        </div>
-        <div className="flex flex-col md:flex-row md:gap-2 w-full justify-center">
-          <button onClick={() => setActiveTab("UI/UX DESIGN")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "UI/UX DESIGN" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>UI/UX Design</button>
-          <button onClick={() => setActiveTab("WEB DESIGN | DEVELOPMENT")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "WEB DESIGN | DEVELOPMENT" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>Design | Development</button>
-          <button onClick={() => setActiveTab("GRAPHIC DESIGN")} className={`rounded-[10px] w-full md:w-auto text-lg md:mr-2 md:mb-0 mb-2 py-2 px-4 font-regular focus:outline-none ${activeTab === "GRAPHIC DESIGN" ? "bg-primary text-white" : "bg-white text-txtcolor hover:bg-primary hover:text-white"}`}>Graphic Design</button>
-        </div>
+    <section id="projects" className="h-auto flex items-center py-12 md:py-[150px]">
+      <div className="flex flex-col justify-center items-center px-5 max-w-6xl mx-auto w-full gap-2">
+      <div className="lg:w-100 h-full relative sm:w-100 w-full max-w-lg flex flex-col items-center justify-center">
+  <h2 className="md:text-[30px] text-2xl font-medium text-txtcolor mb-10 leading-0 md:leading-10 text-center">
+    My Creative Works
+  </h2>
+</div>
 
-        <div className="max-w-full gap-5">
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={20}
-            loop={true}
-            autoplay={{ delay: 3000 }}
-            pagination={{ clickable: true }}
-            breakpoints={{
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
+        {/* Tabs */}
+<div className="flex flex-col md:flex-row md:gap-2 w-full justify-center mb-8">
+<button
+    onClick={() => setActiveTab("WEB DESIGN | DEVELOPMENT")}
+    className={`w-full md:w-auto text-[18px] py-4 px-6 font-bold focus:outline-none transition-all duration-300 ease-in-out rounded-[70px] border-[4px] ${
+      activeTab === "WEB DESIGN | DEVELOPMENT"
+        ? "bg-secondary text-black border-black"
+        : "bg-white text-txtcolor border-transparent hover:bg-secondary hover:text-black hover:border-black"
+    }`}
+  >
+    Design | Development
+  </button>
+  <button
+    onClick={() => setActiveTab("UI/UX DESIGN")}
+    className={`w-full md:w-auto text-[18px] py-4 px-6 font-bold focus:outline-none transition-all duration-300 ease-in-out rounded-[70px] border-[4px] ${
+      activeTab === "UI/UX DESIGN"
+        ? "bg-secondary text-black border-black"
+        : "bg-white text-txtcolor border-transparent hover:bg-secondary hover:text-black hover:border-black"
+    }`}
+  >
+    UI/UX Design
+  </button>
+  <button
+    onClick={() => setActiveTab("GRAPHIC DESIGN")}
+    className={`w-full md:w-auto text-[18px] py-4 px-6 font-bold focus:outline-none transition-all duration-300 ease-in-out rounded-[70px] border-[4px] ${
+      activeTab === "GRAPHIC DESIGN"
+        ? "bg-secondary text-black border-black"
+        : "bg-white text-txtcolor border-transparent hover:bg-secondary hover:text-black hover:border-black"
+    }`}
+  >
+    Graphic Design
+  </button>
+</div>
+
+<div className="max-w-full w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 md:gap-y-20 gap-y-10 gap-x-20">
+  {filteredProjects.map((project, index) => (
+    <div
+      key={index}
+      className="flex flex-col items-start md:p-10 p-6 bg-white  border-4 border-black cursor-pointer group shadow-[10.03px_10.03px_0px_#BFBFB4]"
+      onClick={(e) => {
+        e.stopPropagation(); // Prevent Swiper from detecting this click
+        openPopup(project); // Open popup on container click
+      }}
+    >
+      {/* Image */}
+      <div className="relative overflow-hidden w-full md:h-[300px] h-[200px] mb-6 transition-all border-4 border-black">
+        <img
+          src={project.img}
+          alt={project.name}
+          className="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110 group-hover:rotate-3 origin-center"
+        />
+      </div>
+
+      {/* Title and SVG */}
+      <div className="flex items-center justify-between w-full">
+        <h2 className="md:text-[26px] text-xl font-semibold text-txtcolor">{project.name}</h2>
+        <div className="ml-auto">
+          <svg
+            width="41"
+            height="41"
+            viewBox="0 0 41 41"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="transition-transform group-hover:scale-110 cursor-pointer"
           >
-            {filteredProjects.map((project, index) => (
-              <SwiperSlide key={index}>
-                <div className="flex flex-col items-left py-5 px-5 bg-bgaccent rounded-lg gap-1 hover:bg-primary/10">
-                  <img src={project.img} alt={project.name} className="w-full h-[200px] object-cover rounded-lg mb-3" />
-                  <p className="font-regular text-txtcolor/50 text-sm">{project.label}</p>
-                  <h3 className="text-lg font-semibold text-txtcolor">{project.name}</h3>
-                  <p className="font-regular text-txtcolor">{project.description.substring(0, 120) + "..."}</p>
-                  <div className="flex gap-2 mt-1">
-                    <button onClick={() => openPopup(project)} className="text-primary bg-accent/10 px-2 py-1 rounded-lg hover:scale-105">Read More</button>
-                  </div>
-                </div>
-
-              </SwiperSlide>
-            ))}
-          </Swiper>
+            <g filter="url(#filter0_d_318_18085)">
+              <rect
+                width="35.4404"
+                height="35.4404"
+                transform="translate(0.921875 0.961914)"
+                fill="black"
+              />
+              <path
+                d="M24.5848 12.443L25.213 22.9767M24.5848 12.443L14.0512 13.0712M24.5848 12.443L13.0284 25.4651"
+                stroke="#FDFDFD"
+                strokeWidth="2.2385"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </g>
+            <defs>
+              <filter
+                id="filter0_d_318_18085"
+                x="0.921875"
+                y="0.961914"
+                width="39.172"
+                height="39.171"
+                filterUnits="userSpaceOnUse"
+                colorInterpolationFilters="sRGB"
+              >
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dx="3.73057" dy="3.73057" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0.556863 0 0 0 0 0.560784 0 0 0 0 0.529412 0 0 0 1 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_318_18085"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow_318_18085"
+                  result="shape"
+                />
+              </filter>
+            </defs>
+          </svg>
         </div>
+      </div>
+      <p className="text-txtcolor mt-2 md:text-[20px] text-[16px]">{project.type}</p>
+    </div>
+  ))}
+</div>
+
+        
       </div>
       {/* General Project Popup */}
       {showPopup && selectedProject && activeTab !== "GRAPHIC DESIGN" && (
@@ -410,7 +491,6 @@ const Project = () => {
                 <h2 className="text-txtcolor text-2xl font-semibold mb-5">{selectedProject.name}</h2>
                 <p className="text-txtcolor/50 mb-2">{selectedProject.label_to}</p>
                 <p className="text-txtcolor mb-5">{selectedProject.description}</p>
-                <p className="text-txtcolor/50 mb-2">{selectedProject.type}</p>
                 <p className="text-txtcolor/50 mb-5">{selectedProject.design_tool}</p>
                 <img src={selectedProject.logo_svg} alt={selectedProject.name} className="mb-5" />
                 <img src={selectedProject.color_svg} alt={selectedProject.name} className="mb-5" />
@@ -454,7 +534,6 @@ const Project = () => {
                 <h2 className="text-txtcolor text-2xl font-semibold mb-5">{selectedProject.name}</h2>
                 {/* More project details */}
                 <p className="text-txtcolor/50 mb-2">{selectedProject.label}</p>
-                <p className="text-txtcolor/50 mb-5">{selectedProject.type}</p>
                 <p className="text-txtcolor mb-5">{selectedProject.description}</p>
                 <p className="text-txtcolor mb-2">{selectedProject.description_2}</p>
                 {/* Project links */}

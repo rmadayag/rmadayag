@@ -1,114 +1,55 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Autoplay } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
 import project1 from "../assets/images/qt.svg";
 import project2 from "../assets/images/qt.svg";
 import project3 from "../assets/images/qt.svg";
 import project4 from "../assets/images/qt.svg";
-import project5 from "../assets/images/qt.svg";
-import intro from "../assets/images/Testimonial.svg";
-import { useSpring, animated } from "react-spring";
 
-SwiperCore.use([Pagination, Autoplay]);
+// Avatar images for each client
+import avatar1 from "../assets/images/avatar1.png";
+import avatar2 from "../assets/images/avatar2.png";
+import avatar3 from "../assets/images/avatar3.png";
+import avatar4 from "../assets/images/avatar4.png";
 
 const Testimony = () => {
   const projects = [
-    {
-      img: project1,
-      name: "Steph",
-      description:
-        "So happy with this design to be used thank you :) ",
-     
-    },
-    {
-      img: project2,
-      name: "Bob",
-      description:
-        "Love the first one, Great Job! ",
-     
-    },
-    {
-      img: project3,
-      name: "Alex",
-      description:
-        "Love the color scheme and overall layout. ",
-
-    },
-    {
-      img: project4,
-      name: "Dominic",
-      description:
-        "The design is looking really sleek and modern, which I love!  ",
-   
-    },
-    {
-      img: project5,
-      name: "Brandon",
-      description:
-        "Overall, the design is looking great!",
-     
-    },
+    { img: avatar1, name: "Dom", description: "I'm so happy with this design and excited to have it used—thank you so much! :)" },
+    { img: avatar2, name: "Seff", description: "I'm happy I chose to collaborate with you. The project was completed on time and met all the requirements." },
+    { img: avatar3, name: "Alex", description: "We were delighted to learn how you addressed and resolved the user interface issues and challenges on our website." },
+    { img: avatar4, name: "Steph", description: "The design looks incredibly sleek and modern, with clean lines, contemporary style, and attention to detail that really stand out." },
   ];
 
-  const styles = useSpring({
-    from: { transform: 'scale(1)' },
-    to: [
-      { transform: 'scale(1.3)' },
-      { transform: 'scale(1)' }
-    ],
-    config: { duration: 1000 },
-    loop: { reverse: true }
-  });
+  const getRotation = (index) => {
+    const rotations = [-2, 10, 10, -2];
+    return `rotate(${rotations[index] || (index + 1) * 3}deg)`;
+  };
 
   return (
-    <section id="testimony" className="md:py-36 py-12 bg-bgaccent">
-      <div className="flex flex-col justify-center items-center px-5 max-w-6xl mx-auto w-full gap-10">
-        <div className="flex flex-col items-center gap-5">
-        <animated.img
-              src={intro}
-              alt="Testimony"
-              style={styles}
-            />
-          <h2 className="text-2xl md:text-4xl leading-tight font-semibold text-txtcolor">
-            What Clients <span className="text-primary">Say</span>
+    <section id="testimony" className="py-12 md:py-[150px]">
+      <div className="flex flex-col px-5 max-w-6xl mx-auto w-full gap-10">
+        <div className="lg:w-full h-full relative sm:w-full w-full max-w-lg flex flex-col">
+          <h2 className="md:text-[30px] text-2xl font-medium text-txtcolor md:mb-10 mb-0 leading-0 md:leading-10">
+            Here’s what my clients are saying about my work
           </h2>
         </div>
-        <div className="max-w-full gap-5">
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={20}
-            loop={true}
-            autoplay={{
-              delay: 3000,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            breakpoints={{
-              768: {
-                slidesPerView: 3,
-              },
-            }}
-            className="w-full" // Ensure the Swiper takes full width
-          >
-            {projects.map((project, index) => (
-              <SwiperSlide key={index}>
-                <div className="flex flex-col items-end py-5 px-5 bg-bgcolor rounded-lg gap-1 hover:bg-primary/10">
-                  <img src={project.img} alt="Quote" className="w-[40px]" />
-                  <div className="flex flex-col w-full h-[80px]">
-                    <h3 className="text-lg font-semibold text-txtcolor">
-                      {project.name}
-                    </h3>
-                    <p className="font-regular text-txtcolor">
-                      {project.description}
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 lg:gap-x-[0px]">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-left md:p-10 p-6 bg-white border-4 border-black md:gap-8 gap-4 hover:bg-[#FFC9F0] transition-all duration-200 ease-in-out shadow-[10.03px_10.03px_0px_#BFBFB4]"
+              style={{ transform: getRotation(index) }}
+            >
+                <p className="font-regular text-txtcolor text-left md:text-[20px] text-[16px]">{project.description}</p>
+              <div className="flex items-center gap-4">
+                <img
+                  src={project.img}
+                  alt={`Testimonial from ${project.name}: ${project.description}`}
+                  className="w-[60px] h-[60px] rounded-full" // Avatar styled as a circle
+                />
+                <h2 className="md:text-[26px] font-semibold text-txtcolor">{project.name}</h2>
+              </div>
+            
+            </div>
+          ))}
         </div>
       </div>
     </section>
