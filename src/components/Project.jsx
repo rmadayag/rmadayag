@@ -344,7 +344,7 @@ const Project = () => {
 <div className="flex flex-col md:flex-row md:gap-2 w-full justify-center mb-8">
 <button
     onClick={() => setActiveTab("WEB DESIGN | DEVELOPMENT")}
-    className={`w-full md:w-auto text-[18px] py-4 px-6 font-bold focus:outline-none transition-all duration-300 ease-in-out rounded-[70px] border-[4px] ${
+    className={`w-full md:w-auto md:text-xl text-[16px] md:py-4 px-6 py-[10px] font-bold focus:outline-none transition-all duration-300 ease-in-out rounded-[70px] border-[4px] ${
       activeTab === "WEB DESIGN | DEVELOPMENT"
         ? "bg-secondary text-black border-black"
         : "bg-white text-txtcolor border-transparent hover:bg-secondary hover:text-black hover:border-black"
@@ -354,7 +354,7 @@ const Project = () => {
   </button>
   <button
     onClick={() => setActiveTab("UI/UX DESIGN")}
-    className={`w-full md:w-auto text-[18px] py-4 px-6 font-bold focus:outline-none transition-all duration-300 ease-in-out rounded-[70px] border-[4px] ${
+    className={`w-full md:w-auto md:text-xl text-[16px] md:py-4 px-6 py-[10px] font-bold focus:outline-none transition-all duration-300 ease-in-out rounded-[70px] border-[4px] ${
       activeTab === "UI/UX DESIGN"
         ? "bg-secondary text-black border-black"
         : "bg-white text-txtcolor border-transparent hover:bg-secondary hover:text-black hover:border-black"
@@ -364,7 +364,7 @@ const Project = () => {
   </button>
   <button
     onClick={() => setActiveTab("GRAPHIC DESIGN")}
-    className={`w-full md:w-auto text-[18px] py-4 px-6 font-bold focus:outline-none transition-all duration-300 ease-in-out rounded-[70px] border-[4px] ${
+    className={`w-full md:w-auto md:text-xl text-[16px] md:py-4 px-6 py-[10px] font-bold focus:outline-none transition-all duration-300 ease-in-out rounded-[70px] border-[4px] ${
       activeTab === "GRAPHIC DESIGN"
         ? "bg-secondary text-black border-black"
         : "bg-white text-txtcolor border-transparent hover:bg-secondary hover:text-black hover:border-black"
