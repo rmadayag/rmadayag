@@ -1,27 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import hero from "../assets/images/hero.png";
-import cvPdf from "../assets/Madayag, Rheynalyn C.pdf";
 
 const Hero = () => {
   const [showContent, setShowContent] = useState(false);
 
-  const fadeIn = useSpring({
+  const animationProps = useSpring({
     opacity: showContent ? 1 : 0,
     marginTop: showContent ? 0 : -20,
-    from: { opacity: 0, marginTop: -20 },
-    config: { duration: 1000 },
-  });
-
-  const zoomIn = useSpring({
-    from: { transform: "scale(0.5)" },
-    to: { transform: "scale(1)" },
+    transform: showContent ? "scale(1)" : "scale(0.5)",
+    from: { opacity: 0, marginTop: -20, transform: "scale(0.5)" },
     config: { duration: 1000 },
     delay: 200,
   });
 
   const handleDownload = () => {
-    window.open(cvPdf, "_blank");
+    // Open the Google Drive folder link
+    window.open("https://drive.google.com/drive/folders/1HD-v_gAxkqfLajnqN6UdWSMyZeEKV2mg?usp=sharing", "_blank");
   };
 
   useEffect(() => {
@@ -37,7 +32,7 @@ const Hero = () => {
       <div className="flex flex-col items-center px-5 mx-auto max-w-6xl md:flex-row md:gap-10 gap-10">
         {/* Hero Image */}
         <div className="flex-1 order-1 md:order-2">
-          <animated.div style={{ ...fadeIn, ...zoomIn }}>
+          <animated.div style={animationProps}>
             <img
               src={hero}
               alt="Rheynalyn, a Web Developer and UI/UX Designer, in a professional setting"
@@ -48,7 +43,7 @@ const Hero = () => {
 
         {/* Text Section */}
         <animated.div
-          style={fadeIn}
+          style={{ opacity: animationProps.opacity, marginTop: animationProps.marginTop }}
           className="flex-1 order-2 md:order-1 w-full text-left"
         >
           <div className="flex flex-col items-start justify-center w-full gap-4">
@@ -68,7 +63,7 @@ const Hero = () => {
           <div className="mt-10">
             <button
               onClick={handleDownload}
-              aria-label="Download my CV"
+              aria-label="Download my CV from Google Drive"
               className="btn-primary ease-in duration-300 hover:bg-primary/80 hover:scale-105 transition-transform px-5 py-3 rounded:ring-primary"
             >
               Download CV
@@ -107,7 +102,7 @@ const Hero = () => {
           100% { transform: translateX(-50%); }
         }
         .animate-marquee {
-          animation: marquee 10s linear infinite;
+          animation: marquee 8s linear infinite;
         }
         .animate-wave {
           animation: wave 1s ease-in-out infinite;
