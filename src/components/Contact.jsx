@@ -24,11 +24,10 @@ const Contact = () => {
             id="contact-section"
             className="text-2xl md:text-[40px] font-medium text-txtcolor leading-0 md:leading-10 text-center"
           >
-            Let’s start designing your project
+            Let’s Discuss Your Project
           </h2>
           <p className="text-lg md:text-[20px] text-[16px] font-regular text-txtcolor text-center md:w-[60%] w-full">
-            Want to see how to transform your brand into a unique style? Send me
-            a message.
+          Let’s make something new, different and more meaningful or make thing more visual or conceptual
           </p>
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=hello.rmady@gmail.com&su=Design%20Project%20Inquiry"
