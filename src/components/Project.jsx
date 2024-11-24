@@ -4,7 +4,7 @@ import project2 from "../assets/images/Stranger Lust.png";
 import project3 from "../assets/images/SportsTXT.png";
 import project4 from "../assets/images/SupportTXT.png";
 import project5 from "../assets/images/ShareMyCircle.png";
-import project6 from "../assets/images/Chekkee.png";
+import project6 from "../assets/images/Mock up (14).png";
 import project7 from "../assets/images/NMS.png";
 import project8 from "../assets/images/Maha.png";
 import project9 from "../assets/images/Wittytongues.png";
@@ -19,6 +19,7 @@ import project17 from "../assets/images/Mock up (7).png";
 import project18 from "../assets/images/Mock up (11).png";
 import project19 from "../assets/images/Mock up (12).png";
 import project20 from "../assets/images/Mock up (10).png";
+import project21 from "../assets/images/Mock up (13).png";
 import intro from "../assets/images/Portfolio.svg";
 import Noa_popup from "../assets/images/Noa_popup.png";
 import tdj_popup from "../assets/images/Instagram.png";
@@ -27,6 +28,7 @@ import db_popup from "../assets/images/Instagram-3.png";
 import dgc_popup from "../assets/images/Instagram-4.png";
 import sp_popup from "../assets/images/Instagram-5.png";
 import lc_popup from "../assets/images/Instagram-6.png";
+import eb_popup from "../assets/images/Instagram-7.png";
 import Noa_color from "../assets/images/Noa_color.svg";
 import Noa_logo from "../assets/images/Noa_logo.svg";
 import Strangerlust_color from "../assets/images/Strangerlust_color.svg";
@@ -124,7 +126,21 @@ const Project = () => {
       type: "Web Application",
       live_preview: "https://strangerlust.com/",
     },
-  
+
+      {
+      img_popup: lc_popup,
+      img: project20,
+      label: "WEB DESIGN | DEVELOPMENT",
+      label_to: "WEB DESIGN | DEVELOPMENT",
+      name: "Lending Centric",
+      description:
+        "Lending Centric likely offers services related to financial lending, such as loans, mortgage advice, or financial consulting. Unfortunately, due to access restrictions or limitations in the website's configuration, I could not retrieve specific details. ",
+      design: "✔ Figma",
+      development: "✔ Wordpress - Elementor",
+      type: "UI design - Wordpress develop",
+      design_tool: "Platform : Wordpress",
+      live_preview: "https://lending-centric.thedigitaljuice.com.au/",
+    },
     {
       img_popup: tdj_popup,
       img: project15,
@@ -135,9 +151,23 @@ const Project = () => {
         "Digital Juice is an Australian-based company that specializes in offering digital marketing and branding solutions. Their services often include web design, social media management, video production, and graphic design, catering to businesses looking to enhance their online presence and visual branding.",
       design: "✔ Figma",
       development: "✔ Wordpress - Elementor",
-      type: "UI design - User research - Wordpress develop",
+      type: "UI design - Wordpress develop",
       design_tool: "Platform : Wordpress",
       live_preview: "https://thedigitaljuice.com.au/",
+    },
+    {
+      img_popup: eb_popup,
+      img: project21,
+      label: "WEB DESIGN | DEVELOPMENT",
+      label_to: "WEB DESIGN | DEVELOPMENT",
+      name: "Blueprint 360",
+      description:
+        "Blueprint 360 is a business management platform designed to streamline various aspects of business operations. It offers a centralized solution for managing customer communication, sales, and marketing. With Blueprint 360, businesses can save time and enhance efficiency by handling everything from customer interactions to sales processes and marketing. ",
+      design: "✔ Figma",
+      development: "✔ Wordpress - Elementor",
+      type: "UI design - Wordpress develop",
+      design_tool: "Platform : Wordpress",
+      live_preview: "https://360.ebpsites.com/",
     },
     {
       img_popup: ebp_popup,
@@ -149,7 +179,7 @@ const Project = () => {
         "Empire Blueprint (EBP) is a business consulting service that helps companies streamline operations and enhance productivity across various industries. Their primary goal is to give business owners the ultimate gift —time—by introducing customized solutions tailored to each client’s needs. ",
       design: "✔ Figma",
       development: "✔ Wordpress - Elementor",
-      type: "UI design - User research - Wordpress develop",
+      type: "UI design - Wordpress develop",
       design_tool: "Platform : Wordpress",
       live_preview: "https://ebp.business/",
     },
@@ -163,7 +193,7 @@ const Project = () => {
         "Digital branding is the process of creating and managing a brand's online identity and presence through digital channels. It involves strategies and practices to establish a brand's image, voice, and values in the digital space, enabling businesses to connect with their audience effectively. ",
       design: "✔ Figma",
       development: "✔ Wordpress - Elementor",
-      type: "UI design - User research - Wordpress develop",
+      type: "UI design - Wordpress develop",
       design_tool: "Platform : Wordpress",
       live_preview: "https://db.thedigitaljuice.com.au/",
     },
@@ -177,7 +207,7 @@ const Project = () => {
         "Delight Support Care appears to be a service provider focused on personalized care and support, potentially linked to the National Disability Insurance Scheme (NDIS) in Australia. It likely offers services such as supported accommodation, respite care, and daily living assistance tailored to individual needs.  ",
       design: "✔ Figma",
       development: "✔ Wordpress - Elementor",
-      type: "UI design - User research - Wordpress develop",
+      type: "UI design - Wordpress develop",
       design_tool: "Platform : Wordpress",
       live_preview: "https://delightcaresupport.com.au/",
     },
@@ -191,42 +221,23 @@ const Project = () => {
         "Support Pillars likely refers to a service or platform providing assistance in areas such as mental health, disability support, or community services. It may aim to offer a network of support services or resources tailored to individuals' needs, particularly in an Australian context. ",
       design: "✔ Figma",
       development: "✔ Wordpress - Elementor",
-      type: "UI design - User research - Wordpress develop",
+      type: "UI design - Wordpress develop",
       design_tool: "Platform : Wordpress",
       live_preview: "https://supportpillar.com.au/",
     },
     {
-      img_popup: lc_popup,
-      img: project20,
+      img_popup: Chekkee_popup,
+      img: project6,
       label: "WEB DESIGN | DEVELOPMENT",
       label_to: "WEB DESIGN | DEVELOPMENT",
-      name: "Lending Centric",
+      name: "Chekkee",
       description:
-        "Lending Centric likely offers services related to financial lending, such as loans, mortgage advice, or financial consulting. Unfortunately, due to access restrictions or limitations in the website's configuration, I could not retrieve specific details. ",
+        "Chekkee is a content moderation service focused on managing user-generated content (UGC) across various platforms. The company uses a combination of AI technology and human moderation to ensure that content complies with community standards, safety protocols, and legal requirements.",
+      type: "UI design - Wordpress develop",
       design: "✔ Figma",
-      development: "✔ Wordpress - Elementor",
-      type: "UI design - User research - Wordpress develop",
-      design_tool: "Platform : Wordpress",
-      live_preview: "https://lending-centric.thedigitaljuice.com.au/",
+      development: "✔ Wordpress - Oxygen",
+      live_preview: "https://chekkee.com/",
     },
-    // {
-    //   img_popup: Chekkee_popup,
-    //   img: project6,
-    //   label: "WEB DESIGN | DEVELOPMENT",
-    //   label_to: "WEB DESIGN | DEVELOPMENT",
-    //   name: "Chekkee",
-    //   description:
-    //     "Chekkee is a content moderation company based in Australia. Providing real-time human and AI-powered content moderation solutions for all kinds of online platforms",
-    //   typography1: "DM Sans",
-    //   typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-    //   typography2: "DM Sans",
-    //   typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-    //   color_svg: Chekkee_color,
-    //   logo_svg: Chekkee_logo,
-    //   type: "UI design - User research - Wordpress develop",
-    //   design_tool: "Platform : Wordpress",
-    //   live_preview: "https://chekkee.com/",
-    // },
     // {
     //   img_popup: SportTXT_popup,
     //   img: project3,
@@ -363,7 +374,7 @@ const Project = () => {
         "The central element of the logo is, of course, the tongue. It's a universal symbol of communication, speaking, and expression. It's bold and prominent, indicating the confidence and assertiveness associated with effective communication",
       description_2:
         "The tongue is portrayed in a stylized manner, perhaps with a curve or a twist, signifying wit, humor, and creativity. This suggests that communication with Witty Tongues isn't just about conveying information but doing so in an engaging and entertaining way.",
-      type: "Design Logo",
+      type: "Logo design",
       design: "✔ Figma",
       development: "✔ Logo Design",
     },
@@ -377,7 +388,7 @@ const Project = () => {
         "The logo for Stranger Lust aims to capture the essence of intrigue and sensuality while maintaining tastefulness and elegance. It might feature a combination of elegant typography and subtle imagery, such as silhouettes or suggestive shapes, to evoke curiosity and anticipation.",
       description_2:
         "The logo's composition should be visually balanced and scalable across different platforms. Importantly, the design should avoid explicit imagery or vulgar connotations to uphold the brand's integrity and appeal.",
-      type: "Design Logo",
+      type: "Logo design",
       design: "✔ Figma",
       development: "✔ Logo Design",
     },
@@ -391,7 +402,7 @@ const Project = () => {
         "The logo for Sportstxt aims to represent the brand's focus on sports-related content through a combination of text and imagery. The typography is chosen to be bold and modern, reflecting the energy of sports. ",
       description_2:
         "Additionally, sports-related icons or symbols may be incorporated into the design to enhance its relevance. The color palette is vibrant and dynamic, evoking the excitement of sports events. The logo's composition is carefully balanced to ensure visual appeal and versatility across different platforms. ",
-      type: "Design Logo",
+      type: "Logo design",
       design: "✔ Figma",
       development: "✔ Logo Design",
     },
