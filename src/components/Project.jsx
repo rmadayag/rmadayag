@@ -13,8 +13,20 @@ import project11 from "../assets/images/ST.png";
 import project12 from "../assets/images/Afflyfe.png";
 import project13 from "../assets/images/Detox.png";
 import project14 from "../assets/images/Numa.png";
+import project15 from "../assets/images/Mock up (6).png";
+import project16 from "../assets/images/Mock up (5).png";
+import project17 from "../assets/images/Mock up (7).png";
+import project18 from "../assets/images/Mock up (11).png";
+import project19 from "../assets/images/Mock up (12).png";
+import project20 from "../assets/images/Mock up (10).png";
 import intro from "../assets/images/Portfolio.svg";
 import Noa_popup from "../assets/images/Noa_popup.png";
+import tdj_popup from "../assets/images/Instagram.png";
+import ebp_popup from "../assets/images/Instagram-2.png";
+import db_popup from "../assets/images/Instagram-3.png";
+import dgc_popup from "../assets/images/Instagram-4.png";
+import sp_popup from "../assets/images/Instagram-5.png";
+import lc_popup from "../assets/images/Instagram-6.png";
 import Noa_color from "../assets/images/Noa_color.svg";
 import Noa_logo from "../assets/images/Noa_logo.svg";
 import Strangerlust_color from "../assets/images/Strangerlust_color.svg";
@@ -74,21 +86,29 @@ const Project = () => {
 
   const projects = [
     {
+      img_popup: Maha_popup,
+      img: project8,
+      label: "UI/UX DESIGN",
+      label_to: "UI/UX DESIGN",
+      name: "My Allied Health Academy",
+      description:
+        "My Allied Health Academy (MAHA) is an online platform designed to provide training and mentoring for professionals in the allied health sector. The academy supports practitioners such as physiotherapists, chiropractors, nutritionists, naturopaths, and many other healthcare professionals. ",
+        design: "✔ Figma",
+        development: "✔ Web Application",
+      type: "Web Application",
+      live_preview: "https://myalliedhealthacademy.com/",
+    },
+    {
       img_popup: Noa_popup,
       img: project1,
       label: "UI/UX DESIGN",
       label_to: "UI/UX DESIGN",
       name: "Noa Coach AI",
       description:
-        "Noa Coach is a mobile application designed to provide users with personalized coaching and guidance for various aspects of their lives, such as health, wellness, productivity, and personal development.",
-      typography1: "Raleway",
-      typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-      typography2: "Montserrat",
-      typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-      color_svg: Noa_color,
-      logo_svg: Noa_logo,
-      type: " Mobile Application | Web Application",
-      design_tool: "Design Tool : Figma",
+        "Noa Coach AI is an AI-powered coaching platform designed to enhance workplace productivity and personal well-being. It provides personalized coaching through advanced AI, helping users manage stress, improve focus, and achieve work-life balance. ",
+        design: "✔ Figma",
+        development: "✔ Mobile Application | Web Application",
+        type: " Mobile Application | Web Application",
       live_preview: "https://noacoach.com/",
     },
     {
@@ -99,178 +119,240 @@ const Project = () => {
       name: "Stranger Lust",
       description:
         "Stranger Lust is a platform that connects users anonymously based on mutual interests and desires for casual encounters or exploration. Users typically create profiles with their preferences and interests.",
-      typography1: "Poppins",
-      typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-      typography2: "Questrial",
-      typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-      color_svg: Strangerlust_color,
-      logo_svg: Strangerlust_logo,
+        design: "✔ Figma",
+        development: "✔ Web Application",
       type: "Web Application",
-      design_tool: "Design Tool : Figma",
       live_preview: "https://strangerlust.com/",
     },
+  
     {
-      img_popup: Maha_popup,
-      img: project8,
-      label: "UI/UX DESIGN",
-      label_to: "UI/UX DESIGN",
-      name: "My Allied Health Academy",
-      description:
-        "My Allied Health Academy (MAHA) provides an ongoing learning subscription in the form of lessons to student practioners who wish to subscribe to the course",
-      typography1: "Poppins",
-      typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-      typography2: "Questrial",
-      typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-      color_svg: Maha_color,
-      logo_svg: Maha_logo,
-      type: "Web Application",
-      design_tool: "Design Tool : Figma",
-      live_preview: "https://myalliedhealthacademy.com/",
-    },
-    {
-      img_popup: Chekkee_popup,
-      img: project6,
+      img_popup: tdj_popup,
+      img: project15,
       label: "WEB DESIGN | DEVELOPMENT",
       label_to: "WEB DESIGN | DEVELOPMENT",
-      name: "Chekkee",
+      name: "The Digital Juice",
       description:
-        "Chekkee is a content moderation company based in Australia. Providing real-time human and AI-powered content moderation solutions for all kinds of online platforms",
-      typography1: "DM Sans",
-      typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-      typography2: "DM Sans",
-      typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-      color_svg: Chekkee_color,
-      logo_svg: Chekkee_logo,
+        "Digital Juice is an Australian-based company that specializes in offering digital marketing and branding solutions. Their services often include web design, social media management, video production, and graphic design, catering to businesses looking to enhance their online presence and visual branding.",
+      design: "✔ Figma",
+      development: "✔ Wordpress - Elementor",
       type: "UI design - User research - Wordpress develop",
       design_tool: "Platform : Wordpress",
-      live_preview: "https://chekkee.com/",
+      live_preview: "https://thedigitaljuice.com.au/",
     },
     {
-      img_popup: SportTXT_popup,
-      img: project3,
+      img_popup: ebp_popup,
+      img: project16,
       label: "WEB DESIGN | DEVELOPMENT",
       label_to: "WEB DESIGN | DEVELOPMENT",
-      name: "SportsTXT",
+      name: "Empire Blueprint",
       description:
-        "Being a sports fan is not just about watching games. SportsTXT is an online platform designed to deliver the ultimate sports fan experience. Engage with other fans, get insider facts about your favorite teams, and so much more.",
-      typography1: "Poppins",
-      typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-      typography2: "Poppins",
-      typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-      color_svg: SportTXT_color,
-      logo_svg: SportTXT_logo,
+        "Empire Blueprint (EBP) is a business consulting service that helps companies streamline operations and enhance productivity across various industries. Their primary goal is to give business owners the ultimate gift —time—by introducing customized solutions tailored to each client’s needs. ",
+      design: "✔ Figma",
+      development: "✔ Wordpress - Elementor",
       type: "UI design - User research - Wordpress develop",
       design_tool: "Platform : Wordpress",
-      live_preview: "https://sportstxt.com/",
+      live_preview: "https://ebp.business/",
     },
     {
-      img_popup: SupportTXT_popup,
-      img: project4,
+      img_popup: db_popup,
+      img: project17,
       label: "WEB DESIGN | DEVELOPMENT",
       label_to: "WEB DESIGN | DEVELOPMENT",
-      name: "SupportTXT",
+      name: "Digital Branding",
       description:
-        "The engagement platform for the community is a place where members can come to learn, grow, and connect with each other. The content on the platform should be engaging, informative, and relevant to the interests of the community members.",
-      typography1: "Poppins",
-      typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-      typography2: "Poppins",
-      typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-      color_svg: SupportTXT_color,
-      logo_svg: SupportTXT_logo,
+        "Digital branding is the process of creating and managing a brand's online identity and presence through digital channels. It involves strategies and practices to establish a brand's image, voice, and values in the digital space, enabling businesses to connect with their audience effectively. ",
+      design: "✔ Figma",
+      development: "✔ Wordpress - Elementor",
       type: "UI design - User research - Wordpress develop",
       design_tool: "Platform : Wordpress",
-      live_preview: "https://supporttxt.com/",
+      live_preview: "https://db.thedigitaljuice.com.au/",
     },
     {
-      img_popup: SMC_popup,
-      img: project5,
+      img_popup: dgc_popup,
+      img: project18,
       label: "WEB DESIGN | DEVELOPMENT",
       label_to: "WEB DESIGN | DEVELOPMENT",
-      name: "Share My Circle",
+      name: "Delight Support Care",
       description:
-        "Share My Circle offers a space for soon-to-be-married couples to invite their circle of family and friends to be connected with them throughout their wedding journey",
-      typography1: "Poppins",
-      typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-      typography2: "Poppins",
-      typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-      color_svg: SMC_color,
-      logo_svg: SMC_logo,
+        "Delight Support Care appears to be a service provider focused on personalized care and support, potentially linked to the National Disability Insurance Scheme (NDIS) in Australia. It likely offers services such as supported accommodation, respite care, and daily living assistance tailored to individual needs.  ",
+      design: "✔ Figma",
+      development: "✔ Wordpress - Elementor",
       type: "UI design - User research - Wordpress develop",
       design_tool: "Platform : Wordpress",
-      live_preview: "https://sharemycircle.com/",
+      live_preview: "https://delightcaresupport.com.au/",
     },
     {
-      img_popup: Numa_popup,
-      img: project14,
+      img_popup: sp_popup,
+      img: project19,
       label: "WEB DESIGN | DEVELOPMENT",
       label_to: "WEB DESIGN | DEVELOPMENT",
-      name: "Numa",
+      name: "Support Pillar",
       description:
-        "Numa Recovery Center is a leading detox and rehab In Los Angeles, CA, that serves to eliminate financial barriers to treatment. Healing Begins Here.",
-      typography1: "Inter",
-      typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-      typography2: "Inter",
-      typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-      color_svg: Numa_color,
-      logo_svg: Numa_logo,
+        "Support Pillars likely refers to a service or platform providing assistance in areas such as mental health, disability support, or community services. It may aim to offer a network of support services or resources tailored to individuals' needs, particularly in an Australian context. ",
+      design: "✔ Figma",
+      development: "✔ Wordpress - Elementor",
       type: "UI design - User research - Wordpress develop",
       design_tool: "Platform : Wordpress",
-      live_preview: "https://numarecoverycenters.com/",
+      live_preview: "https://supportpillar.com.au/",
     },
     {
-      img_popup: NMS_popup,
-      img: project7,
+      img_popup: lc_popup,
+      img: project20,
       label: "WEB DESIGN | DEVELOPMENT",
       label_to: "WEB DESIGN | DEVELOPMENT",
-      name: "New Media Services PH",
+      name: "Lending Centric",
       description:
-        "New Media Services specializes in delivering intelligent outsourcing services through a combination of machine learning and human-powered activities",
-      typography1: "Poppins",
-      typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-      typography2: "Poppins",
-      typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-      color_svg: NMS_color,
-      logo_svg: NMS_logo,
+        "Lending Centric likely offers services related to financial lending, such as loans, mortgage advice, or financial consulting. Unfortunately, due to access restrictions or limitations in the website's configuration, I could not retrieve specific details. ",
+      design: "✔ Figma",
+      development: "✔ Wordpress - Elementor",
       type: "UI design - User research - Wordpress develop",
       design_tool: "Platform : Wordpress",
-      live_preview: "https://nms.ph/",
+      live_preview: "https://lending-centric.thedigitaljuice.com.au/",
     },
-    {
-      img_popup: Afflyfe_popup,
-      img: project12,
-      label: "WEB DESIGN | DEVELOPMENT",
-      label_to: "WEB DESIGN",
-      name: "Afflyfe",
-      description:
-        "Afflyfe is a comprehensive NFT information platform designed to cater to both newcomers and experienced participants in the NFT space. Through a range of resources and features, Afflyfe aims to educate, inform, and connect individuals interested in NFTs",
-      typography1: "Montserrat",
-      typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-      typography2: "Montserrat",
-      typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-      color_svg: Afflyfe_color,
-      logo_svg: Afflyfe_logo,
-      type: "UI design - User research - Wordpress develop",
-      design_tool: "Design Tool : Figma",
-      live_preview: "https://www.figma.com/proto/iDw0PzGdGinh46iqpauXiL/Projects?type=design&node-id=1-1999&t=d1Q1xZBTjVSGw1Qe-0&scaling=min-zoom&page-id=0%3A1",
-    },
-    {
-      img_popup: Detox_popup,
-      img: project13,
-      label: "WEB DESIGN | DEVELOPMENT",
-      label_to: "WEB DESIGN",
-      name: "San Diego Detox",
-      description:
-        "The San Diego Detox website likely serves as an online platform providing information and services related to detoxification programs in the San Diego area.",
-      typography1: "Montserrat",
-      typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-      typography2: "Montserrat",
-      typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-      color_svg: Detox_color,
-      logo_svg: Detox_logo,
-      type: "UI design - User research - Wordpress develop",
-      design_tool: "Design Tool : Figma",
-      live_preview: "https://www.figma.com/proto/iDw0PzGdGinh46iqpauXiL/Projects?type=design&node-id=5-1893&t=d1Q1xZBTjVSGw1Qe-0&scaling=min-zoom&page-id=1%3A5495",
-    },
+    // {
+    //   img_popup: Chekkee_popup,
+    //   img: project6,
+    //   label: "WEB DESIGN | DEVELOPMENT",
+    //   label_to: "WEB DESIGN | DEVELOPMENT",
+    //   name: "Chekkee",
+    //   description:
+    //     "Chekkee is a content moderation company based in Australia. Providing real-time human and AI-powered content moderation solutions for all kinds of online platforms",
+    //   typography1: "DM Sans",
+    //   typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   typography2: "DM Sans",
+    //   typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   color_svg: Chekkee_color,
+    //   logo_svg: Chekkee_logo,
+    //   type: "UI design - User research - Wordpress develop",
+    //   design_tool: "Platform : Wordpress",
+    //   live_preview: "https://chekkee.com/",
+    // },
+    // {
+    //   img_popup: SportTXT_popup,
+    //   img: project3,
+    //   label: "WEB DESIGN | DEVELOPMENT",
+    //   label_to: "WEB DESIGN | DEVELOPMENT",
+    //   name: "SportsTXT",
+    //   description:
+    //     "Being a sports fan is not just about watching games. SportsTXT is an online platform designed to deliver the ultimate sports fan experience. Engage with other fans, get insider facts about your favorite teams, and so much more.",
+    //   typography1: "Poppins",
+    //   typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   typography2: "Poppins",
+    //   typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   color_svg: SportTXT_color,
+    //   logo_svg: SportTXT_logo,
+    //   type: "UI design - User research - Wordpress develop",
+    //   design_tool: "Platform : Wordpress",
+    //   live_preview: "https://sportstxt.com/",
+    // },
+    // {
+    //   img_popup: SupportTXT_popup,
+    //   img: project4,
+    //   label: "WEB DESIGN | DEVELOPMENT",
+    //   label_to: "WEB DESIGN | DEVELOPMENT",
+    //   name: "SupportTXT",
+    //   description:
+    //     "The engagement platform for the community is a place where members can come to learn, grow, and connect with each other. The content on the platform should be engaging, informative, and relevant to the interests of the community members.",
+    //   typography1: "Poppins",
+    //   typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   typography2: "Poppins",
+    //   typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   color_svg: SupportTXT_color,
+    //   logo_svg: SupportTXT_logo,
+    //   type: "UI design - User research - Wordpress develop",
+    //   design_tool: "Platform : Wordpress",
+    //   live_preview: "https://supporttxt.com/",
+    // },
+    // {
+    //   img_popup: SMC_popup,
+    //   img: project5,
+    //   label: "WEB DESIGN | DEVELOPMENT",
+    //   label_to: "WEB DESIGN | DEVELOPMENT",
+    //   name: "Share My Circle",
+    //   description:
+    //     "Share My Circle offers a space for soon-to-be-married couples to invite their circle of family and friends to be connected with them throughout their wedding journey",
+    //   typography1: "Poppins",
+    //   typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   typography2: "Poppins",
+    //   typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   color_svg: SMC_color,
+    //   logo_svg: SMC_logo,
+    //   type: "UI design - User research - Wordpress develop",
+    //   design_tool: "Platform : Wordpress",
+    //   live_preview: "https://sharemycircle.com/",
+    // },
+    // {
+    //   img_popup: Numa_popup,
+    //   img: project14,
+    //   label: "WEB DESIGN | DEVELOPMENT",
+    //   label_to: "WEB DESIGN | DEVELOPMENT",
+    //   name: "Numa",
+    //   description:
+    //     "Numa Recovery Center is a leading detox and rehab In Los Angeles, CA, that serves to eliminate financial barriers to treatment. Healing Begins Here.",
+    //   typography1: "Inter",
+    //   typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   typography2: "Inter",
+    //   typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   color_svg: Numa_color,
+    //   logo_svg: Numa_logo,
+    //   type: "UI design - User research - Wordpress develop",
+    //   design_tool: "Platform : Wordpress",
+    //   live_preview: "https://numarecoverycenters.com/",
+    // },
+    // {
+    //   img_popup: NMS_popup,
+    //   img: project7,
+    //   label: "WEB DESIGN | DEVELOPMENT",
+    //   label_to: "WEB DESIGN | DEVELOPMENT",
+    //   name: "New Media Services PH",
+    //   description:
+    //     "New Media Services specializes in delivering intelligent outsourcing services through a combination of machine learning and human-powered activities",
+    //   typography1: "Poppins",
+    //   typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   typography2: "Poppins",
+    //   typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   color_svg: NMS_color,
+    //   logo_svg: NMS_logo,
+    //   type: "UI design - User research - Wordpress develop",
+    //   design_tool: "Platform : Wordpress",
+    //   live_preview: "https://nms.ph/",
+    // },
+    // {
+    //   img_popup: Afflyfe_popup,
+    //   img: project12,
+    //   label: "WEB DESIGN | DEVELOPMENT",
+    //   label_to: "WEB DESIGN",
+    //   name: "Afflyfe",
+    //   description:
+    //     "Afflyfe is a comprehensive NFT information platform designed to cater to both newcomers and experienced participants in the NFT space. Through a range of resources and features, Afflyfe aims to educate, inform, and connect individuals interested in NFTs",
+    //   typography1: "Montserrat",
+    //   typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   typography2: "Montserrat",
+    //   typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   color_svg: Afflyfe_color,
+    //   logo_svg: Afflyfe_logo,
+    //   type: "UI design - User research - Wordpress develop",
+    //   design_tool: "Design Tool : Figma",
+    //   live_preview: "https://www.figma.com/proto/iDw0PzGdGinh46iqpauXiL/Projects?type=design&node-id=1-1999&t=d1Q1xZBTjVSGw1Qe-0&scaling=min-zoom&page-id=0%3A1",
+    // },
+    // {
+    //   img_popup: Detox_popup,
+    //   img: project13,
+    //   label: "WEB DESIGN | DEVELOPMENT",
+    //   label_to: "WEB DESIGN",
+    //   name: "San Diego Detox",
+    //   description:
+    //     "The San Diego Detox website likely serves as an online platform providing information and services related to detoxification programs in the San Diego area.",
+    //   typography1: "Montserrat",
+    //   typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   typography2: "Montserrat",
+    //   typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
+    //   color_svg: Detox_color,
+    //   logo_svg: Detox_logo,
+    //   type: "UI design - User research - Wordpress develop",
+    //   design_tool: "Design Tool : Figma",
+    //   live_preview: "https://www.figma.com/proto/iDw0PzGdGinh46iqpauXiL/Projects?type=design&node-id=5-1893&t=d1Q1xZBTjVSGw1Qe-0&scaling=min-zoom&page-id=1%3A5495",
+    // },
     {
       img_popup: Wittytongues_popup,
       img: project9,
@@ -282,6 +364,8 @@ const Project = () => {
       description_2:
         "The tongue is portrayed in a stylized manner, perhaps with a curve or a twist, signifying wit, humor, and creativity. This suggests that communication with Witty Tongues isn't just about conveying information but doing so in an engaging and entertaining way.",
       type: "Design Logo",
+      design: "✔ Figma",
+      development: "✔ Logo Design",
     },
     {
       img_popup: SL_popup,
@@ -294,6 +378,8 @@ const Project = () => {
       description_2:
         "The logo's composition should be visually balanced and scalable across different platforms. Importantly, the design should avoid explicit imagery or vulgar connotations to uphold the brand's integrity and appeal.",
       type: "Design Logo",
+      design: "✔ Figma",
+      development: "✔ Logo Design",
     },
     {
       img_popup: ST_popup,
@@ -306,6 +392,8 @@ const Project = () => {
       description_2:
         "Additionally, sports-related icons or symbols may be incorporated into the design to enhance its relevance. The color palette is vibrant and dynamic, evoking the excitement of sports events. The logo's composition is carefully balanced to ensure visual appeal and versatility across different platforms. ",
       type: "Design Logo",
+      design: "✔ Figma",
+      development: "✔ Logo Design",
     },
   ];
 
@@ -385,7 +473,7 @@ const Project = () => {
       }}
     >
       {/* Image */}
-      <div className="relative overflow-hidden w-full md:h-[300px] h-[200px] mb-6 transition-all border-4 border-black">
+      <div className="relative overflow-hidden w-full md:h-[260px] h-[200px] mb-6 transition-all border-4 border-black">
         <img
           src={project.img}
           alt={project.name}
@@ -488,17 +576,16 @@ const Project = () => {
                   </button>
                 </div>
                 {/* Project information */}
-                <h2 className="text-txtcolor text-2xl font-semibold mb-5">{selectedProject.name}</h2>
-                <p className="text-txtcolor/50 mb-2">{selectedProject.label_to}</p>
-                <p className="text-txtcolor mb-5">{selectedProject.description}</p>
-                <p className="text-txtcolor/50 mb-5">{selectedProject.design_tool}</p>
-                <img src={selectedProject.logo_svg} alt={selectedProject.name} className="mb-5" />
-                <img src={selectedProject.color_svg} alt={selectedProject.name} className="mb-5" />
+                <h2 className="text-txtcolor text-2xl font-semibold mb-4">{selectedProject.name}</h2>
+                <p className="text-txtcolor/50 mb-8">{selectedProject.label_to}</p>
+                <p className="text-txtcolor mb-8">{selectedProject.description}</p>
+                <p className="text-txtcolor/50 mb-4">{selectedProject.design}</p>
+                <p className="text-txtcolor/50 mb-8">{selectedProject.development}</p>
                 {/* Project links */}
                 <a
                   href={selectedProject.live_preview}
                   target="_blank"
-                  className="text-primary bg-primary/10 px-2 py-1 inline-block rounded-lg hover:scale-105"
+                  className="text-black bg-secondary px-10 py-3 inline-block rounded-[70px] border-4 border-black hover:scale-105"
                 >
                   Live Preview
                 </a>
@@ -531,11 +618,13 @@ const Project = () => {
                   </button>
                 </div>
                 {/* Project information */}
-                <h2 className="text-txtcolor text-2xl font-semibold mb-5">{selectedProject.name}</h2>
+                <h2 className="text-txtcolor text-2xl font-semibold mb-4">{selectedProject.name}</h2>
                 {/* More project details */}
-                <p className="text-txtcolor/50 mb-2">{selectedProject.label}</p>
-                <p className="text-txtcolor mb-5">{selectedProject.description}</p>
-                <p className="text-txtcolor mb-2">{selectedProject.description_2}</p>
+                <p className="text-txtcolor/50 mb-8">{selectedProject.label}</p>
+                <p className="text-txtcolor mb-8">{selectedProject.description}</p>
+                <p className="text-txtcolor mb-8">{selectedProject.description_2}</p>
+                <p className="text-txtcolor/50 mb-4">{selectedProject.design}</p>
+                <p className="text-txtcolor/50 mb-8">{selectedProject.development}</p>
                 {/* Project links */}
               </div>
             </div>
