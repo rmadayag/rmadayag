@@ -195,7 +195,7 @@ const Project = () => {
       development: "✔ Wordpress - Elementor",
       type: "UI design - Wordpress develop",
       design_tool: "Platform : Wordpress",
-      live_preview: "https://db.thedigitaljuice.com.au/",
+      live_preview: "https://digitalbrandingco.com.au/",
     },
     {
       img_popup: dgc_popup,
@@ -317,7 +317,7 @@ const Project = () => {
       name: "Numa",
       description:
         "Numa Recovery Centers is a luxury detox and rehabilitation facility located in Los Angeles, California. It offers specialized treatment for substance abuse and mental health issues, such as alcohol and drug addiction, co-occurring disorders, and trauma. ",
-      type: "UI design - User research - Wordpress develop",
+      type: "UI design - Wordpress develop",
       design: "✔ Figma",
       development: "✔ Wordpress - Oxygen",
       live_preview: "https://numarecoverycenters.com/",
