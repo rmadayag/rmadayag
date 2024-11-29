@@ -139,7 +139,7 @@ const Project = () => {
       development: "✔ Wordpress - Elementor",
       type: "UI design - Wordpress develop",
       design_tool: "Platform : Wordpress",
-      live_preview: "https://lending-centric.thedigitaljuice.com.au/",
+      live_preview: "https://lendingcentric.com.au/",
     },
     {
       img_popup: tdj_popup,
