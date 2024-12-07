@@ -94,21 +94,21 @@ const Project = () => {
       type: "Web Application",
       live_preview: "https://strangerlust.com/",
     },
-
-      {
-      img_popup: lc_popup,
-      img: project20,
+    {
+      img_popup: eb_popup,
+      img: project21,
       label: "WEB DESIGN | DEVELOPMENT",
       label_to: "WEB DESIGN | DEVELOPMENT",
-      name: "Lending Centric",
+      name: "Blueprint 360",
       description:
-        "Lending Centric likely offers services related to financial lending, such as loans, mortgage advice, or financial consulting. Unfortunately, due to access restrictions or limitations in the website's configuration, I could not retrieve specific details. ",
+        "Blueprint 360 is a business management platform designed to streamline various aspects of business operations. It offers a centralized solution for managing customer communication, sales, and marketing. With Blueprint 360, businesses can save time and enhance efficiency by handling everything from customer interactions to sales processes and marketing. ",
       design: "✔ Figma",
       development: "✔ Wordpress - Elementor",
       type: "UI design - Wordpress develop",
       design_tool: "Platform : Wordpress",
-      live_preview: "https://lendingcentric.com.au/",
+      live_preview: "https://360.ebpsites.com/",
     },
+
     {
       img_popup: tdj_popup,
       img: project15,
@@ -124,18 +124,18 @@ const Project = () => {
       live_preview: "https://thedigitaljuice.com.au/",
     },
     {
-      img_popup: eb_popup,
-      img: project21,
+      img_popup: lc_popup,
+      img: project20,
       label: "WEB DESIGN | DEVELOPMENT",
       label_to: "WEB DESIGN | DEVELOPMENT",
-      name: "Blueprint 360",
+      name: "Lending Centric",
       description:
-        "Blueprint 360 is a business management platform designed to streamline various aspects of business operations. It offers a centralized solution for managing customer communication, sales, and marketing. With Blueprint 360, businesses can save time and enhance efficiency by handling everything from customer interactions to sales processes and marketing. ",
+        "Lending Centric likely offers services related to financial lending, such as loans, mortgage advice, or financial consulting. Unfortunately, due to access restrictions or limitations in the website's configuration, I could not retrieve specific details. ",
       design: "✔ Figma",
       development: "✔ Wordpress - Elementor",
       type: "UI design - Wordpress develop",
       design_tool: "Platform : Wordpress",
-      live_preview: "https://360.ebpsites.com/",
+      live_preview: "https://lendingcentric.com.au/",
     },
     {
       img_popup: ebp_popup,
