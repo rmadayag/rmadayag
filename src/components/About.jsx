@@ -44,10 +44,16 @@ const About = () => {
   return (
     <section id="about" className="h-auto flex items-center py-12 md:py-[150px]">
       <div className="flex flex-col gap-20 px-5 max-w-6xl mx-auto w-full">
-        <div className="w-full flex flex-col items-center justify-center gap-10 py-2 mx-auto px-6">
-          <h2 className="md:text-[30px] text-2xl font-medium text-txtcolor leading-0 md:leading-10 text-center">
-            Tech Stack
+        <div className="w-full flex flex-col items-center justify-center gap-20 py-2 mx-auto px-6">
+        <div className="flex flex-col gap-5 items-center">    
+        <h2 className="md:text-[30px] text-2xl font-medium text-txtcolor leading-0 md:leading-10 text-center">
+            Tech Stacks
           </h2>
+          <p className="md:text-[20px] text-lg font-regular text-txtcolor md:w-[70%] w-full text-center">
+          Explore the tools and technologies I use to build fast, high-performing websites that grow with your needs.
+          </p>
+                 
+                 </div>
           <div className="flex flex-wrap justify-center gap-20">
             {techStack.map(({ name, image }, index) => (
               <div
