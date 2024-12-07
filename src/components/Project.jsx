@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import project1 from "../assets/images/Noa.png";
 import project2 from "../assets/images/Stranger Lust.png";
-import project3 from "../assets/images/SportsTXT.png";
-import project4 from "../assets/images/SupportTXT.png";
-import project5 from "../assets/images/ShareMyCircle.png";
 import project6 from "../assets/images/Mock up (14).png";
 import project7 from "../assets/images/NMS.png";
 import project8 from "../assets/images/Maha.png";
 import project9 from "../assets/images/Wittytongues.png";
 import project10 from "../assets/images/SL.png";
 import project11 from "../assets/images/ST.png";
-import project12 from "../assets/images/Afflyfe.png";
-import project13 from "../assets/images/Detox.png";
 import project14 from "../assets/images/Numa.png";
 import project15 from "../assets/images/Mock up (6).png";
 import project16 from "../assets/images/Mock up (5).png";
@@ -29,41 +24,14 @@ import dgc_popup from "../assets/images/Instagram-4.png";
 import sp_popup from "../assets/images/Instagram-5.png";
 import lc_popup from "../assets/images/Instagram-6.png";
 import eb_popup from "../assets/images/Instagram-7.png";
-import Noa_color from "../assets/images/Noa_color.svg";
-import Noa_logo from "../assets/images/Noa_logo.svg";
-import Strangerlust_color from "../assets/images/Strangerlust_color.svg";
-import Strangerlust_logo from "../assets/images/Strangerlust_logo.svg";
 import Strangerlust_popup from "../assets/images/Strangerlust_popup.png";
-import SportTXT_color from "../assets/images/SportTXT_color.svg";
-import SportTXT_logo from "../assets/images/SportTXT_logo.svg";
-import SportTXT_popup from "../assets/images/SportTXT_popup.png";
-import SupportTXT_color from "../assets/images/SupportTXT.color.svg";
-import SupportTXT_logo from "../assets/images/SupportTXT_logo.svg";
-import SupportTXT_popup from "../assets/images/SupportTXT_popup.png";
-import SMC_color from "../assets/images/SMC_color.svg";
-import SMC_logo from "../assets/images/SMC_logo.svg";
-import SMC_popup from "../assets/images/SMC_popup.png";
-import Chekkee_color from "../assets/images/Chekkee_color.svg";
-import Chekkee_logo from "../assets/images/Chekkee_logo.svg";
 import Chekkee_popup from "../assets/images/Chekkee_popup.png";
-import NMS_color from "../assets/images/NMS_color.svg";
-import NMS_logo from "../assets/images/NMS_logo.svg";
 import NMS_popup from "../assets/images/NMS_popup.png";
-import Numa_color from "../assets/images/Numa_color.svg";
-import Numa_logo from "../assets/images/Numa_logo.svg";
 import Numa_popup from "../assets/images/Numa_popup.png";
-import Maha_color from "../assets/images/Maha_color.svg";
-import Maha_logo from "../assets/images/Maha_logo.svg";
 import Maha_popup from "../assets/images/Maha_popup.png";
 import Wittytongues_popup from "../assets/images/Wittytongues_popup.png";
 import SL_popup from "../assets/images/SL_popup.png";
 import ST_popup from "../assets/images/ST_popup.png";
-import Afflyfe_color from "../assets/images/Afflyfe_color.svg";
-import Afflyfe_logo from "../assets/images/Afflyfe_logo.svg";
-import Afflyfe_popup from "../assets/images/Afflyfe_popup.png";
-import Detox_color from "../assets/images/Detox_color.svg";
-import Detox_logo from "../assets/images/Detox_logo.svg";
-import Detox_popup from "../assets/images/Detox_popup.png";
 import { useSpring, animated } from "react-spring";
 
 
@@ -238,77 +206,6 @@ const Project = () => {
       development: "✔ Wordpress - Oxygen",
       live_preview: "https://chekkee.com/",
     },
-      //   img_popup: NMS_popup,
-    //   img: project7,
-    //   label: "WEB DESIGN | DEVELOPMENT",
-    //   label_to: "WEB DESIGN | DEVELOPMENT",
-    //   name: "New Media Services PH",
-    //   description:
-    //     "New Media Services specializes in delivering intelligent outsourcing services through a combination of machine learning and human-powered activities",
-    //   typography1: "Poppins",
-    //   typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-    //   typography2: "Poppins",
-    //   typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-    //   color_svg: NMS_color,
-    //   logo_svg: NMS_logo,
-    //   type: "UI design - User research - Wordpress develop",
-    //   design_tool: "Platform : Wordpress",
-    //   live_preview: "https://nms.ph/",
-    // },
-    // {
-    //   img_popup: SportTXT_popup,
-    //   img: project3,
-    //   label: "WEB DESIGN | DEVELOPMENT",
-    //   label_to: "WEB DESIGN | DEVELOPMENT",
-    //   name: "SportsTXT",
-    //   description:
-    //     "Being a sports fan is not just about watching games. SportsTXT is an online platform designed to deliver the ultimate sports fan experience. Engage with other fans, get insider facts about your favorite teams, and so much more.",
-    //   typography1: "Poppins",
-    //   typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-    //   typography2: "Poppins",
-    //   typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-    //   color_svg: SportTXT_color,
-    //   logo_svg: SportTXT_logo,
-    //   type: "UI design - User research - Wordpress develop",
-    //   design_tool: "Platform : Wordpress",
-    //   live_preview: "https://sportstxt.com/",
-    // },
-    // {
-    //   img_popup: SupportTXT_popup,
-    //   img: project4,
-    //   label: "WEB DESIGN | DEVELOPMENT",
-    //   label_to: "WEB DESIGN | DEVELOPMENT",
-    //   name: "SupportTXT",
-    //   description:
-    //     "The engagement platform for the community is a place where members can come to learn, grow, and connect with each other. The content on the platform should be engaging, informative, and relevant to the interests of the community members.",
-    //   typography1: "Poppins",
-    //   typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-    //   typography2: "Poppins",
-    //   typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-    //   color_svg: SupportTXT_color,
-    //   logo_svg: SupportTXT_logo,
-    //   type: "UI design - User research - Wordpress develop",
-    //   design_tool: "Platform : Wordpress",
-    //   live_preview: "https://supporttxt.com/",
-    // },
-    // {
-    //   img_popup: SMC_popup,
-    //   img: project5,
-    //   label: "WEB DESIGN | DEVELOPMENT",
-    //   label_to: "WEB DESIGN | DEVELOPMENT",
-    //   name: "Share My Circle",
-    //   description:
-    //     "Share My Circle offers a space for soon-to-be-married couples to invite their circle of family and friends to be connected with them throughout their wedding journey",
-    //   typography1: "Poppins",
-    //   typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-    //   typography2: "Poppins",
-    //   typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-    //   color_svg: SMC_color,
-    //   logo_svg: SMC_logo,
-    //   type: "UI design - User research - Wordpress develop",
-    //   design_tool: "Platform : Wordpress",
-    //   live_preview: "https://sharemycircle.com/",
-    // },
     {
       img_popup: Numa_popup,
       img: project14,
@@ -335,42 +232,6 @@ const Project = () => {
       development: "✔ Wordpress - Oxygen",
       live_preview: "https://nms.ph/",
     },
-    // {
-    //   img_popup: Afflyfe_popup,
-    //   img: project12,
-    //   label: "WEB DESIGN | DEVELOPMENT",
-    //   label_to: "WEB DESIGN",
-    //   name: "Afflyfe",
-    //   description:
-    //     "Afflyfe is a comprehensive NFT information platform designed to cater to both newcomers and experienced participants in the NFT space. Through a range of resources and features, Afflyfe aims to educate, inform, and connect individuals interested in NFTs",
-    //   typography1: "Montserrat",
-    //   typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-    //   typography2: "Montserrat",
-    //   typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-    //   color_svg: Afflyfe_color,
-    //   logo_svg: Afflyfe_logo,
-    //   type: "UI design - User research - Wordpress develop",
-    //   design_tool: "Design Tool : Figma",
-    //   live_preview: "https://www.figma.com/proto/iDw0PzGdGinh46iqpauXiL/Projects?type=design&node-id=1-1999&t=d1Q1xZBTjVSGw1Qe-0&scaling=min-zoom&page-id=0%3A1",
-    // },
-    // {
-    //   img_popup: Detox_popup,
-    //   img: project13,
-    //   label: "WEB DESIGN | DEVELOPMENT",
-    //   label_to: "WEB DESIGN",
-    //   name: "San Diego Detox",
-    //   description:
-    //     "The San Diego Detox website likely serves as an online platform providing information and services related to detoxification programs in the San Diego area.",
-    //   typography1: "Montserrat",
-    //   typography_bold: "Aa Bb Cc Dd Ee Ff Gg ",
-    //   typography2: "Montserrat",
-    //   typography_regular: "Aa Bb Cc Dd Ee Ff Gg ",
-    //   color_svg: Detox_color,
-    //   logo_svg: Detox_logo,
-    //   type: "UI design - User research - Wordpress develop",
-    //   design_tool: "Design Tool : Figma",
-    //   live_preview: "https://www.figma.com/proto/iDw0PzGdGinh46iqpauXiL/Projects?type=design&node-id=5-1893&t=d1Q1xZBTjVSGw1Qe-0&scaling=min-zoom&page-id=1%3A5495",
-    // },
     {
       img_popup: Wittytongues_popup,
       img: project9,
@@ -442,7 +303,7 @@ const Project = () => {
       <div className="flex flex-col justify-center items-center px-5 max-w-6xl mx-auto w-full gap-2">
       <div className="lg:w-100 h-full relative sm:w-100 w-full max-w-lg flex flex-col items-center justify-center">
   <h2 className="md:text-[30px] text-2xl font-medium text-txtcolor mb-10 leading-0 md:leading-10 text-center">
-    My Creative Works
+  My Featured Projects
   </h2>
 </div>
 
