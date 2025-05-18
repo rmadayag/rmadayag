@@ -30,14 +30,14 @@ const Testimony = () => {
   const projects = [
     {
       img: avatar1,
-      name: "Fadi Fahd",
+      name: "Youssef Assad",
       position: "Digital Coordinator",
       description:
         "I had the pleasure of collaborating with Rheyna on a branding project, and her development skills were outstanding.",
     },
     {
       img: avatar2,
-      name: "Youssef Assad",
+      name: "Fadi Fahd ",
       position: "Head of TDJ",
       description:
         "Working with Rheyna at TDJ was an absolute game-changer for our website. Her eye for detail and passion for clean, modern UI made our brand stand out.",
