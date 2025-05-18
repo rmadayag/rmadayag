@@ -7,10 +7,14 @@ html {
   @apply font-Poppins scroll-smooth;
 }
 body {
-  @apply box-border bg-bgcolor text-gray-100;
+  @apply box-border bg-bgcolor text-txtcolor;
 }
 .btn-primary {
-  @apply bg-secondary font-bold text-black rounded-[70px] md:py-[20px] md:px-[40px] py-[10px] px-[30px] flex items-center gap-2 border-4 border-black md:text-xl text-[16px];
+  @apply bg-secondary font-medium text-white rounded-[8px] 
+  py-[10px] px-[16px]         /* Mobile (default) */
+  sm:py-[12px] sm:px-[24px]   /* Small screens and up */
+  md:py-[16px] md:px-[30px]   /* Medium screens and up */
+  flex items-center gap-2 text-[16px];
 }
 
 .aboutImg::after {

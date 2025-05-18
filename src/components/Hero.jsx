@@ -1,118 +1,118 @@
-import React, { useState, useEffect } from "react";
-import { useSpring, animated } from "react-spring";
+import React, { useEffect } from "react";
 import hero from "../assets/images/hero.png";
+import menuIcon from "/Arrow.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+const socialLinks = [
+  { label: "LINKEDIN", href: "https://www.linkedin.com/in/rheynalyn-madayag-998100242/" },
+  { label: "INSTAGRAM", href: "https://www.instagram.com/" },
+  { label: "FACEBOOK", href: "https://www.facebook.com/" },
+  { label: "GITHUB", href: "https://github.com/rmadayag" },
+];
 
 const Hero = () => {
-  const [showContent, setShowContent] = useState(false);
-
-  const animationProps = useSpring({
-    opacity: showContent ? 1 : 0,
-    marginTop: showContent ? 0 : -20,
-    transform: showContent ? "scale(1)" : "scale(0.5)",
-    from: { opacity: 0, marginTop: -20, transform: "scale(0.5)" },
-    config: { duration: 1000 },
-    delay: 200,
-  });
-
-  const handleDownload = () => {
-    // Open the Google Drive folder link
-    window.open("https://drive.google.com/drive/folders/1HD-v_gAxkqfLajnqN6UdWSMyZeEKV2mg?usp=sharing", "_blank");
-  };
-
   useEffect(() => {
-    setShowContent(true);
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
   }, []);
 
+  const handleDownload = () => {
+    window.open(
+      "https://drive.google.com/drive/folders/1HD-v_gAxkqfLajnqN6UdWSMyZeEKV2mg?usp=sharing",
+      "_blank"
+    );
+  };
+
   return (
-    <section
-      id="home"
-      className="bg-cover bg-center text-white pt-40 md:pt-60"
-      aria-live="polite"
-    >
-      <div className="flex flex-col items-center px-5 mx-auto max-w-6xl md:flex-row md:gap-10 gap-10">
-        {/* Hero Image */}
-        <div className="flex-1 order-1 md:order-2">
-          <animated.div style={animationProps}>
+    <section id="home" className="w-full bg-bgcolor" aria-live="polite">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-8 pb-24">
+        
+        {/* Left Column */}
+        <div
+          data-aos="fade-up"
+          className="
+            lg:col-span-3 
+            flex flex-col 
+            items-center text-center 
+            lg:items-start lg:text-left
+            pt-24 sm:pt-32 lg:pt-40 xl:pt-48
+          "
+        >
+          <p className="mb-36 text-xs sm:text-sm md:text-base hidden lg:block">
+            AVAILABLE FOR PROJECT
+          </p>
+          <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-[300px] sm:max-w-[400px] md:max-w-[360px] lg:max-w-[320px] xl:max-w-[360px]">
+            My goal is to craft seamless interfaces that are both functional and visually engaging.
+          </p>
+          <button
+            onClick={handleDownload}
+            aria-label="Download my CV"
+            className="mt-6 btn-primary px-4 py-2 sm:px-5 sm:py-3 text-sm sm:text-base rounded ring-primary ease-in duration-300 hover:bg-primary/80 hover:scale-105 transition-transform"
+          >
+            Download CV
+          </button>
+        </div>
+
+        {/* Center Column */}
+        <div
+          data-aos="fade-up"
+          data-aos-delay="100"
+          className="lg:col-span-6 flex justify-center items-start"
+        >
+          <div className="relative w-full max-w-[280px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[900px]">
             <img
               src={hero}
-              alt="Rheynalyn, a Web Developer and UI/UX Designer, in a professional setting"
-              className="w-full max-w-lg h-auto object-cover rounded-lg"
+              alt="Rheynalyn, a Web Developer and UI/UX Designer"
+              className="w-full h-auto object-cover"
             />
-          </animated.div>
-        </div>
-
-        {/* Text Section */}
-        <animated.div
-          style={{ opacity: animationProps.opacity, marginTop: animationProps.marginTop }}
-          className="flex-1 order-2 md:order-1 w-full text-left"
-        >
-          <div className="flex flex-col items-start justify-center w-full gap-4">
-            <h1 className="text-4xl md:text-6xl font-semibold leading-tight md:leading-tight text-txtcolor">
-              Hi! <span className="inline-block animate-wave">👋</span> <br />
-              I'm&nbsp;
-              <span className="inline-block px-2 py-0.5 bg-[#FFDC58] text-black">
-                Rheyna
-              </span>
-            </h1>
-            <h4 className="text-xl md:text-2xl font-medium leading-relaxed text-txtcolor">
-              Web Developer | UI/UX Designer
-            </h4>
-          </div>
-
-          {/* Download CV Button */}
-          <div className="mt-10">
-            <button
-              onClick={handleDownload}
-              aria-label="Download my CV from Google Drive"
-              className="btn-primary ease-in duration-300 hover:bg-primary/80 hover:scale-105 transition-transform px-5 py-3 rounded:ring-primary"
+            <h1
+              className="
+                absolute bottom-[-20px] md:bottom-[-40px] 
+                left-1/2 transform -translate-x-1/2
+                text-black 
+                text-[4.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[8.5rem] xl:text-[11.5rem] 
+                font-bold tracking-wider select-none
+                leading-none
+              "
             >
-              Download CV
-            </button>
-          </div>
-        </animated.div>
-      </div>
-
-      {/* Marquee Section */}
-      <div className="relative overflow-hidden bg-pink-300 py-5 md:py-8 md:mt-32 mt-16">
-        <div className="whitespace-nowrap flex animate-marquee">
-          {/* Duplicate Content for Seamless Scrolling */}
-          <div className="inline-block">
-            <span className="px-10 text-black text-xl md:text-4xl">Web Design</span>
-            <span className="px-10 text-black text-xl md:text-4xl">App Design</span>
-            <span className="px-10 text-black text-xl md:text-4xl">Wireframe</span>
-            <span className="px-10 text-black text-xl md:text-4xl">Prototyping</span>
-            <span className="px-10 text-black text-xl md:text-4xl">User Research</span>
-            <span className="px-10 text-black text-xl md:text-4xl">Web Development</span>
-          </div>
-          <div className="inline-block">
-            <span className="px-10 text-black text-xl md:text-4xl">Web Design</span>
-            <span className="px-10 text-black text-xl md:text-4xl">App Design</span>
-            <span className="px-10 text-black text-xl md:text-4xl">Wireframe</span>
-            <span className="px-10 text-black text-xl md:text-4xl">Prototyping</span>
-            <span className="px-10 text-black text-xl md:text-4xl">User Research</span>
-            <span className="px-10 text-black text-xl md:text-4xl">Web Development</span>
+              RHEYNA
+            </h1>
           </div>
         </div>
-      </div>
 
-      {/* Tailwind Animations */}
-      <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-          animation: marquee 8s linear infinite;
-        }
-        .animate-wave {
-          animation: wave 1s ease-in-out infinite;
-        }
-        @keyframes wave {
-          0%, 100% { transform: rotate(0deg); }
-          20%, 60% { transform: rotate(10deg); }
-          40%, 80% { transform: rotate(-10deg); }
-        }
-      `}</style>
+        {/* Right Column */}
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          className="
+            hidden lg:flex lg:col-span-3 
+            flex-col items-center text-center 
+            lg:items-end lg:text-right 
+            pt-0 lg:pt-40 xl:pt-48 
+            space-y-4
+          "
+        >
+          <p className="mb-36 text-xs sm:text-sm md:text-base hidden lg:block">
+            CREATING SINCE 2022
+          </p>
+          {socialLinks.map(({ label, href }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-xs sm:text-sm md:text-base uppercase transition-transform duration-300 hover:scale-110"
+            >
+              {label}
+              <img src={menuIcon} alt="Arrow Icon" className="w-4 h-4 sm:w-6 sm:h-6" />
+            </a>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };

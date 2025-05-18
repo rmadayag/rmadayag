@@ -1,56 +1,116 @@
-import React from "react";
-import project1 from "../assets/images/qt.svg";
-import project2 from "../assets/images/qt.svg";
-import project3 from "../assets/images/qt.svg";
-import project4 from "../assets/images/qt.svg";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-// Avatar images for each client
+// Avatar images
 import avatar1 from "../assets/images/avatar1.png";
-import avatar2 from "../assets/images/avatar2.png";
-import avatar3 from "../assets/images/avatar3.png";
-import avatar4 from "../assets/images/avatar4.png";
+import avatar2 from "../assets/images/avatar3.png";
+import avatar3 from "../assets/images/avatar2.png";
+
+// Star icon component
+const Star = () => (
+  <svg
+    className="w-5 h-5 text-yellow-400"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+  >
+    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.96a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.287 3.96c.3.921-.755 1.688-1.54 1.118L10 13.348l-3.37 2.448c-.784.57-1.838-.197-1.539-1.118l1.287-3.96a1 1 0 00-.364-1.118L2.646 9.387c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.96z" />
+  </svg>
+);
 
 const Testimony = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true, // animation happens only once when scrolled into view
+    });
+  }, []);
+
   const projects = [
-    { img: avatar1, name: "Dom", description: "I'm so happy with this design and excited to have it used—thank you so much! :)" },
-    { img: avatar2, name: "Seff", description: "I'm happy I chose to collaborate with you. The project was completed on time and met all the requirements." },
-    { img: avatar3, name: "Alex", description: "We were delighted to learn how you addressed and resolved the user interface issues and challenges on our website." },
-    { img: avatar4, name: "Steph", description: "The design looks incredibly sleek and modern, with clean lines, contemporary style, and attention to detail that really stand out." },
+    {
+      img: avatar1,
+      name: "Fadi Fahd",
+      position: "Digital Coordinator",
+      description:
+        "I had the pleasure of collaborating with Rheyna on a branding project, and her development skills were outstanding.",
+    },
+    {
+      img: avatar2,
+      name: "Youssef Assad",
+      position: "Head of TDJ",
+      description:
+        "Working with Rheyna at TDJ was an absolute game-changer for our website. Her eye for detail and passion for clean, modern UI made our brand stand out.",
+    },
+    {
+      img: avatar3,
+      name: "Patty Chua",
+      position: "Head of Brewing Brands",
+      description:
+        "Rheyna brought our vision to life at Brewing Brands with a level of professionalism and creativity that exceeded our expectations.",
+    },
   ];
 
-  const getRotation = (index) => {
-    const rotations = [-2, 10, 10, -2];
-    return `rotate(${rotations[index] || (index + 1) * 3}deg)`;
-  };
-
   return (
-    <section id="testimony" className="py-12 md:py-[150px]">
-      <div className="flex flex-col px-5 max-w-6xl mx-auto w-full gap-10">
-        <div className="lg:w-full h-full relative sm:w-full w-full max-w-lg flex flex-col">
-          <h2 className="md:text-[30px] text-2xl font-medium text-txtcolor md:mb-10 mb-0 leading-0 md:leading-10">
-            Here’s what my clients are saying about my work
-          </h2>
+    <section
+      id="testimony"
+      className="py-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto"
+    >
+      {/* Section Title */}
+      <p className="text-xl sm:text-2xl font-normal text-txtcolor mb-10">
+        Testimonials
+      </p>
+
+      {/* Heading & Subtext */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-24 items-start mb-10">
+        <div>
+          <h3 className="text-[clamp(2.5rem,6vw,4.375rem)] font-medium text-primary leading-tight">
+            WHAT MY CLIENT SAY
+          </h3>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 lg:gap-x-[0px]">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-left md:p-10 p-6 bg-white border-4 border-black md:gap-8 gap-4 hover:bg-[#FFC9F0] transition-all duration-200 ease-in-out shadow-[10.03px_10.03px_0px_#BFBFB4]"
-              style={{ transform: getRotation(index) }}
-            >
-                <p className="font-regular text-txtcolor text-left md:text-[20px] text-[16px]">{project.description}</p>
-              <div className="flex items-center gap-4">
-                <img
-                  src={project.img}
-                  alt={`Testimonial from ${project.name}: ${project.description}`}
-                  className="w-[60px] h-[60px] rounded-full" // Avatar styled as a circle
-                />
-                <h2 className="md:text-[26px] font-semibold text-txtcolor">{project.name}</h2>
-              </div>
-            
+        <div>
+          <p className="text-base sm:text-lg text-txtcolor leading-relaxed">
+            Hear from those who have experienced my work firsthand. Their
+            feedback reflects my commitment to quality and collaboration.
+          </p>
+        </div>
+      </div>
+
+      <div className="border-t border-gray-300 mb-10" />
+
+      {/* Testimonials */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="group flex flex-col items-center p-6 bg-white rounded-lg shadow-sm text-center transition-all duration-300 hover:shadow-md"
+            data-aos="fade-up"
+            data-aos-delay={index * 150} // stagger animation delay
+          >
+            <h2 className="text-xl sm:text-2xl font-medium text-primary">
+              {project.name}
+            </h2>
+            <p className="text-sm text-txtcolor mb-4">{project.position}</p>
+
+            <div className="w-full h-[360px] overflow-hidden rounded-md">
+              <img
+                src={project.img}
+                alt={project.name}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
             </div>
-          ))}
-        </div>
+
+            <div className="flex justify-center mt-4">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} />
+              ))}
+            </div>
+
+            <p className="text-txtcolor text-sm mt-4 leading-relaxed">
+              {project.description}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );

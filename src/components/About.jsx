@@ -1,80 +1,177 @@
-import React from "react";
-import HTML from "../assets/images/HTML.svg";
-import CSS from "../assets/images/CSS.svg";
-import JS from "../assets/images/JS.svg";
-import BOOTSTRAP from "../assets/images/BOOTSTRAP.svg";
-import NODEJS from "../assets/images/NODEJS.svg";
-import REACT from "../assets/images/REACT.svg";
-import VITE from "../assets/images/VITE.svg";
-import VSCODE from "../assets/images/VSCODE.svg";
-import TAILWIND from "../assets/images/TAILWIND.svg";
-import MUI from "../assets/images/MUI.svg";
-import GIT from "../assets/images/GIT.svg";
-import WP from "../assets/images/WP.svg";
-import FIGMA from "../assets/images/FIGMA.svg";
-import PS from "../assets/images/PS.svg";
-import AI from "../assets/images/AI.svg";
-import CANVA from "../assets/images/CANVA.svg";
-import ELEMENTOR from "../assets/images/ELEMENTOR.svg";
-import OXYGEN from "../assets/images/OXYGEN.svg";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaBootstrap,
+  FaNodeJs,
+  FaReact,
+  FaGitAlt,
+  FaWordpress,
+  FaFigma,
+  FaElementor,
+  FaCode,
+} from "react-icons/fa";
+import {
+  SiVite,
+  SiTailwindcss,
+  SiMui,
+  SiAdobephotoshop,
+  SiAdobeillustrator,
+  SiFirebase,
+  SiOxygen,
+  SiCanva,
+} from "react-icons/si";
+import { DiPhp } from "react-icons/di";
+import { GrMysql } from "react-icons/gr";
 
-// Define the tech stack images
 const techStack = [
-  { name: "HTML", image: HTML },
-  { name: "CSS", image: CSS },
-  { name: "JS", image: JS },
-  { name: "Bootstrap", image: BOOTSTRAP },
-  { name: "Node.js", image: NODEJS },
-  { name: "React", image: REACT },
-  { name: "Vite", image: VITE },
-  { name: "VSCode", image: VSCODE },
-  { name: "Tailwind", image: TAILWIND },
-  { name: "MUI", image: MUI },
-  { name: "Git", image: GIT },
-  { name: "WordPress", image: WP },
-  { name: "Figma", image: FIGMA },
-  { name: "Photoshop", image: PS },
-  { name: "Illustrator", image: AI },
-  { name: "Canva", image: CANVA },
-  { name: "Elementor", image: ELEMENTOR },
-  { name: "Oxygen", image: OXYGEN },
+  { name: "HTML", icon: <FaHtml5 className="text-[#E34F26]" /> },
+  { name: "CSS", icon: <FaCss3Alt className="text-[#1572B6]" /> },
+  { name: "JavaScript", icon: <FaJsSquare className="text-[#F7DF1E]" /> },
+  { name: "Bootstrap", icon: <FaBootstrap className="text-[#7952B3]" /> },
+  { name: "Node.js", icon: <FaNodeJs className="text-[#339933]" /> },
+  { name: "React", icon: <FaReact className="text-[#61DAFB]" /> },
+  { name: "Vite", icon: <SiVite className="text-[#646CFF]" /> },
+  { name: "VSCode", icon: <FaCode className="text-[#007ACC]" /> },
+  { name: "Tailwind", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
+  { name: "MUI", icon: <SiMui className="text-[#007FFF]" /> },
+  { name: "Git", icon: <FaGitAlt className="text-[#F05032]" /> },
+  { name: "WordPress", icon: <FaWordpress className="text-[#21759B]" /> },
+  { name: "PHP", icon: <DiPhp className="text-[#777BB4]" /> },
+  { name: "MySQL", icon: <GrMysql className="text-[#4479A1]" /> },
+  { name: "Firebase", icon: <SiFirebase className="text-[#FFCA28]" /> },
+  { name: "Divi WP", icon: <FaWordpress className="text-[#21759B]" /> },
+  { name: "Figma", icon: <FaFigma className="text-[#F24E1E]" /> },
+  { name: "Photoshop", icon: <SiAdobephotoshop className="text-[#31A8FF]" /> },
+  { name: "Illustrator", icon: <SiAdobeillustrator className="text-[#FF9A00]" /> },
+  { name: "Canva", icon: <SiCanva className="text-[#00C4CC]" /> },
+  { name: "Elementor", icon: <FaElementor className="text-[#EF3B75]" /> },
+  { name: "Oxygen Builder", icon: <SiOxygen className="text-[#00AEEF]" /> },
 ];
 
-const About = () => {
+const Counter = ({ target }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const duration = 2000;
+    const incrementTime = 20;
+    const steps = duration / incrementTime;
+    const increment = target / steps;
+
+    const counter = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        clearInterval(counter);
+        setCount(target);
+      } else {
+        setCount(Math.ceil(start));
+      }
+    }, incrementTime);
+
+    return () => clearInterval(counter);
+  }, [target]);
+
   return (
-    <section id="about" className="h-auto flex items-center py-12 md:py-[150px]">
-      <div className="flex flex-col gap-20 px-5 max-w-6xl mx-auto w-full">
-        <div className="w-full flex flex-col items-center justify-center gap-20 py-2 mx-auto px-6">
-        <div className="flex flex-col gap-5 items-center">    
-        <h2 className="md:text-[30px] text-2xl font-medium text-txtcolor leading-0 md:leading-10 text-center">
-            Tech Stacks
-          </h2>
-          <p className="md:text-[20px] text-lg font-regular text-txtcolor md:w-[70%] w-full text-center">
-          Explore the tools and technologies I use to build fast, high-performing websites that grow with your needs.
+    <span className="text-[5rem] md:text-[70px] font-bold text-primary">
+      {count}+
+    </span>
+  );
+};
+
+const About = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
+  return (
+    <section
+      id="about"
+      className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+    >
+      <div className="flex flex-col gap-40 w-full">
+        {/* About Me Section */}
+        <div
+          className="flex flex-col items-center text-center gap-8 md:gap-10"
+          data-aos="fade-up"
+        >
+          <p className="text-2xl md:text-[27px] font-normal text-txtcolor">
+            About Me
           </p>
-                 
-                 </div>
-          <div className="flex flex-wrap justify-center gap-20">
-            {techStack.map(({ name, image }, index) => (
+          <p className="text-base md:text-[38px] font-medium text-primary max-w-5xl leading-relaxed md:leading-normal">
+            I’m a Web Developer and UI/UX Designer passionate about crafting
+            intuitive, user-focused, and responsive digital experiences. With a
+            keen eye for design and a strong foundation in front-end
+            development, I bridge the gap between visual aesthetics and seamless
+            functionality.
+          </p>
+
+          {/* Statistics */}
+          <div
+            className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 mt-6 w-full max-w-4xl"
+            data-aos="fade-up"
+          >
+            {[
+              { title: "Projects Completed", value: 60 },
+              { title: "Satisfied Clients", value: 45 },
+              { title: "Hours of Work", value: 820 },
+            ].map(({ title, value }, idx) => (
+              <div key={idx} className="flex flex-col items-center">
+                <Counter target={value} />
+                <div className="my-2 w-36 h-[1px] bg-txtcolor" />
+                <p className="text-txtcolor text-lg font-normal">{title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Toolbox Section */}
+        <section id="toolbox" className="w-full" data-aos="fade-up">
+          {/* Section Label */}
+          <p className="text-lg sm:text-xl md:text-2xl font-normal text-txtcolor mb-8 sm:mb-12">
+            Toolbox
+          </p>
+
+          {/* Title and Description */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-8 lg:gap-y-10 gap-x-8 lg:gap-x-16 items-start mb-12">
+            <h3 className="text-[36px] sm:text-[50px] md:text-[60px] lg:text-[70px] font-medium text-primary leading-tight">
+              DESIGN & DEVELOPMENT
+            </h3>
+            <p className="text-base sm:text-lg text-txtcolor max-w-xl">
+              Check out what I’ve been working on lately. Here’s a glimpse of
+              my recent projects.
+            </p>
+          </div>
+
+          <div className="border-t border-gray-300 mb-12" />
+
+          {/* Tech Stack Icons */}
+          <div
+            className="flex flex-wrap gap-10 md:gap-16 justify-start"
+            data-aos="fade-up"
+          >
+            {techStack.map(({ name, icon }, index) => (
               <div
                 key={index}
-                className="relative group w-18 h-18 flex flex-col items-center justify-center"
+                className="relative group w-12 h-12 md:w-10 md:h-10 flex flex-col items-center justify-center"
               >
-                {/* Logo */}
-                <img
-                  src={image}
-                  alt={`${name} Logo`}
-                  className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-300"
-                  loading="lazy"
-                />
-                {/* Tooltip */}
-                <span className="absolute bottom-[-30px] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {React.cloneElement(icon, {
+                  className:
+                    "w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-300",
+                })}
+                <span className="absolute bottom-[-30px] bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                   {name}
                 </span>
               </div>
             ))}
           </div>
-        </div>
+        </section>
       </div>
     </section>
   );

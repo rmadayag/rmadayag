@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from "react";
-import logo from '/full-logo.svg';
+import logo from "/full-logo.png";
+import menuIcon from "/menu.svg";
+import closeIcon from "/close.svg";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
   const menuLinks = [
     { name: "Home", link: "#home" },
-    // { name: "About", link: "#about" },
-    { name: "Services", link: "#service" },
+    { name: "About", link: "#about" },
     { name: "Portfolio", link: "#projects" },
+    { name: "Services", link: "#service" },
     { name: "Testimonial", link: "#testimony" },
-    { name: "Contact", link: "#contact" },
+    { name: "FAQ's", link: "#faq" },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-      const nav = document.querySelector("nav");
-      if (window.scrollY > 0) {
-        nav.classList.add("visible");
-      } else {
-        nav.classList.remove("visible");
-      }
+      setScrolled(window.scrollY > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -27,43 +26,51 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 bg-white p-5 border-b-[5px] border-b-black">
-      <nav className="flex items-center justify-between w-full max-w-6xl mx-auto">
-        <div>
-          <img src={logo} alt="Logo" />
+    <header
+      className={`fixed left-0 right-0 top-0 z-50 p-5 transition-all duration-300 ${
+        scrolled ? "bg-bgcolor shadow" : "bg-transparent"
+      }`}
+    >
+      <nav className="flex items-center justify-between w-full max-w-7xl mx-auto">
+        {/* Logo */}
+        <div className="w-[150px]">
+          <img src={logo} alt="Logo" className="w-full h-auto" />
         </div>
-        <div className="text-txtcolor md:block hidden px-7 py-2 font-medium">
-          <ul className="flex items-center gap-1 py-2 text-lg">
-            {menuLinks.map(({ name, link }, i) => (
-              <li key={i} className="px-4 hover:text-primary">
-                <a href={link}>{name}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
+
+        {/* Always visible menu icon */}
         <button
-          onClick={() => setOpen(!open)}
+          onClick={() => setOpen(true)}
           aria-expanded={open}
-          className={`${open ? "text-txtcolor" : "text-primary"} text-4xl md:hidden`}
-          aria-label="Toggle navigation menu"
+          className="text-4xl"
+          aria-label="Open navigation menu"
         >
-          <ion-icon name="menu"></ion-icon>
+          <img src={menuIcon} alt="Menu" className="w-8 h-8" />
         </button>
+
+        {/* Slide-in Side Menu */}
         <div
-          className={`md:hidden text-txtcolor absolute w-2/3 h-screen px-7 py-2 font-medium bg-bgcolor top-0 transition-transform duration-300 ${open ? "right-0" : "right-[-100%]"} `}
+          className={`fixed top-0 right-0 h-screen w-[300px] bg-white z-50 transition-transform duration-300 ${
+            open ? "translate-x-0" : "translate-x-full"
+          }`}
           role="navigation"
         >
-          <div className="flex justify-between items-center mb-4">
-            <button className="text-4xl text-primary" onClick={() => setOpen(false)} aria-label="Close navigation menu">
-              <ion-icon name="close"></ion-icon>
+          {/* Close icon */}
+          <div className="flex justify-end p-5">
+            <button
+              onClick={() => setOpen(false)}
+              aria-label="Close navigation menu"
+            >
+              <img src={closeIcon} alt="Close" className="w-6 h-6" />
             </button>
           </div>
-          <ul className="flex flex-col justify-center h-full gap-10 py-2 text-lg">
+
+          {/* Menu Items */}
+          <ul className="flex flex-col items-start p-6 pt-2 gap-6 text-lg text-black">
             {menuLinks.map(({ name, link }, i) => (
               <li
-                onClick={() => setOpen(false)}
                 key={i}
-                className="px-6 hover:text-primary"
+                onClick={() => setOpen(false)}
+                className="pb-1 border-b-2 border-transparent hover:border-black transition-all duration-200"
               >
                 <a href={link}>{name}</a>
               </li>

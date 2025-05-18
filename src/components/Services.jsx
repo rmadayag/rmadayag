@@ -1,76 +1,132 @@
-import React from "react";
-import UIandUX from "../assets/images/UIandUX.svg";
-import Graphic from "../assets/images/Graphic.svg";
-import SEO from "../assets/images/SEO.svg";
-import WebDev from "../assets/images/Web Dev.svg";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { GoArrowUpRight } from "react-icons/go";
+import UIandUX from "../assets/images/img_service-1.png";
+import Graphic from "../assets/images/img_service-2.png";
+import SEO from "../assets/images/img_service-3.png";
+import WebDev from "../assets/images/img_service-4.png";
+
+const servicesData = [
+  {
+    id: 1,
+    title: "UI/UX Design",
+    description:
+      "I design intuitive and engaging user interfaces, ensuring seamless experiences through wireframing, prototyping, and usability testing.",
+    icon: UIandUX,
+  },
+  {
+    id: 2,
+    title: "Web Design",
+    description:
+      "I build visually appealing and responsive websites that work flawlessly across devices. My focus is on combining aesthetics with functionality to deliver a great user experience.",
+    icon: Graphic,
+  },
+  {
+    id: 3,
+    title: "App Design",
+    description:
+      "I create user-friendly and visually engaging mobile app interfaces. My designs prioritize smooth navigation and optimal usability for all users.",
+    icon: SEO,
+  },
+  {
+    id: 4,
+    title: "Web Development",
+    description:
+      "I develop responsive, dynamic, and user-friendly websites, ensuring seamless functionality, performance, and an engaging digital experience.",
+    icon: WebDev,
+  },
+];
 
 const Services = () => {
+  const [hovered, setHovered] = useState(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
+
   return (
     <section
       id="service"
-      className="py-12 md:py-[150px] text-white" // Padding for mobile and desktop
+      className="py-16 md:py-24 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto"
     >
-      <div className="flex flex-col md:gap-0 gap-0 px-5 max-w-6xl mx-auto">
-        
-        {/* Services container */}
-        <div className="flex-1">
-          <div className="flex flex-col md:flex-row gap-10">
-            {/* Title Optimization Block */}
-            <div className="w-full md:w-1/2">
-              <div className="flex flex-col gap-5 pr-4">
-               
-            <h2 className="md:text-[30px] text-2xl font-medium text-txtcolor md:leading-10 leading-8">
-            Bring Your Ideas to Life with My Expertise
-            </h2>
-            <p className="md:text-[20px] text-lg font-regular text-txtcolor  w-full">
-            What i do?
+      {/* Section Title */}
+      <p className="text-xl sm:text-2xl font-normal text-txtcolor mb-10">
+        What I do
+      </p>
+      {/* Heading */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-12 md:gap-x-24 mb-10">
+        <div>
+          <h3 className="text-primary font-medium text-[clamp(2.5rem,6vw,4.375rem)] leading-tight">
+            SERVICES EXPERTISE
+          </h3>
+        </div>
+        <div>
+          <p className="text-base sm:text-lg md:text-xl text-txtcolor leading-relaxed">
+            Bring your ideas to life with my expertise. I turn concepts into
+            engaging, functional digital experiences.
           </p>
-              
+        </div>
+      </div>
+
+      <div className="border-t border-gray-300 mb-10" />
+
+      {/* Services List */}
+      <div className="flex flex-col gap-10">
+        {servicesData.map(({ id, title, description, icon }, index) => (
+          <div
+            key={id}
+            className="relative cursor-pointer p-6 md:p-8 w-full border-b border-gray-300 group"
+            onMouseEnter={() => setHovered(id)}
+            onMouseLeave={() => setHovered(null)}
+            data-aos="fade-up"
+            data-aos-delay={index * 150}
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-6 sm:gap-4">
+              {/* Title */}
+              <div className="sm:col-span-1">
+                <p className="text-primary font-medium text-2xl sm:text-3xl md:text-4xl leading-tight">
+                  {title}
+                </p>
               </div>
-            </div>
 
-            {/* UI/UX Design and Graphic Design Blocks */}
-            <div className="w-full md:w-1/2">
-              <div className="flex flex-col gap-10">
-                <div className="h-[260px] border-solid border-4 p-6 border-black hover:rotate-[3.4deg] hover:bg-[#FFE68C] transition-transform duration-300 ease-in-out shadow-[10.03px_10.03px_0px_#BFBFB4]">
-                <img src={WebDev} className="mb-5" alt="Web Development icon" />
-                  <p className="mt-2 font-semibold text-txtcolor text-[20px]">Web Development</p>
-                  <p className="mt-2 md:text-[18px] text-[16px] text-txtcolor">
-                  Create functional, visually appealing, and user-friendly Website.
-                  </p>
-                </div>
-                <div className="h-[260px] border-solid border-4 p-6 border-black hover:rotate-[3.4deg] hover:bg-[#FFC9F0] transition-transform duration-300 ease-in-out shadow-[10.03px_10.03px_0px_#BFBFB4]">
-                <img src={UIandUX} className="mb-5" alt="UI/UX Design icon" />
-                  <p className="mt-2 font-semibold text-txtcolor text-[20px]">UI/UX Design</p>
-                  <p className="mt-2 md:text-[18px] text-[16px] text-txtcolor">
-                  Designing with the user's needs and preferences in mind.
-                  </p>
-                </div>
+              {/* Hover Image */}
+              <div className="sm:col-span-1 relative h-[1px]">
+                {hovered === id && (
+                  <img
+                    src={icon}
+                    alt={`${title} icon`}
+                    className="hidden md:block absolute top-1/2 left-1/2 max-w-[230px] max-h-[260px] object-cover opacity-90 pointer-events-none"
+                    style={{
+                      transform: "translate(-50%, -50%) rotate(10deg)",
+                      filter: "drop-shadow(2px 4px 6px rgba(0,0,0,0.3))",
+                      zIndex: 10,
+                    }}
+                  />
+                )}
               </div>
-            </div>
 
-            {/* Web Development Block */}
-            <div className="w-full md:w-1/2">
-              <div className="flex flex-col gap-10">
-                <div className="h-[260px] border-solid border-4 p-6 border-black hover:rotate-[3.4deg] hover:bg-[#DAC4FF] transition-transform duration-300 ease-in-out shadow-[10.03px_10.03px_0px_#BFBFB4]">
-                <img src={SEO} className="mb-5"  alt="SEO icon" />
-                  <p className="mt-2 font-semibold text-txtcolor text-[20px]">SEO Optimisation</p>
-                  <p className="mt-2 md:text-[18px] text-[16px] text-txtcolor">
-                  Improving a website's visibility and ranking in search engine results.
-                  </p>
+              {/* Description + Arrow */}
+              <div className="sm:col-span-2 grid grid-cols-6 items-center gap-2 mt-4 sm:mt-0">
+                <p className="col-span-5 text-sm sm:text-base md:text-lg text-txtcolor leading-relaxed">
+                  {description}
+                </p>
+                <div className="col-span-1 flex justify-start">
+                  <div
+                    className="p-3 border border-txtcolor rounded-full text-txtcolor text-xl sm:text-2xl 
+                               transition-colors duration-300 group-hover:bg-black group-hover:text-white"
+                  >
+                    <GoArrowUpRight />
+                  </div>
                 </div>
-                <div className="h-[260px] border-4 border-solid border-black p-6 hover:rotate-[3.4deg] hover:bg-[#9DDCFF] transition-transform duration-300 ease-in-out shadow-[10.03px_10.03px_0px_#BFBFB4]">
-  <img src={Graphic} className="mb-5" alt="Graphic Design icon" />
-  <p className="mt-2 font-semibold text-txtcolor text-[20px]">Graphic Design</p>
-  <p className="mt-2 md:text-[18px] text-[16px] text-txtcolor">
-    Create functional, visually appealing, and user-friendly Websites.
-  </p>
-</div>
-
               </div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );
