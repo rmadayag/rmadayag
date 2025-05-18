@@ -73,9 +73,9 @@ const Hero = () => {
               className="
                 absolute bottom-[-20px] md:bottom-[-40px] 
                 left-1/2 transform -translate-x-1/2
-                text-bold 
+                text-black 
                 text-[4.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[8.5rem] xl:text-[11.5rem] 
-                font-bold tracking-wider select-none
+                font-medium tracking-wider select-none
                 leading-none
               "
             >
