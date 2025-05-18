@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 
 const socialLinks = [
   { label: "LINKEDIN", href: "https://www.linkedin.com/in/rheynalyn-madayag-998100242/" },
+  { label: "INSTAGRAM", href: "https://www.instagram.com/rmadx.jpg/" },
   { label: "BEHANCE", href: "https://www.behance.net/rheynalmadayag" },
   { label: "GITHUB", href: "https://github.com/rmadayag" },
 ];
