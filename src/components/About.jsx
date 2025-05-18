@@ -159,7 +159,7 @@ const About = () => {
             {techStack.map(({ name, icon }, index) => (
               <div
                 key={index}
-                className="relative group w-12 h-12 md:w-10 md:h-10 flex flex-col items-center justify-center"
+                className="relative group w-12 h-12 md:w-8 md:h-8 flex flex-col items-center justify-center"
               >
                 {React.cloneElement(icon, {
                   className:
