@@ -144,8 +144,7 @@ const About = () => {
               DESIGN & DEVELOPMENT
             </h3>
             <p className="text-base sm:text-lg text-txtcolor max-w-xl">
-              Check out what I’ve been working on lately. Here’s a glimpse of
-              my recent projects.
+            The tools I use to craft clean designs and smooth builds. They power every step from concept to launch.
             </p>
           </div>
 
