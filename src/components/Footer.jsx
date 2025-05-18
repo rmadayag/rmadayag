@@ -6,7 +6,6 @@ import { GoArrowUpRight } from "react-icons/go";
 const Footer = () => {
   const socialLinks = [
     { label: "LINKEDIN", href: "https://www.linkedin.com/in/rheynalyn-madayag-998100242/" },
-    { label: "FIGMA", href: "https://www.figma.com/design/FhhsMvcQyprSZXCErcCbbX/Figma-Portfolio?node-id=1-11&t=RvemA4lO480GHeaM-1" },
     { label: "BEHANCE", href: "https://www.behance.net/rheynalmadayag" },
     { label: "GITHUB", href: "https://github.com/rmadayag" },
 
