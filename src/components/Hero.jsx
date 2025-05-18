@@ -45,7 +45,7 @@ const Hero = () => {
           <p className="mb-36 text-xs sm:text-sm md:text-base hidden lg:block">
             AVAILABLE FOR PROJECT
           </p>
-          <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-[300px] sm:max-w-[400px] md:max-w-[360px] lg:max-w-[320px] xl:max-w-[360px]">
+          <p className="text-sm sm:text-base leading-relaxed max-w-[300px] sm:max-w-[400px] md:max-w-[360px] lg:max-w-[320px] xl:max-w-[360px]">
             My goal is to craft seamless interfaces that are both functional and visually engaging.
           </p>
           <button
