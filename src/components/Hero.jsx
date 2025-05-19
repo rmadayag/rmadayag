@@ -29,12 +29,12 @@ const Hero = () => {
 
   return (
     <section id="home" className="w-full bg-bgcolor" aria-live="polite">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-8 pb-10">
-        
+      <div
+        className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-8 pb-10"
+        data-aos="fade-up"
+      >
         {/* Hero Image - On top for mobile/tablet, center for desktop */}
         <div
-          data-aos="fade-up"
-          data-aos-delay="100"
           className="
             order-1 lg:order-2
             lg:col-span-6 flex justify-center items-start
@@ -64,7 +64,6 @@ const Hero = () => {
 
         {/* Content - left side on desktop, below image on mobile/tablet */}
         <div
-          data-aos="fade-up"
           className="
             order-2 lg:order-1
             lg:col-span-3 
@@ -91,8 +90,6 @@ const Hero = () => {
 
         {/* Social Links - right side on desktop, hidden on mobile/tablet */}
         <div
-          data-aos="fade-up"
-          data-aos-delay="200"
           className="
             order-3
             lg:order-3 lg:col-span-3 
