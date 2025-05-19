@@ -29,39 +29,17 @@ const Hero = () => {
 
   return (
     <section id="home" className="w-full bg-bgcolor" aria-live="polite">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-8 pb-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-8 pb-10">
         
-        {/* Left Column */}
-        <div
-          data-aos="fade-up"
-          className="
-            lg:col-span-3 
-            flex flex-col 
-            items-center text-center 
-            lg:items-start lg:text-left
-            pt-24 sm:pt-32 lg:pt-40 xl:pt-48
-          "
-        >
-          <p className="mb-36 text-xs sm:text-sm md:text-base hidden lg:block">
-            AVAILABLE FOR PROJECT
-          </p>
-          <p className="text-sm sm:text-base leading-relaxed max-w-[300px] sm:max-w-[400px] md:max-w-[360px] lg:max-w-[320px] xl:max-w-[360px]">
-            My goal is to craft seamless interfaces that are both functional and visually engaging.
-          </p>
-          <button
-            onClick={handleDownload}
-            aria-label="Download my CV"
-            className="mt-6 btn-primary px-4 py-2 sm:px-5 sm:py-3 text-sm sm:text-base rounded ring-primary ease-in duration-300 hover:bg-primary/80 hover:scale-105 transition-transform"
-          >
-            Download CV
-          </button>
-        </div>
-
-        {/* Center Column */}
+        {/* Hero Image - On top for mobile/tablet, center for desktop */}
         <div
           data-aos="fade-up"
           data-aos-delay="100"
-          className="lg:col-span-6 flex justify-center items-start"
+          className="
+            order-1 lg:order-2
+            lg:col-span-6 flex justify-center items-start
+            mt-20 sm:mt-20 md:mt-24 lg:mt-0
+          "
         >
           <div className="relative w-full max-w-[280px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[900px]">
             <img
@@ -84,13 +62,41 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Right Column */}
+        {/* Content - left side on desktop, below image on mobile/tablet */}
+        <div
+          data-aos="fade-up"
+          className="
+            order-2 lg:order-1
+            lg:col-span-3 
+            flex flex-col 
+            items-center text-center 
+            lg:items-start lg:text-left
+            pt-8 sm:pt-10 md:pt-12 lg:pt-40 xl:pt-48
+          "
+        >
+          <p className="mb-36 text-xs sm:text-sm md:text-base hidden lg:block">
+            AVAILABLE FOR PROJECT
+          </p>
+          <p className="text-sm sm:text-base leading-relaxed max-w-[300px] sm:max-w-[400px] md:max-w-[360px] lg:max-w-[320px] xl:max-w-[360px]">
+            My goal is to craft seamless interfaces that are both functional and visually engaging.
+          </p>
+          <button
+            onClick={handleDownload}
+            aria-label="Download my CV"
+            className="mt-6 btn-primary px-4 py-2 sm:px-5 sm:py-3 text-sm sm:text-base rounded ring-primary ease-in duration-300 hover:bg-primary/80 hover:scale-105 transition-transform"
+          >
+            Download CV
+          </button>
+        </div>
+
+        {/* Social Links - right side on desktop, hidden on mobile/tablet */}
         <div
           data-aos="fade-up"
           data-aos-delay="200"
           className="
-            hidden lg:flex lg:col-span-3 
-            flex-col items-center text-center 
+            order-3
+            lg:order-3 lg:col-span-3 
+            hidden lg:flex flex-col items-center text-center 
             lg:items-end lg:text-right 
             pt-0 lg:pt-40 xl:pt-48 
             space-y-4

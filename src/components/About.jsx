@@ -76,7 +76,7 @@ const Counter = ({ target }) => {
   }, [target]);
 
   return (
-    <span className="text-[5rem] md:text-[70px] font-bold text-primary">
+    <span className="text-[3.5rem] md:text-[56px] font-bold text-primary">
       {count}+
     </span>
   );
@@ -95,7 +95,7 @@ const About = () => {
       id="about"
       className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
     >
-      <div className="flex flex-col gap-40 w-full">
+      <div className="flex flex-col gap-20 md:gap-40 w-full">
         {/* About Me Section */}
         <div
           className="flex flex-col items-center text-center gap-8 md:gap-10"
@@ -144,7 +144,7 @@ const About = () => {
               DESIGN & DEVELOPMENT
             </h3>
             <p className="text-base sm:text-lg text-txtcolor max-w-xl">
-            The tools I use to craft clean designs and smooth builds. They power every step from concept to launch.
+              The tools I use to craft clean designs and smooth builds. They power every step from concept to launch.
             </p>
           </div>
 
@@ -152,17 +152,17 @@ const About = () => {
 
           {/* Tech Stack Icons */}
           <div
-            className="flex flex-wrap gap-10 md:gap-16 justify-start"
+            className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-y-16 gap-x-6 md:gap-x-10"
             data-aos="fade-up"
           >
             {techStack.map(({ name, icon }, index) => (
               <div
                 key={index}
-                className="relative group w-12 h-12 md:w-8 md:h-8 flex flex-col items-center justify-center"
+                className="relative group flex flex-col items-left justify-left"
               >
                 {React.cloneElement(icon, {
                   className:
-                    "w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-300",
+                    "w-8 h-8 md:w-10 md:h-10 transform group-hover:scale-110 transition-transform duration-300",
                 })}
                 <span className="absolute bottom-[-30px] bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                   {name}
