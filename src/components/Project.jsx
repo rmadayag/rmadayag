@@ -95,11 +95,15 @@ const Projects = () => {
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
-            <div className="w-full aspect-video mb-4 overflow-hidden rounded-lg">
+            <div className="w-full h-auto mb-4 overflow-hidden rounded-lg">
               <img
                 src={project.image}
                 alt={project.title}
+                loading="eager"
                 className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-105"
+                style={{
+                  imageRendering: "crisp-edges",
+                }}
               />
             </div>
 
