@@ -21,6 +21,8 @@ import IMG14 from "../assets/images/img14.png";
 
 const allProjects = [
   { id: 1, title: "Brewing Brands", image: IMG1, description: "2025 • Web Development", url: "https://brewingbrandsph.com/" },
+  { id: 12, title: "MAHA", image: IMG12, description: "2023 • App Design | Web Development", url: "https://myalliedhealthacademy.com/" },
+  { id: 13, title: "Noa Coach Ai", image: IMG13, description: "2022 • App Design | Web Development", url: "https://www.behance.net/gallery/196498417/Noa-Coach/" },
   { id: 2, title: "The Digital Juice", image: IMG2, description: "2025 • Web Design | Development", url: "https://thedigitaljuice.com.au/" },
   { id: 4, title: "Age Care Support", image: IMG4, description: "2025 • Web Development", url: "https://agecaresupport.com.au/" },
   { id: 3, title: "Easy Health Care", image: IMG3, description: "2025 • Web Design | Development", url: "https://easyhealthcare.com.au/" },
@@ -30,10 +32,8 @@ const allProjects = [
   { id: 7, title: "International MAARIF School", image: IMG7, description: "2025 • Web Development", url: "https://vic.maarif.org.au/" },
   { id: 9, title: "Lending Centric", image: IMG9, description: "2024 • Web Development", url: "https://lendingcentric.com.au/" },
   { id: 10, title: "Blueprint 360", image: IMG10, description: "2024 • Web Design | Development", url: "https://360.ebpsites.com/" },
-  { id: 12, title: "MAHA", image: IMG12, description: "2023 • App Design | Web Development", url: "https://myalliedhealthacademy.com/" },
   { id: 11, title: "Digital Branding", image: IMG11, description: "2024 • Web Development", url: "https://digitalbrandingco.com.au/" },
   { id: 14, title: "NUMA", image: IMG14, description: "2022 • Web Design | Development", url: "https://numarecoverycenters.com/" },
-  { id: 13, title: "Noa Coach Ai", image: IMG13, description: "2022 • App Design | Web Development", url: "https://noacoach.com/" },
 ];
 
 const Projects = () => {
