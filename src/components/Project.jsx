@@ -18,6 +18,7 @@ import IMG11 from "../assets/images/img11.png";
 import IMG12 from "../assets/images/img12.png";
 import IMG13 from "../assets/images/img13.png";
 import IMG14 from "../assets/images/img14.png";
+import IMG15 from "../assets/images/img15.png";
 
 const allProjects = [
   { id: 1, title: "Brewing Brands", image: IMG1, description: "2025 • Web Development", url: "https://brewingbrandsph.com/" },
@@ -34,6 +35,7 @@ const allProjects = [
   { id: 10, title: "Blueprint 360", image: IMG10, description: "2024 • Web Design | Development", url: "https://360.ebpsites.com/" },
   { id: 11, title: "Digital Branding", image: IMG11, description: "2024 • Web Development", url: "https://digitalbrandingco.com.au/" },
   { id: 14, title: "NUMA", image: IMG14, description: "2022 • Web Design | Development", url: "https://numarecoverycenters.com/" },
+  { id: 15, title: "TribeTXT", image: IMG15, description: "2022 • Web Design | Development", url: "https://business.tribetxt.com//" },
 ];
 
 const Projects = () => {
