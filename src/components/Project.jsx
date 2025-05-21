@@ -27,7 +27,7 @@ const allProjects = [
   { id: 2, title: "The Digital Juice", image: IMG2, description: "2025 • Web Design | Development", url: "https://thedigitaljuice.com.au/" },
   { id: 4, title: "Age Care Support", image: IMG4, description: "2025 • Web Development", url: "https://agecaresupport.com.au/" },
   { id: 3, title: "Easy Health Care", image: IMG3, description: "2025 • Web Design | Development", url: "https://easyhealthcare.com.au/" },
-  { id: 5, title: "Lifetime Roof", image: IMG5, description: "2025 • Web Design | Development", url: "https://lifetimeroof.tdjwebsites.com.au/" },
+  { id: 5, title: "Lifetime Roof", image: IMG5, description: "2025 • Web Design | Development", url: "https://www.lifetimeroofing.com.au/" },
   { id: 6, title: "Emergency Plumbers", image: IMG6, description: "2025 • Web Design | Development", url: "https://emergencyplumbersmelbourne.au/" },
   { id: 8, title: "Sustainable Power Fuels", image: IMG8, description: "2025 • Web Development", url: "https://spf.tdjwebsites.com.au/" },
   { id: 7, title: "International MAARIF School", image: IMG7, description: "2025 • Web Development", url: "https://vic.maarif.org.au/" },
