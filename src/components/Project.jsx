@@ -41,7 +41,7 @@ const allProjects = [
   { id: 15, title: "TribeTXT", image: IMG15, description: "2022 • Web Design | Development", url: "https://business.tribetxt.com/" },
   { id: 16, title: "Emergency Plumbers", image: IMG16, description: "2025 • Web Design | Development", url: "https://emergencyplumbersmelbourne.au/" },
   { id: 17, title: "Foster Disability Services", image: IMG17, description: "2025 • Web Development", url: "https://fds.thedigitaljuice.com.au/" },
-  { id: 18, title: "Delight Care Support", image: IMG18, description: "2025 • Web Design | Development", url: "https://delightcaresupport.com.au/" },
+  { id: 18, title: "Delight Care Support", image: IMG18, description: "2024 • Web Design | Development", url: "https://delightcaresupport.com.au/" },
 ];
 
 const Projects = () => {
