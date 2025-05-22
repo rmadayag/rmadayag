@@ -20,6 +20,8 @@ import IMG13 from "../assets/images/img13.png";
 import IMG14 from "../assets/images/img14.png";
 import IMG15 from "../assets/images/img15.png";
 import IMG16 from "../assets/images/img16.png";
+import IMG17 from "../assets/images/img17.png";
+import IMG18 from "../assets/images/img18.png";
 
 const allProjects = [
   { id: 1, title: "Brewing Brands", image: IMG1, description: "2025 • Web Development", url: "https://brewingbrandsph.com/" },
@@ -38,6 +40,8 @@ const allProjects = [
   { id: 14, title: "NUMA", image: IMG14, description: "2022 • Web Design | Development", url: "https://numarecoverycenters.com/" },
   { id: 15, title: "TribeTXT", image: IMG15, description: "2022 • Web Design | Development", url: "https://business.tribetxt.com/" },
   { id: 16, title: "Emergency Plumbers", image: IMG16, description: "2025 • Web Design | Development", url: "https://emergencyplumbersmelbourne.au/" },
+  { id: 17, title: "Foster Disability Services", image: IMG17, description: "2025 • Web Development", url: "https://fds.thedigitaljuice.com.au/" },
+  { id: 18, title: "Delight Care Support", image: IMG18, description: "2025 • Web Design | Development", url: "https://delightcaresupport.com.au/" },
 ];
 
 const Projects = () => {
