@@ -30,12 +30,13 @@ const allProjects = [
   { id: 4, title: "Age Care Support", image: IMG4, description: "2025 • Web Development", url: "https://agecaresupport.com.au/" },
   { id: 3, title: "Easy Health Care", image: IMG3, description: "2025 • Web Design | Development", url: "https://easyhealthcare.com.au/" },
   { id: 5, title: "Support Pillars", image: IMG5, description: "2024 • Web Design | Development", url: "https://supportpillar.com.au/" },
-  { id: 6, title: "Emergency Plumbers", image: IMG6, description: "2025 • Web Design | Development", url: "https://emergencyplumbersmelbourne.au/" },
+  { id: 6, title: "Go Respite", image: IMG6, description: "2025 • Web Design | Development", url: "https://gorespite.tdjwebsites.com.au/" },
   { id: 8, title: "Sustainable Power Fuels", image: IMG8, description: "2025 • Web Development", url: "https://spf.tdjwebsites.com.au/" },
   { id: 7, title: "International MAARIF School", image: IMG7, description: "2025 • Web Development", url: "https://vic.maarif.org.au/" },
   { id: 11, title: "Digital Branding", image: IMG11, description: "2024 • Web Development", url: "https://digitalbrandingco.com.au/" },
   { id: 14, title: "NUMA", image: IMG14, description: "2022 • Web Design | Development", url: "https://numarecoverycenters.com/" },
-  { id: 15, title: "TribeTXT", image: IMG15, description: "2022 • Web Design | Development", url: "https://business.tribetxt.com//" },
+  { id: 15, title: "TribeTXT", image: IMG15, description: "2022 • Web Design | Development", url: "https://business.tribetxt.com/" },
+  { id: 16, title: "Emergency Plumbers", image: IMG15, description: "2025 • Web Design | Development", url: "https://emergencyplumbersmelbourne.au/" },
 ];
 
 const Projects = () => {
