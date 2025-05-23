@@ -28,7 +28,7 @@ const Contact = () => {
     {
       question: "How can I get started with a project?",
       answer:
-        "Simply reach out to me through email or the contact form. We’ll set up a discovery call to discuss your goals and next steps.",
+        "Simply reach out to me via email or LinkedIn. We’ll set up a discovery call to discuss your goals and next steps.",
     },
   ];
 

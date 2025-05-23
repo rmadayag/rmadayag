@@ -1,31 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
-  FaBootstrap,
-  FaNodeJs,
-  FaReact,
-  FaGitAlt,
-  FaWordpress,
-  FaFigma,
-  FaElementor,
-  FaCode,
+  FaHtml5, FaCss3Alt, FaJsSquare, FaBootstrap, FaNodeJs, FaReact, FaGitAlt,
+  FaWordpress, FaFigma, FaElementor, FaCode
 } from "react-icons/fa";
 import {
-  SiVite,
-  SiTailwindcss,
-  SiMui,
-  SiAdobephotoshop,
-  SiAdobeillustrator,
-  SiFirebase,
-  SiOxygen,
-  SiCanva,
+  SiVite, SiTailwindcss, SiMui, SiAdobephotoshop, SiAdobeillustrator,
+  SiFirebase, SiOxygen, SiCanva
 } from "react-icons/si";
 import { DiPhp } from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const techStack = [
   { name: "HTML", icon: <FaHtml5 className="text-[#E34F26]" /> },
@@ -53,9 +43,9 @@ const techStack = [
 ];
 
 const Counter = ({ target }) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = React.useState(0);
 
-  useEffect(() => {
+  React.useEffect(() => {
     let start = 0;
     const duration = 2000;
     const incrementTime = 20;
@@ -82,13 +72,43 @@ const Counter = ({ target }) => {
   );
 };
 
+const splitTextToWords = (text) => {
+  return text.split(" ").map((word, index) => {
+    // Add space after each word except the last
+    return (
+      <span
+        key={index}
+        className="inline-block text-gray-600 mr-1"
+        style={{ color: "#C9C9C9" }}
+      >
+        {word}
+      </span>
+    );
+  });
+};
+
 const About = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
+    AOS.init({ duration: 800, once: true });
+
+    const words = document.querySelectorAll(".highlight-word span");
+    if (words.length) {
+      gsap.to(words, {
+        color: "#0A0C09", // highlight color
+        ease: "none",
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: ".highlight-word",
+          start: "top 80%",
+          end: "top 30%",
+          scrub: true,
+        },
+      });
+    }
   }, []);
+
+  const aboutText =
+    "I’m a Web Developer and UI/UX Designer passionate about crafting intuitive, user-focused, and responsive digital experiences. With a keen eye for design and a strong foundation in front-end development, I bridge the gap between visual aesthetics and seamless functionality.";
 
   return (
     <section
@@ -101,15 +121,15 @@ const About = () => {
           className="flex flex-col items-center text-center gap-8 md:gap-10"
           data-aos="fade-up"
         >
-          <p className="text-2xl md:text-[27px] font-normal text-txtcolor">
+          <p className="text-lg sm:text-xl md:text-2xl font-normal text-txtcolor">
             About Me
           </p>
-          <p className="text-base md:text-[38px] font-medium text-primary max-w-5xl leading-relaxed md:leading-normal">
-            I’m a Web Developer and UI/UX Designer passionate about crafting
-            intuitive, user-focused, and responsive digital experiences. With a
-            keen eye for design and a strong foundation in front-end
-            development, I bridge the gap between visual aesthetics and seamless
-            functionality.
+
+          <p
+            className="text-base md:text-[38px] font-medium max-w-5xl leading-relaxed md:leading-normal highlight-word"
+            style={{ cursor: "default" }}
+          >
+            {splitTextToWords(aboutText)}
           </p>
 
           {/* Statistics */}
@@ -133,24 +153,21 @@ const About = () => {
 
         {/* Toolbox Section */}
         <section id="toolbox" className="w-full" data-aos="fade-up">
-          {/* Section Label */}
           <p className="text-lg sm:text-xl md:text-2xl font-normal text-txtcolor mb-8 sm:mb-12">
             Toolbox
           </p>
 
-          {/* Title and Description */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-8 lg:gap-y-10 gap-x-8 lg:gap-x-16 items-start mb-12">
             <h3 className="text-[36px] sm:text-[50px] md:text-[60px] lg:text-[70px] font-medium text-primary leading-tight">
               DESIGN & DEVELOPMENT
             </h3>
             <p className="text-base sm:text-lg text-txtcolor max-w-xl">
-              The tools I use to craft clean designs and smooth builds. They power every step from concept to launch.
+            The tools I use to craft clean designs and smooth builds. They power every step from concept to launch.
             </p>
           </div>
 
           <div className="border-t border-gray-300 mb-12" />
 
-          {/* Tech Stack Icons */}
           <div
             className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-y-16 gap-x-6 md:gap-x-10"
             data-aos="fade-up"

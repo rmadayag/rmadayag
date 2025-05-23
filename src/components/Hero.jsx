@@ -30,7 +30,7 @@ const Hero = () => {
   return (
     <section id="home" className="w-full bg-bgcolor" aria-live="polite">
       <div
-        className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-8 pb-10"
+        className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-8 pb-20"
         data-aos="fade-up"
       >
         {/* Hero Image - On top for mobile/tablet, center for desktop */}
