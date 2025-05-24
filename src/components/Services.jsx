@@ -66,7 +66,7 @@ const Services = () => {
           </h3>
         </div>
         <div>
-          <p className="text-base sm:text-lg md:text-xl text-txtcolor leading-relaxed">
+          <p className="text-base sm:text-lg text-txtcolor max-w-xl">
             Bring your ideas to life with my expertise. I turn concepts into
             engaging, functional digital experiences.
           </p>
