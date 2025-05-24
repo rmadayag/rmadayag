@@ -78,7 +78,7 @@ const splitTextToWords = (text) => {
     return (
       <span
         key={index}
-        className="inline-block text-gray-600 mr-1"
+        className="inline-block text-gray-600 mr-[0.5rem] md:mr-[0.75rem] lg:mr-[0.75rem]"
         style={{ color: "#C9C9C9" }}
       >
         {word}
