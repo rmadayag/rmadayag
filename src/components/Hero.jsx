@@ -42,7 +42,7 @@ const Hero = () => {
               mt-20 sm:mt-20 md:mt-24 lg:mt-0
             "
           >
-            <div className="relative w-full max-w-[280px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[900px]">
+            <div className="relative w-full max-w-[300px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[900px]">
               <img
                 src={hero}
                 alt="Rheynalyn, a Web Developer and UI/UX Designer"
