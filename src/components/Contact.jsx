@@ -62,7 +62,7 @@ const Contact = () => {
           </h3>
         </div>
         <div>
-          <p className="text-base md:text-lg text-txtcolor leading-relaxed max-w-md">
+          <p className="text-base sm:text-lg text-txtcolor max-w-xl">
             Find clear and concise answers to the most common questions our clients ask.
           </p>
         </div>
