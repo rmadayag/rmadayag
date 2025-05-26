@@ -21,9 +21,20 @@ const Navbar = () => {
       setScrolled(window.scrollY > 0);
     };
 
+    const preventScroll = (e) => {
+      if (open) {
+        e.preventDefault();
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    document.body.style.overflow = open ? "hidden" : "auto";
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = "auto";
+    };
+  }, [open]);
 
   return (
     <header
@@ -37,7 +48,7 @@ const Navbar = () => {
           <img src={logo} alt="Logo" className="w-full h-auto" />
         </div>
 
-        {/* Always visible menu icon */}
+        {/* Menu Icon */}
         <button
           onClick={() => setOpen(true)}
           aria-expanded={open}
@@ -47,9 +58,17 @@ const Navbar = () => {
           <img src={menuIcon} alt="Menu" className="w-8 h-8" />
         </button>
 
+        {/* Backdrop */}
+        <div
+          className={`fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 ease-in-out ${
+            open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
+          onClick={() => setOpen(false)}
+        />
+
         {/* Slide-in Side Menu */}
         <div
-          className={`fixed top-0 right-0 h-screen w-[300px] bg-white z-50 transition-transform duration-300 ${
+          className={`fixed top-0 right-0 h-screen w-[300px] bg-white z-50 transition-transform duration-300 ease-in-out ${
             open ? "translate-x-0" : "translate-x-full"
           }`}
           role="navigation"
